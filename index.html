@@ -211,11 +211,7 @@ button{font-family:'DM Sans',sans-serif}
   .nav{padding:8px 12px}
 }
 /* Touch-friendly targets */
-@media(hover:none){
-  .feat:hover,.lesson-row:hover,.faq-item:hover{box-shadow:none;border-color:inherit}
-  .hero-cta:hover,.nav-cta:hover,.email-row button:hover{transform:none;box-shadow:none}
-  .hero-cta:active,.nav-cta:active,.email-row button:active{transform:scale(0.98)}
-}
+@media(hover:none){.feat:hover,.lesson-row:hover,.faq-item:hover,.blog-tile:hover,.who-card:hover,.testi-card:hover,.lesson-item:hover{box-shadow:none;border-color:inherit;transform:none}.hero-cta:hover,.nav-cta:hover,.email-row button:hover,.email-form button:hover,.cta-btn:hover{transform:none;box-shadow:none}.hero-cta:active,.nav-cta:active{transform:scale(0.98)}}
 /* Reduce motion for accessibility */
 @media(prefers-reduced-motion:reduce){
   .fade-up,.fade-up-d1,.fade-up-d2,.fade-up-d3,.fade-up-d4{animation:none;opacity:1}
@@ -247,14 +243,8 @@ button{font-family:'DM Sans',sans-serif}
 .bento-d::before{content:'🏝️';font-size:100px;position:absolute;right:-10px;bottom:-20px;opacity:0.1;line-height:1}
 .bento-d h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;margin-bottom:8px;line-height:1.2}
 .bento-d p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.65}
-@media(max-width:700px){
-  .bento{grid-template-columns:1fr 1fr}
-  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 2}
-}
-@media(max-width:480px){
-  .bento{grid-template-columns:1fr}
-  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 1}
-}
+@media(max-width:700px){.bento{grid-template-columns:1fr 1fr;gap:12px}.bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 2}.bento-a,.bento-d{padding:28px 24px}.bento-b,.bento-c{padding:24px}}
+@media(max-width:480px){.bento{grid-template-columns:1fr;gap:10px}.bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 1}.bento-a h3,.bento-b h3,.bento-c h3,.bento-d h3{font-size:18px}.bento-a,.bento-d{padding:24px 20px}.bento-b,.bento-c{padding:22px 20px}}
 
 /* STATS ROW */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E8ECF1;border-radius:20px;overflow:hidden;margin-top:28px}
@@ -263,9 +253,13 @@ button{font-family:'DM Sans',sans-serif}
 .stat-box-num{font-family:'Playfair Display',Georgia,serif;font-size:44px;font-weight:700;color:#1A2332;line-height:1;margin-bottom:4px}
 .stat-box-num span{color:#0077A8}
 .stat-box-label{font-size:13px;color:#5C6B7A;font-weight:500}
+@media(max-width:480px){.stats-row{grid-template-columns:1fr;gap:1px}.stat-box{padding:22px 16px}.stat-box-num{font-size:36px}}
 
 /* WHO - horizontal scroll cards */
-.who-section{background:linear-gradient(180deg,#FAFCFE 0%,#EEF4FB 100%);padding:60px 0;margin:0 -999px;padding-left:999px;padding-right:999px}
+.who-section{background:linear-gradient(180deg,#FAFCFE 0%,#EEF4FB 100%);padding:56px 0;}
+@media(max-width:768px){.who-section{padding:40px 0;}}
+@media(max-width:480px){.who-section{padding:32px 0;}}
+@media(max-width:480px){.who-inner{padding:0 16px;}}
 .who-inner{max-width:960px;margin:0 auto;padding:0 24px}
 .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
 .who-card{background:#fff;border-radius:20px;padding:28px 22px;border:1px solid #E8ECF1;position:relative;overflow:hidden;transition:all 0.25s}
@@ -274,8 +268,8 @@ button{font-family:'DM Sans',sans-serif}
 .who-card-icon{font-size:32px;margin-bottom:14px;display:block}
 .who-card h3{font-size:15px;font-weight:700;color:#1A2332;margin-bottom:6px}
 .who-card p{font-size:13px;color:#5C6B7A;line-height:1.6}
-@media(max-width:720px){.who-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.who-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.who-grid{grid-template-columns:1fr 1fr;gap:12px}}
+@media(max-width:480px){.who-grid{grid-template-columns:1fr;gap:10px}.who-card{padding:22px 18px}.who-card-num{font-size:52px}}
 
 /* LESSONS - nieuwe stijl */
 .lessons-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
@@ -292,9 +286,10 @@ button{font-family:'DM Sans',sans-serif}
 .li-num.next{background:#E6F1FB;color:#0077A8;border:1px solid #B5D4F4}
 .li-info{flex:1;min-width:0}
 .li-info h4{font-size:15px;font-weight:600;color:#1A2332;margin-bottom:2px}
-.li-info p{font-size:13px;color:#5C6B7A;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-info p{font-size:13px;color:#5C6B7A;line-height:1.35}
 .li-badge{background:#E6F5F1;color:#0F6E56;font-size:10px;font-weight:700;padding:4px 10px;border-radius:6px;flex-shrink:0;letter-spacing:0.5px}
 .li-arrow{margin-left:8px;color:#CBD5E1;opacity:0;transform:translateX(-4px);transition:all 0.2s;flex-shrink:0;font-size:16px}
+@media(max-width:480px){.lesson-item a{padding:14px 16px;gap:14px}.li-num{width:36px;height:36px;border-radius:10px;font-size:13px}.li-info h4{font-size:13px}.li-info p{font-size:12px}.li-badge{display:none}.li-arrow{display:none}}
 
 /* FREE BANNER - nieuw */
 .free-banner{background:linear-gradient(135deg,#064e3b 0%,#065F46 50%,#047857 100%);border-radius:24px;padding:44px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;margin-top:32px}
@@ -305,6 +300,7 @@ button{font-family:'DM Sans',sans-serif}
 .free-banner-badge .price{font-family:'Playfair Display',Georgia,serif;font-size:42px;font-weight:700;color:#fff;line-height:1}
 .free-banner-badge .price-label{font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;letter-spacing:1px;text-transform:uppercase}
 @media(max-width:600px){.free-banner{flex-direction:column;text-align:center;padding:32px 24px}.free-banner-badge{width:100%}.free-banner-left p{max-width:100%}}
+@media(max-width:480px){.free-banner{padding:28px 20px;border-radius:18px}.free-banner-left h2{font-size:22px}.free-banner-badge .price{font-size:36px}}
 
 /* BLOG GRID - nieuw */
 .blog-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
@@ -328,7 +324,7 @@ button{font-family:'DM Sans',sans-serif}
 .blog-all-link-btn{background:#F4A236;color:#1A2332;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;flex-shrink:0;white-space:nowrap;transition:all 0.2s}
 .blog-all-link:hover .blog-all-link-btn{transform:scale(1.04)}
 @media(max-width:700px){.blog-masonry{grid-template-columns:1fr 1fr}.blog-all-link{grid-column:span 2}}
-@media(max-width:480px){.blog-masonry{grid-template-columns:1fr}.blog-all-link{grid-column:span 1;flex-direction:column;text-align:center;gap:16px}}
+@media(max-width:480px){.blog-masonry{grid-template-columns:1fr;gap:14px}.blog-all-link{grid-column:span 1;flex-direction:column;text-align:center;gap:16px;padding:24px 20px}}
 
 /* TESTIMONIALS - magazine stijl */
 .testi-new{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
@@ -346,7 +342,7 @@ button{font-family:'DM Sans',sans-serif}
 .testi-name{font-size:13px;font-weight:700;color:#1A2332}
 .testi-loc{font-size:11px;color:#94A3B8}
 .testi-stars-new{color:#F4A236;font-size:12px;letter-spacing:2px;margin-top:2px}
-@media(max-width:560px){.testi-new{grid-template-columns:1fr}}
+@media(max-width:560px){.testi-new{grid-template-columns:1fr;gap:14px}.testi-card{padding:22px 18px}.testi-text{font-size:14px}}
 
 /* FAQ - nieuw */
 .faq-new{display:flex;flex-direction:column;gap:8px;margin-top:28px}
@@ -356,6 +352,7 @@ button{font-family:'DM Sans',sans-serif}
 .faq-new-icon{width:28px;height:28px;border-radius:50%;background:#F1F5F9;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.25s;color:#0077A8;font-size:18px;font-weight:300}
 .faq-new-item.open .faq-new-icon{background:#0077A8;color:#fff;transform:rotate(45deg)}
 .faq-new-a{padding:0 22px 20px;font-size:14px;color:#5C6B7A;line-height:1.7;display:none}
+@media(max-width:480px){.faq-new-q{padding:16px 18px;font-size:14px}.faq-new-a{padding:0 18px 16px;font-size:13px}.faq-new-icon{width:24px;height:24px;font-size:16px}}
 .faq-new-item.open .faq-new-a{display:block}
 
 /* CTA EMAIL */
@@ -372,7 +369,8 @@ button{font-family:'DM Sans',sans-serif}
 .email-form button{background:#F4A236;color:#1A2332;border:none;border-radius:14px;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all 0.2s;flex-shrink:0}
 .email-form button:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(244,162,54,0.4)}
 @media(max-width:500px){.email-form{flex-direction:column}.email-form button{width:100%}}
-@media(max-width:480px){.cta-email-section{padding:40px 24px;border-radius:20px}}
+@media(max-width:480px){.cta-email-section{padding:36px 20px;border-radius:20px}.cta-email-section h2{font-size:26px}}
+@media(max-width:360px){.cta-email-section{padding:28px 16px;border-radius:16px}}
 
 /* SECTION HEADERS NIEUW */
 .sh{margin-bottom:32px}
@@ -380,8 +378,10 @@ button{font-family:'DM Sans',sans-serif}
 .sh-eyebrow::before{content:'';display:inline-block;width:28px;height:2px;background:#0077A8;border-radius:2px}
 .sh h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:8px}
 .sh p{font-size:15px;color:#5C6B7A;max-width:600px;line-height:1.65}
+@media(max-width:480px){.sh{margin-bottom:24px}.sh h2{font-size:24px}.sh p{font-size:14px}}
 
 </style>
+</head>
 <body>
 
 <!-- NAV -->
