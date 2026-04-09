@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A2332"/>
+      <stop offset="45%" style="stop-color:#243044"/>
+      <stop offset="100%" style="stop-color:#005A7D"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0077A8;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00B8D4;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Achtergrond -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decoratieve golven achtergrond -->
+  <ellipse cx="1050" cy="100" rx="300" ry="300" fill="#0077A8" opacity="0.06"/>
+  <ellipse cx="150" cy="530" rx="200" ry="200" fill="#00B8D4" opacity="0.05"/>
+
+  <!-- Golfjes onderkant -->
+  <path d="M0 580 Q150 560 300 575 Q450 590 600 575 Q750 560 900 575 Q1050 590 1200 575 L1200 630 L0 630 Z" fill="#0077A8" opacity="0.15"/>
+  <path d="M0 600 Q200 585 400 598 Q600 611 800 598 Q1000 585 1200 598 L1200 630 L0 630 Z" fill="#00B8D4" opacity="0.1"/>
+
+  <!-- Logo: 4 huisjes groot -->
+  <g transform="translate(80, 220)">
+    <rect x="0" y="60" width="40" height="70" rx="4" fill="#E8634A"/>
+    <polygon points="0,60 20,20 40,60" fill="#C94E38"/>
+    <rect x="9" y="85" width="10" height="16" rx="1" fill="white" opacity="0.3"/>
+
+    <rect x="48" y="45" width="40" height="85" rx="4" fill="#F4A236"/>
+    <polygon points="48,45 68,5 88,45" fill="#D4892E"/>
+    <rect x="57" y="70" width="10" height="16" rx="1" fill="white" opacity="0.3"/>
+
+    <rect x="96" y="50" width="40" height="80" rx="4" fill="#0077A8"/>
+    <polygon points="96,50 116,12 136,50" fill="#005A7D"/>
+    <rect x="105" y="75" width="10" height="16" rx="1" fill="white" opacity="0.3"/>
+
+    <rect x="144" y="65" width="40" height="65" rx="4" fill="#2A8E4F"/>
+    <polygon points="144,65 164,28 184,65" fill="#1E7A3E"/>
+    <rect x="153" y="87" width="10" height="16" rx="1" fill="white" opacity="0.3"/>
+
+    <!-- Golf onder logo -->
+    <path d="M0 135 Q45 125 92 135 Q138 145 184 135" fill="none" stroke="#0077A8" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- Hoofd tekst -->
+  <text x="340" y="270" font-family="Georgia, serif" font-size="68" font-weight="700" fill="white" letter-spacing="-1">Dushi</text>
+  <text x="560" y="270" font-family="Georgia, serif" font-size="68" font-weight="400" font-style="italic" fill="#00B8D4" letter-spacing="-1">Papiamentu</text>
+
+  <!-- Ondertitel -->
+  <text x="340" y="325" font-family="Arial, sans-serif" font-size="26" fill="rgba(255,255,255,0.65)" letter-spacing="0.5">Gratis Papiaments leren voor je Curaçao vakantie</text>
+
+  <!-- Streepje -->
+  <rect x="340" y="355" width="60" height="3" rx="2" fill="#F4A236"/>
+
+  <!-- 3 punten -->
+  <g transform="translate(340, 390)">
+    <!-- Punt 1 -->
+    <rect x="0" y="0" width="36" height="36" rx="10" fill="#F4A236" opacity="0.15"/>
+    <text x="18" y="25" font-family="Arial" font-size="18" fill="#F4A236" text-anchor="middle">📚</text>
+    <text x="46" y="22" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="600">12 gratis lessen</text>
+
+    <!-- Punt 2 -->
+    <rect x="260" y="0" width="36" height="36" rx="10" fill="#0077A8" opacity="0.2"/>
+    <text x="278" y="25" font-family="Arial" font-size="18" fill="#00B8D4" text-anchor="middle">🗣️</text>
+    <text x="306" y="22" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="600">300+ woorden</text>
+
+    <!-- Punt 3 -->
+    <rect x="520" y="0" width="36" height="36" rx="10" fill="#2A8E4F" opacity="0.2"/>
+    <text x="538" y="25" font-family="Arial" font-size="18" fill="#2A8E4F" text-anchor="middle">🏝️</text>
+    <text x="566" y="22" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="600">Door native speakers</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="340" y="510" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.4)" letter-spacing="3">SPREEK HET HART VAN DE EILANDEN</text>
+
+  <!-- URL badge -->
+  <rect x="340" y="545" width="280" height="40" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="480" y="570" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.6)" text-anchor="middle" letter-spacing="1">dushipapiamentu.nl</text>
+</svg>
