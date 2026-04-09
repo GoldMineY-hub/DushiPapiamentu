@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dushi Papiamentu Blog: tips voor je Curaçao vakantie, handige Papiaments zinnen, uitspraakgids en leeradvies voor beginners. Gratis lezen!">
+<meta name="keywords" content="Papiamentu blog, Papiaments leren, Curaçao vakantie tips, Papiamentu zinnen, Papiaments uitspraak">
+<title>Blog: Papiamentu leren &amp; Curaçao tips | Dushi Papiamentu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button{font-family:'DM Sans',sans-serif;cursor:pointer}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}
+.nav-logo{display:flex;align-items:center;gap:8px}
+.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}
+.nb em{font-weight:400;font-style:italic;color:#00B8D4}
+.nr{display:flex;gap:16px;align-items:center}
+.nr a{font-size:12px;color:rgba(255,255,255,0.6);font-weight:500;transition:color 0.2s}
+.nr a:hover,.nr a.active{color:#fff}
+.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
+@media(max-width:600px){.nr a:not(.active){display:none}}
+
+.page-header{padding:80px 20px 48px;background:linear-gradient(135deg,#1A2332 0%,#243044 40%,#005A7D 100%);text-align:center;position:relative;overflow:hidden}
+.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:28px;background:#FAFCFE;border-radius:28px 28px 0 0}
+.page-header-label{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:6px 18px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:2px;margin-bottom:14px;text-transform:uppercase}
+.page-header h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,38px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:10px}
+.page-header p{font-size:15px;color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto}
+
+.container{max-width:960px;margin:0 auto;padding:48px 24px 80px}
+
+.featured{display:flex;background:#fff;border:1px solid #E8ECF1;border-radius:20px;overflow:hidden;margin-bottom:32px;transition:all 0.2s}
+.featured:hover{border-color:#0077A8;box-shadow:0 6px 24px rgba(0,119,168,0.1);transform:translateY(-2px)}
+.featured-img{width:220px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:72px}
+.featured-body{padding:28px 24px}
+.featured-tag{font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.featured-title{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:#1A2332;line-height:1.25;margin-bottom:8px}
+.featured-desc{font-size:14px;color:#5C6B7A;line-height:1.6;margin-bottom:8px}
+.featured-meta{font-size:12px;color:#94A3B8}
+.featured-link{font-size:14px;font-weight:700;color:#0077A8;display:inline-block;margin-top:12px}
+@media(max-width:600px){.featured{flex-direction:column}.featured-img{width:100%;height:120px;font-size:52px}}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:700px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.blog-grid{grid-template-columns:1fr}}
+
+.blog-card{background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;transition:all 0.2s;display:flex;flex-direction:column}
+.blog-card:hover{border-color:#0077A8;box-shadow:0 6px 24px rgba(0,119,168,0.1);transform:translateY(-2px)}
+.blog-card-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.blog-card-body{padding:16px 16px 18px;flex:1;display:flex;flex-direction:column}
+.blog-card-tag{font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.blog-card-title{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:6px}
+.blog-card-desc{font-size:13px;color:#5C6B7A;line-height:1.5;flex:1}
+.blog-card-meta{font-size:11px;color:#94A3B8;margin-top:8px}
+.blog-card-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:#0077A8}
+
+.cta-banner{background:linear-gradient(135deg,#1A2332 0%,#005A7D 100%);border-radius:20px;padding:40px 28px;text-align:center;margin-top:48px}
+.cta-banner h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,4vw,26px);color:#fff;margin-bottom:8px}
+.cta-banner p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:20px}
+.cta-banner a{display:inline-block;background:#F4A236;color:#1A2332;border-radius:12px;padding:14px 32px;font-size:15px;font-weight:700;transition:all 0.2s}
+.cta-banner a:hover{transform:translateY(-1px)}
+
+.ft{text-align:center;padding:32px 24px;font-size:13px;color:#94A3B8;border-top:1px solid #E8ECF1}
+.ft a{color:#0077A8;font-weight:600}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg viewBox="0 0 70 50" width="32" height="23" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="20" width="12" height="22" rx="2" fill="#E8634A"/><polygon points="3,20 9,11 15,20" fill="#C94E38"/>
+      <rect x="17" y="16" width="12" height="26" rx="2" fill="#F4A236"/><polygon points="17,16 23,6 29,16" fill="#D4892E"/>
+      <rect x="31" y="18" width="12" height="24" rx="2" fill="#0077A8"/><polygon points="31,18 37,9 43,18" fill="#005A7D"/>
+      <rect x="45" y="22" width="12" height="20" rx="2" fill="#2A8E4F"/><polygon points="45,22 51,14 57,22" fill="#1E7A3E"/>
+    </svg>
+    <span class="nb">Dushi <em>Papiamentu</em></span>
+  </a>
+  <div class="nr">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#lessons">Lessen</a>
+    <a href="index.html" class="active">Blog</a>
+    <button onclick="location.href='../lessons/lesson-1-bon-bini.html'">Start Les 1</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-label">Blog &amp; Tips</div>
+  <h1>Papiamentu leren &amp; Curaçao vakantie tips</h1>
+  <p>Handige zinnen, uitspraaktips, reisadvies en meer. Gratis leesvoer voor je reis naar Kòrsou.</p>
+</div>
+
+<div class="container">
+
+  <a href="papiamentu-leren-voor-beginners.html" class="featured">
+    <div class="featured-img" style="background:linear-gradient(135deg,#E6F5F1,#C7EFE0)">🌱</div>
+    <div class="featured-body">
+      <div class="featured-tag">Uitgelicht &bull; Voor beginners</div>
+      <div class="featured-title">Papiamentu leren voor beginners: van Bon Bini tot echte gesprekken</div>
+      <div class="featured-desc">Nog nooit een woord Papiaments gesproken? Geen probleem. Dit artikel legt uit hoe je als Nederlander stap voor stap de basis leert, wat je na elke les kunt, en waarom het makkelijker is dan je denkt.</div>
+      <div class="featured-meta">2026 &middot; 7 min leestijd</div>
+      <span class="featured-link">Lees het volledige artikel →</span>
+    </div>
+  </a>
+
+  <div class="blog-grid">
+
+    <a href="20-handige-papiamentu-zinnen.html" class="blog-card">
+      <div class="blog-card-img" style="background:linear-gradient(135deg,#E6F1FB,#C7E0F4)">💬</div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Handige zinnen</div>
+        <div class="blog-card-title">20 handige Papiamentu zinnen voor je Curaçao vakantie</div>
+        <div class="blog-card-desc">De 20 zinnen die je het meest nodig hebt. Van begroetingen tot de rekening vragen, met uitspraak en vertaling.</div>
+        <div class="blog-card-meta">2026 &middot; 6 min leestijd</div>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </a>
+
+    <a href="papiamentu-strand-restaurant-bestellen.html" class="blog-card">
+      <div class="blog-card-img" style="background:linear-gradient(135deg,#ECFDF5,#A7F3D0)">🏖️</div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Strand &amp; restaurant</div>
+        <div class="blog-card-title">Papiamentu op het strand en in restaurants: bestel als een local</div>
+        <div class="blog-card-desc">Van een serbes bestellen op Playa Kenepa tot kabritu stobá herkennen bij Marshe Bieu.</div>
+        <div class="blog-card-meta">2026 &middot; 7 min leestijd</div>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </a>
+
+    <a href="papiaments-uitspraak-tips-nederlanders.html" class="blog-card">
+      <div class="blog-card-img" style="background:linear-gradient(135deg,#F3E8FF,#DDD6FE)">🎤</div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Uitspraak</div>
+        <div class="blog-card-title">Papiaments uitspraak: veelgemaakte fouten door Nederlanders</div>
+        <div class="blog-card-desc">De "sh" in dushi, de zachte "g" en de klemtoon. Hoe je klinkt als een halve local.</div>
+        <div class="blog-card-meta">2026 &middot; 6 min leestijd</div>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </a>
+
+    <a href="10-redenen-papiamentu-vakantie.html" class="blog-card">
+      <div class="blog-card-img" style="background:linear-gradient(135deg,#FBF4E8,#F5E2C0)">🌴</div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Vakantietips</div>
+        <div class="blog-card-title">10 redenen waarom Papiamentu spreken je vakantie leuker maakt</div>
+        <div class="blog-card-desc">Van warmer contact met locals tot betere deals op de markt. Waarom een paar zinnen alles verandert.</div>
+        <div class="blog-card-meta">2026 &middot; 5 min leestijd</div>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="cta-banner">
+    <h2>Klaar om Papiamentu te leren?</h2>
+    <p>12 gratis interactieve lessen, gemaakt door native speakers van Kòrsou. Geen account nodig.</p>
+    <a href="../lessons/lesson-1-bon-bini.html">Start gratis met Les 1</a>
+  </div>
+
+</div>
+
+<footer class="ft">
+  <strong style="font-family:'Playfair Display',Georgia,serif">Dushi <em style="color:#0077A8;font-style:italic">Papiamentu</em></strong>
+  <p style="margin-top:6px">Gemaakt met ❤️ vanuit Kòrsou &middot; <a href="../index.html">Home</a> &middot; <a href="../index.html#lessons">Alle Lessen</a> &middot; <a href="#">Privacy</a></p>
+  <p style="margin-top:4px">© 2026 Dushi Papiamentu. Alle rechten voorbehouden.</p>
+</footer>
+
+</body>
+</html>
