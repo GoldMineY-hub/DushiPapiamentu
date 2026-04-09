@@ -224,261 +224,436 @@ button{font-family:'DM Sans',sans-serif}
 
 .footer{text-align:center;padding:40px 24px;font-size:13px;color:#94A3B8}
 .footer a{color:#0077A8;font-weight:600}
+
+/* =============================================
+   NIEUWE SECTIES - REDESIGN
+   ============================================= */
+
+/* WHY - Bento grid stijl */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:36px}
+.bento-a{grid-column:span 7;background:linear-gradient(135deg,#1A2332 0%,#1e3d5a 60%,#005A7D 100%);border-radius:24px;padding:36px 32px;position:relative;overflow:hidden;color:#fff}
+.bento-a::before{content:'🗣️';font-size:100px;position:absolute;right:-10px;bottom:-20px;opacity:0.08;line-height:1}
+.bento-a h3{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;margin-bottom:10px;line-height:1.2}
+.bento-a p{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65}
+.bento-b{grid-column:span 5;background:#F4A236;border-radius:24px;padding:32px;position:relative;overflow:hidden}
+.bento-b::before{content:'🎮';font-size:90px;position:absolute;right:-5px;bottom:-15px;opacity:0.12;line-height:1}
+.bento-b h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
+.bento-b p{font-size:14px;color:rgba(26,35,50,0.7);line-height:1.65}
+.bento-c{grid-column:span 5;background:linear-gradient(135deg,#E6F1FB,#c8e0f5);border-radius:24px;padding:32px;position:relative;overflow:hidden}
+.bento-c::before{content:'🌍';font-size:90px;position:absolute;right:-5px;bottom:-15px;opacity:0.12;line-height:1}
+.bento-c h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
+.bento-c p{font-size:14px;color:#3A4A5C;line-height:1.65}
+.bento-d{grid-column:span 7;background:linear-gradient(135deg,#0F6E56,#0a8060,#0D9488);border-radius:24px;padding:32px;position:relative;overflow:hidden;color:#fff}
+.bento-d::before{content:'🏝️';font-size:100px;position:absolute;right:-10px;bottom:-20px;opacity:0.1;line-height:1}
+.bento-d h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;margin-bottom:8px;line-height:1.2}
+.bento-d p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.65}
+@media(max-width:700px){
+  .bento{grid-template-columns:1fr 1fr}
+  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 2}
+}
+@media(max-width:480px){
+  .bento{grid-template-columns:1fr}
+  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 1}
+}
+
+/* STATS ROW */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E8ECF1;border-radius:20px;overflow:hidden;margin-top:28px}
+.stat-box{background:#fff;padding:32px 20px;text-align:center;transition:background 0.2s}
+.stat-box:hover{background:#F8FAFC}
+.stat-box-num{font-family:'Playfair Display',Georgia,serif;font-size:44px;font-weight:700;color:#1A2332;line-height:1;margin-bottom:4px}
+.stat-box-num span{color:#0077A8}
+.stat-box-label{font-size:13px;color:#5C6B7A;font-weight:500}
+
+/* WHO - horizontal scroll cards */
+.who-section{background:linear-gradient(180deg,#FAFCFE 0%,#EEF4FB 100%);padding:60px 0;margin:0 -999px;padding-left:999px;padding-right:999px}
+.who-inner{max-width:960px;margin:0 auto;padding:0 24px}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.who-card{background:#fff;border-radius:20px;padding:28px 22px;border:1px solid #E8ECF1;position:relative;overflow:hidden;transition:all 0.25s}
+.who-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.08);border-color:transparent}
+.who-card-num{font-family:'Playfair Display',Georgia,serif;font-size:64px;font-weight:700;color:#E8ECF1;position:absolute;top:-8px;right:12px;line-height:1;user-select:none}
+.who-card-icon{font-size:32px;margin-bottom:14px;display:block}
+.who-card h3{font-size:15px;font-weight:700;color:#1A2332;margin-bottom:6px}
+.who-card p{font-size:13px;color:#5C6B7A;line-height:1.6}
+@media(max-width:720px){.who-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.who-grid{grid-template-columns:1fr}}
+
+/* LESSONS - nieuwe stijl */
+.lessons-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.lessons-header-left h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,34px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:6px}
+.lessons-header-left p{font-size:15px;color:#5C6B7A}
+.lessons-track{display:flex;flex-direction:column;gap:0}
+.lesson-item{display:flex;align-items:center;gap:0;border-bottom:1px solid #F1F5F9;transition:all 0.2s;position:relative}
+.lesson-item:last-child{border-bottom:none}
+.lesson-item:hover{background:#F8FAFC}
+.lesson-item:hover .li-arrow{opacity:1;transform:translateX(0)}
+.lesson-item a{display:flex;align-items:center;gap:20px;padding:18px 20px;flex:1;text-decoration:none;color:inherit}
+.li-num{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:'Playfair Display',Georgia,serif}
+.li-num.done{background:linear-gradient(135deg,#0F6E56,#0D9488);color:#fff}
+.li-num.next{background:#E6F1FB;color:#0077A8;border:1px solid #B5D4F4}
+.li-info{flex:1;min-width:0}
+.li-info h4{font-size:15px;font-weight:600;color:#1A2332;margin-bottom:2px}
+.li-info p{font-size:13px;color:#5C6B7A;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-badge{background:#E6F5F1;color:#0F6E56;font-size:10px;font-weight:700;padding:4px 10px;border-radius:6px;flex-shrink:0;letter-spacing:0.5px}
+.li-arrow{margin-left:8px;color:#CBD5E1;opacity:0;transform:translateX(-4px);transition:all 0.2s;flex-shrink:0;font-size:16px}
+
+/* FREE BANNER - nieuw */
+.free-banner{background:linear-gradient(135deg,#064e3b 0%,#065F46 50%,#047857 100%);border-radius:24px;padding:44px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;margin-top:32px}
+.free-banner::before{content:'∞';font-size:200px;font-family:'Playfair Display',serif;position:absolute;right:-20px;top:-60px;color:rgba(255,255,255,0.04);line-height:1}
+.free-banner-left h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,4vw,32px);color:#fff;margin-bottom:8px;line-height:1.1}
+.free-banner-left p{font-size:15px;color:rgba(255,255,255,0.65);max-width:500px;line-height:1.65}
+.free-banner-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:20px 28px;text-align:center;flex-shrink:0}
+.free-banner-badge .price{font-family:'Playfair Display',Georgia,serif;font-size:42px;font-weight:700;color:#fff;line-height:1}
+.free-banner-badge .price-label{font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;letter-spacing:1px;text-transform:uppercase}
+@media(max-width:600px){.free-banner{flex-direction:column;text-align:center;padding:32px 24px}.free-banner-badge{width:100%}.free-banner-left p{max-width:100%}}
+
+/* BLOG GRID - nieuw */
+.blog-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.blog-tile{border-radius:20px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:all 0.25s;border:1px solid #E8ECF1;background:#fff}
+.blog-tile:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(0,0,0,0.1);border-color:transparent}
+.blog-tile-cover{height:130px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative}
+.blog-tile-cover::after{content:'';position:absolute;bottom:0;left:0;right:0;height:30px;background:linear-gradient(to top,rgba(0,0,0,0.12),transparent)}
+.blog-tile-cover-emoji{position:relative;z-index:1;transition:transform 0.3s}
+.blog-tile:hover .blog-tile-cover-emoji{transform:scale(1.12) rotate(-4deg)}
+.blog-tile-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column}
+.blog-tile-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.blog-tile-title{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px;flex:1}
+.blog-tile-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #F1F5F9;margin-top:auto}
+.blog-tile-time{font-size:11px;color:#94A3B8}
+.blog-tile-arrow{width:28px;height:28px;border-radius:50%;background:#F1F5F9;display:flex;align-items:center;justify-content:center;transition:all 0.25s;color:#0077A8;font-size:13px}
+.blog-tile:hover .blog-tile-arrow{background:#0077A8;color:#fff}
+.blog-all-link{grid-column:1/-1;background:linear-gradient(135deg,#1A2332,#005A7D);border-radius:20px;padding:32px;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:all 0.2s}
+.blog-all-link:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.15)}
+.blog-all-link h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;margin-bottom:4px}
+.blog-all-link p{font-size:13px;color:rgba(255,255,255,0.6)}
+.blog-all-link-btn{background:#F4A236;color:#1A2332;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;flex-shrink:0;white-space:nowrap;transition:all 0.2s}
+.blog-all-link:hover .blog-all-link-btn{transform:scale(1.04)}
+@media(max-width:700px){.blog-masonry{grid-template-columns:1fr 1fr}.blog-all-link{grid-column:span 2}}
+@media(max-width:480px){.blog-masonry{grid-template-columns:1fr}.blog-all-link{grid-column:span 1;flex-direction:column;text-align:center;gap:16px}}
+
+/* TESTIMONIALS - magazine stijl */
+.testi-new{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.testi-card{background:#fff;border:1px solid #E8ECF1;border-radius:20px;padding:28px;position:relative;transition:all 0.2s}
+.testi-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.07);border-color:#CBD5E1}
+.testi-card:nth-child(1){border-top:3px solid #0077A8}
+.testi-card:nth-child(2){border-top:3px solid #F4A236}
+.testi-card:nth-child(3){border-top:3px solid #0F6E56}
+.testi-card:nth-child(4){border-top:3px solid #E8634A}
+.testi-quote{font-size:42px;color:#E8ECF1;font-family:'Playfair Display',serif;line-height:1;margin-bottom:4px}
+.testi-text{font-size:15px;color:#1A2332;line-height:1.7;font-style:italic;margin-bottom:16px}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0077A8,#00B8D4);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
+.testi-info{flex:1}
+.testi-name{font-size:13px;font-weight:700;color:#1A2332}
+.testi-loc{font-size:11px;color:#94A3B8}
+.testi-stars-new{color:#F4A236;font-size:12px;letter-spacing:2px;margin-top:2px}
+@media(max-width:560px){.testi-new{grid-template-columns:1fr}}
+
+/* FAQ - nieuw */
+.faq-new{display:flex;flex-direction:column;gap:8px;margin-top:28px}
+.faq-new-item{background:#fff;border:1px solid #E8ECF1;border-radius:16px;overflow:hidden;transition:border-color 0.2s}
+.faq-new-item.open{border-color:#0077A8}
+.faq-new-q{padding:20px 22px;font-size:15px;font-weight:600;color:#1A2332;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;user-select:none}
+.faq-new-icon{width:28px;height:28px;border-radius:50%;background:#F1F5F9;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.25s;color:#0077A8;font-size:18px;font-weight:300}
+.faq-new-item.open .faq-new-icon{background:#0077A8;color:#fff;transform:rotate(45deg)}
+.faq-new-a{padding:0 22px 20px;font-size:14px;color:#5C6B7A;line-height:1.7;display:none}
+.faq-new-item.open .faq-new-a{display:block}
+
+/* CTA EMAIL */
+.cta-email-section{background:linear-gradient(145deg,#1A2332 0%,#1e3d5a 50%,#005A7D 100%);border-radius:28px;padding:56px 44px;text-align:center;position:relative;overflow:hidden}
+.cta-email-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#E8634A,#F4A236,#0077A8,#2A8E4F)}
+.cta-email-section::after{content:'🏝️';font-size:180px;position:absolute;bottom:-50px;right:-20px;opacity:0.05;line-height:1}
+.cta-email-label{display:inline-block;background:rgba(244,162,54,0.15);border:1px solid rgba(244,162,54,0.3);color:#F4A236;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:20px}
+.cta-email-section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,38px);color:#fff;margin-bottom:12px;line-height:1.1}
+.cta-email-section p{font-size:15px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 32px;line-height:1.7}
+.email-form{display:flex;gap:10px;max-width:500px;margin:0 auto}
+.email-form input{flex:1;padding:16px 20px;border-radius:14px;border:1px solid rgba(255,255,255,0.15);font-size:15px;font-family:'DM Sans',sans-serif;background:rgba(255,255,255,0.09);color:white;outline:none;transition:border-color 0.2s}
+.email-form input::placeholder{color:rgba(255,255,255,0.35)}
+.email-form input:focus{border-color:rgba(255,255,255,0.4)}
+.email-form button{background:#F4A236;color:#1A2332;border:none;border-radius:14px;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all 0.2s;flex-shrink:0}
+.email-form button:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(244,162,54,0.4)}
+@media(max-width:500px){.email-form{flex-direction:column}.email-form button{width:100%}}
+@media(max-width:480px){.cta-email-section{padding:40px 24px;border-radius:20px}}
+
+/* SECTION HEADERS NIEUW */
+.sh{margin-bottom:32px}
+.sh-eyebrow{font-size:11px;font-weight:700;color:#0077A8;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sh-eyebrow::before{content:'';display:inline-block;width:28px;height:2px;background:#0077A8;border-radius:2px}
+.sh h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:8px}
+.sh p{font-size:15px;color:#5C6B7A;max-width:600px;line-height:1.65}
+
 </style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="#" class="nav-logo">
-    <svg viewBox="0 0 70 50" width="44" height="32" xmlns="http://www.w3.org/2000/svg">
-      <rect x="3" y="20" width="12" height="22" rx="2" fill="#E8634A"/>
-      <polygon points="3,20 9,11 15,20" fill="#C94E38"/>
-      <rect x="7" y="29" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-      <rect x="17" y="16" width="12" height="26" rx="2" fill="#F4A236"/>
-      <polygon points="17,16 23,6 29,16" fill="#D4892E"/>
-      <rect x="21" y="25" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-      <rect x="31" y="18" width="12" height="24" rx="2" fill="#0077A8"/>
-      <polygon points="31,18 37,9 43,18" fill="#005A7D"/>
-      <rect x="35" y="27" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-      <rect x="45" y="22" width="12" height="20" rx="2" fill="#2A8E4F"/>
-      <polygon points="45,22 51,14 57,22" fill="#1E7A3E"/>
-      <rect x="49" y="29" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-      <path d="M0 44 Q15 39 30 44 Q45 49 60 44" fill="none" stroke="#0077A8" stroke-width="1.8" stroke-linecap="round" opacity="0.3"/>
-    </svg>
-    <span>Dushi <em>Papiamentu</em></span>
-  </a>
-  <div class="nav-links">
-    <a href="#lessen">Lessen</a>
-    <a href="blog/">Blog</a>
-    <a href="#faq">FAQ</a>
-    <button class="nav-cta" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth'})">Start gratis</button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">🌊</div>
-  <div class="hero-bg2">🌴</div>
-  <div style="position:relative;z-index:1;max-width:640px;margin:0 auto">
-    <!-- Large logo -->
-    <div class="fade-up" style="margin-bottom:24px">
-      <svg viewBox="0 0 340 60" width="280" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto;display:block">
-        <rect x="3" y="16" width="12" height="22" rx="2" fill="#E8634A"/>
-        <polygon points="3,16 9,7 15,16" fill="#C94E38"/>
-        <rect x="7" y="25" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-        <rect x="17" y="12" width="12" height="26" rx="2" fill="#F4A236"/>
-        <polygon points="17,12 23,2 29,12" fill="#D4892E"/>
-        <rect x="21" y="21" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-        <rect x="31" y="14" width="12" height="24" rx="2" fill="#0077A8"/>
-        <polygon points="31,14 37,5 43,14" fill="#005A7D"/>
-        <rect x="35" y="23" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-        <rect x="45" y="18" width="12" height="20" rx="2" fill="#2A8E4F"/>
-        <polygon points="45,18 51,10 57,18" fill="#1E7A3E"/>
-        <rect x="49" y="25" width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.5"/>
-        <path d="M0 40 Q15 35 30 40 Q45 45 60 40" fill="none" stroke="#0077A8" stroke-width="1.8" stroke-linecap="round" opacity="0.25"/>
-        <text x="68" y="28" font-family="Playfair Display, Georgia, serif" font-size="26" font-weight="700" fill="#FFFFFF">Dushi</text>
-        <text x="168" y="28" font-family="Playfair Display, Georgia, serif" font-size="26" font-weight="400" font-style="italic" fill="#00B8D4">Papiamentu</text>
-        <text x="69" y="46" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.4)" letter-spacing="2.5"><tspan>SPREEK HET HART VAN DE EILANDEN</tspan></text>
-      </svg>
-    </div>
-    <h1 class="fade-up-d1">Leer <em>Papiamentu</em> voor<br>je vakantie op Curaçao</h1>
-    <p class="hero-sub fade-up-d2">De enige gratis Papiaments cursus gemaakt door native speakers van Kòrsou. Leer handige zinnen voor op het strand, in restaurants en op straat. Direct bruikbaar tijdens je vakantie op Curaçao, Aruba of Bonaire.</p>
-    <a href="#signup" class="hero-cta fade-up-d3">Start gratis met Les 1</a>
-    <div class="hero-note fade-up-d4">12 gratis lessen · Geen account nodig · Direct beginnen</div>
-  </div>
-</section>
 
 <!-- WHY -->
 <section class="section">
-  <div class="section-label">Waarom Papiamentu leren voor je reis?</div>
-  <h2>Voel je geen toerist meer op Curaçao</h2>
-  <p class="sub">Een paar woorden Papiaments maken het verschil tussen toerist en welkome gast. Locals waarderen het enorm als je hun taal probeert. Met deze gratis cursus spreek je de basis voor je volgende reis.</p>
-  <div class="features">
-    <div class="feat"><div class="feat-icon">🗣️</div><h3>Door native speakers van Kòrsou</h3><p>Geen vertaalalgoritme maar echte uitspraak en dagelijkse uitdrukkingen van iemand die geboren en getogen is op Curaçao.</p></div>
-    <div class="feat"><div class="feat-icon">🎮</div><h3>Interactief en leuk</h3><p>Quizzen, woordkaarten, invuloefeningen en echte gesprekssituaties. Leren voelt als een spelletje, niet als huiswerk.</p></div>
-    <div class="feat"><div class="feat-icon">🌍</div><h3>Direct bruikbaar op vakantie</h3><p>Elke les bevat zinnen die je meteen kunt gebruiken: op het strand, in een taxi, bij het eten bestellen of in een noodgeval.</p></div>
-    <div class="feat"><div class="feat-icon">🏝️</div><h3>Inclusief eilandcultuur</h3><p>Naast de taal leer je over lokale gerechten, tradities, muziek en de plekken die niet in de reisgids staan.</p></div>
+  <div class="sh">
+    <div class="sh-eyebrow">Waarom Papiamentu leren?</div>
+    <h2>Voel je geen toerist meer<br>op Curaçao</h2>
+    <p>Een paar woorden Papiaments maken het verschil tussen anonieme toerist en welkome gast. Locals waarderen het enorm als je hun taal probeert.</p>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Interactieve lessen</div></div>
-    <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Woorden en zinnen</div></div>
-    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Oefeningen en quizzen</div></div>
+  <div class="bento">
+    <div class="bento-a">
+      <h3>Door native speakers van Kòrsou</h3>
+      <p>Geen vertaalalgoritme, maar echte uitspraak en dagelijkse uitdrukkingen van iemand die geboren en getogen is op Curaçao.</p>
+    </div>
+    <div class="bento-b">
+      <h3>Interactief en leuk</h3>
+      <p>Quizzen, woordkaarten, invuloefeningen en echte gesprekssituaties. Leren voelt als een spelletje.</p>
+    </div>
+    <div class="bento-c">
+      <h3>Direct bruikbaar op vakantie</h3>
+      <p>Elke les bevat zinnen die je meteen kunt gebruiken: op het strand, bij het eten bestellen, in een taxi.</p>
+    </div>
+    <div class="bento-d">
+      <h3>Inclusief eilandcultuur</h3>
+      <p>Naast de taal leer je over lokale gerechten, tradities, muziek en de plekken die niet in de reisgids staan.</p>
+    </div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-box-num">1<span>2</span></div>
+      <div class="stat-box-label">Interactieve lessen</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-box-num">300<span>+</span></div>
+      <div class="stat-box-label">Woorden en zinnen</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-box-num">50<span>+</span></div>
+      <div class="stat-box-label">Oefeningen en quizzen</div>
+    </div>
   </div>
 </section>
 
 <!-- WHO -->
-<section class="section section-sm" style="padding-top:0">
-  <div class="section-label">Voor wie is deze Papiamentu cursus?</div>
-  <h2>Of het nu je eerste of tiende keer Curaçao is</h2>
-  <p class="sub">Deze gratis cursus Papiaments is gemaakt voor iedereen die meer wil halen uit zijn vakantie op de ABC eilanden.</p>
-  <div class="features">
-    <div class="feat"><div class="feat-icon">✈️</div><h3>Vakantiegangers</h3><p>Ga je binnenkort naar Curaçao, Aruba of Bonaire? Leer de basis en maak écht contact met locals. Zelfs een paar zinnen maken een groot verschil!</p></div>
-    <div class="feat"><div class="feat-icon">🏠</div><h3>Koppels en families</h3><p>Partner of schoonfamilie van de Antillen? Verras ze door hun taal te spreken. Of leer samen met je kinderen voor de volgende familievakantie.</p></div>
-    <div class="feat"><div class="feat-icon">💻</div><h3>Eerste keer Curaçao</h3><p>Ken je het eiland nog niet? Begin hier. Na een paar lessen bestel je al drankjes op het strand en vraag je locals om tips in hun eigen taal.</p></div>
-    <div class="feat"><div class="feat-icon">❤️</div><h3>Expats en digital nomads</h3><p>Ga je op de eilanden wonen of werken? Papiamentu spreken is de sleutel tot echte connecties en zakelijk vertrouwen.</p></div>
+<div class="who-section">
+  <div class="who-inner">
+    <div class="sh">
+      <div class="sh-eyebrow">Voor wie?</div>
+      <h2>Voor iedereen die meer wil<br>halen uit de ABC-eilanden</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-card-num">01</div>
+        <span class="who-card-icon">✈️</span>
+        <h3>Vakantiegangers</h3>
+        <p>Ga je binnenkort naar Curaçao, Aruba of Bonaire? Zelfs een paar zinnen maken een enorm verschil bij locals.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">02</div>
+        <span class="who-card-icon">🏠</span>
+        <h3>Koppels en families</h3>
+        <p>Partner of schoonfamilie van de Antillen? Verras ze door hun harttaal te spreken.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">03</div>
+        <span class="who-card-icon">🌊</span>
+        <h3>Eerste keer Curaçao</h3>
+        <p>Ken je het eiland nog niet? Na een paar lessen bestel je drankjes op het strand als een local.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">04</div>
+        <span class="who-card-icon">💼</span>
+        <h3>Expats en nomads</h3>
+        <p>Ga je op de eilanden wonen of werken? Papiamentu is de sleutel tot echte connecties.</p>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 <!-- LESSONS -->
-<section class="section" style="padding-top:16px" id="lessen">
-  <div class="section-label">Cursusoverzicht</div>
-  <h2>12 gratis lessen van nul tot gesprek</h2>
-  <p class="sub">Elke les bouwt voort op de vorige en is direct gericht op situaties die je tegenkomt tijdens je vakantie op Curaçao, Aruba of Bonaire.</p>
-  <div class="lessons-list">
-    <a href="lessen/lesson-1-bon-bini.html" class="lesson-row active"><div class="lesson-num num-done">✓</div><div class="lesson-info"><h4>Les 1: Bon Bini!</h4><p>Begroetingen op het vliegveld, in je hotel en op straat. Je eerste woorden Papiaments.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-2-numbernan-kolornan.html" class="lesson-row"><div class="lesson-num num-next">2</div><div class="lesson-info"><h4>Les 2: Numbernan & Kolornan</h4><p>Tellen, kleuren en maten. Handig bij het winkelen en op de markt.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-3-na-playa.html" class="lesson-row"><div class="lesson-num num-next">3</div><div class="lesson-info"><h4>Les 3: Na Playa</h4><p>Drankjes bestellen op het strand, over het weer praten en de weg vragen naar de mooiste playa's.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-4-kuminda-dushi.html" class="lesson-row"><div class="lesson-num num-next">4</div><div class="lesson-info"><h4>Les 4: Kuminda Dushi</h4><p>Eten bestellen in restaurants en op de Marshe Bieu. Lokale gerechten herkennen en allergieën aangeven.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-5-famia.html" class="lesson-row"><div class="lesson-num num-next">5</div><div class="lesson-info"><h4>Les 5: Famia</h4><p>Over je familie praten, mensen beschrijven en kennismaken met de schoonfamilie.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-6-den-siudat.html" class="lesson-row"><div class="lesson-num num-next">6</div><div class="lesson-info"><h4>Les 6: Den Siudat</h4><p>De weg vragen in Willemstad, taxi's nemen, winkelen en om hulp vragen als je verdwaald bent.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-7-tempo-liber.html" class="lesson-row"><div class="lesson-num num-next">7</div><div class="lesson-info"><h4>Les 7: Tempo Liber</h4><p>Hobby's, uitgaan, Tambú muziek en Karnaval. Praten over wat je leuk vindt.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-8-trabou.html" class="lesson-row"><div class="lesson-num num-next">8</div><div class="lesson-info"><h4>Les 8: Trabou</h4><p>Werk, beroepen en zakelijke gesprekken. Handig voor expats en zakelijke reizigers.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-9-salu.html" class="lesson-row"><div class="lesson-num num-next">9</div><div class="lesson-info"><h4>Les 9: Salu</h4><p>Naar de apotheek, bij de dokter, noodgevallen en gezondheid tijdens je vakantie.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-10-kultura-di-korsou.html" class="lesson-row"><div class="lesson-num num-next">10</div><div class="lesson-info"><h4>Les 10: Kultura di Kòrsou</h4><p>Tradities, geschiedenis en het verhaal achter Kòrsou. Begrijp de eilandcultuur.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-11-expresashonnan.html" class="lesson-row"><div class="lesson-num num-next">11</div><div class="lesson-info"><h4>Les 11: Expresashonnan</h4><p>Uitdrukkingen, straattaal en spreekwoorden. Praat als een echte local.</p></div><span class="tag tag-free">GRATIS</span></a>
-    <a href="lessen/lesson-12-konversashon-final.html" class="lesson-row"><div class="lesson-num num-next">12</div><div class="lesson-info"><h4>Les 12: Konversashon Final</h4><p>Alles komt samen: echte gesprekken, eindtoets en je Dushi Papiamentu diploma.</p></div><span class="tag tag-free">GRATIS</span></a>
+<section class="section" id="lessen">
+  <div class="lessons-header">
+    <div class="lessons-header-left">
+      <h2>12 gratis lessen van<br>nul tot gesprek</h2>
+      <p>Elke les bouwt voort op de vorige. Direct bruikbaar op vakantie.</p>
+    </div>
+  </div>
+  <div class="lessons-track">
+    <div class="lesson-item"><a href="lessen/lesson-1-bon-bini.html"><div class="li-num done">✓</div><div class="li-info"><h4>Les 1: Bon Bini!</h4><p>Begroetingen, kennismaking en je eerste gesprek</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-2-numbernan-kolornan.html"><div class="li-num next">2</div><div class="li-info"><h4>Les 2: Numbernan & Kolornan</h4><p>Tellen, kleuren en maten</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-3-na-playa.html"><div class="li-num next">3</div><div class="li-info"><h4>Les 3: Na Playa</h4><p>Drankjes bestellen, het weer en de weg vragen</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-4-kuminda-dushi.html"><div class="li-num next">4</div><div class="li-info"><h4>Les 4: Kuminda Dushi</h4><p>Eten bestellen en lokale gerechten</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-5-famia.html"><div class="li-num next">5</div><div class="li-info"><h4>Les 5: Famia</h4><p>Familie, relaties en mensen beschrijven</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-6-den-siudat.html"><div class="li-num next">6</div><div class="li-info"><h4>Les 6: Den Siudat</h4><p>Door Willemstad navigeren en winkelen</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-7-tempo-liber.html"><div class="li-num next">7</div><div class="li-info"><h4>Les 7: Tempo Liber</h4><p>Hobby's, Tambú-muziek en Karnaval</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-8-trabou.html"><div class="li-num next">8</div><div class="li-info"><h4>Les 8: Trabou</h4><p>Werk, beroepen en zakelijke gesprekken</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-9-salu.html"><div class="li-num next">9</div><div class="li-info"><h4>Les 9: Salu</h4><p>Gezondheid, apotheek en noodgevallen</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-10-kultura-di-korsou.html"><div class="li-num next">10</div><div class="li-info"><h4>Les 10: Kultura di Kòrsou</h4><p>Tradities, geschiedenis en eilandidentiteit</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-11-expresashonnan.html"><div class="li-num next">11</div><div class="li-info"><h4>Les 11: Expresashonnan</h4><p>Uitdrukkingen en straattaal als een local</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+    <div class="lesson-item"><a href="lessen/lesson-12-konversashon-final.html"><div class="li-num next">12</div><div class="li-info"><h4>Les 12: Konversashon Final</h4><p>Echte gesprekken, eindtoets en je diploma</p></div><span class="li-badge">GRATIS</span><span class="li-arrow">→</span></a></div>
+  </div>
+  <div class="free-banner">
+    <div class="free-banner-left">
+      <h2>100% gratis. Voor altijd.</h2>
+      <p>Alle 12 lessen, alle oefeningen, alle culturele content. Geen betaalmuur, geen verborgen kosten, geen creditcard nodig.</p>
+    </div>
+    <div class="free-banner-badge">
+      <div class="price">€0</div>
+      <div class="price-label">Voor altijd gratis</div>
+    </div>
   </div>
 </section>
-
-<!-- 100% FREE BANNER -->
-<section class="section section-sm" id="pricing" style="padding-top:16px;text-align:center">
-  <div style="background:linear-gradient(135deg,#E6F5F1,#ECFDF5);border:2px solid #2A8E4F;border-radius:20px;padding:32px 24px;margin-bottom:24px">
-    <div style="font-size:40px;margin-bottom:8px">🎉</div>
-    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,5vw,30px);color:#065F46;margin-bottom:6px">100% Gratis. Voor altijd.</h2>
-    <p style="font-size:15px;color:#0F6E56;line-height:1.6;max-width:460px;margin:0 auto">Alle 12 lessen, alle oefeningen, alle culturele content. Helemaal gratis. Geen betaalmuur, geen verborgen kosten, geen creditcard nodig. Gewoon Papiamentu leren en genieten van je vakantie!</p>
-  </div>
-</section>
-
-
-
 
 <!-- BLOG -->
 <section class="section section-sm" style="padding-top:0">
-  <div class="section-label">BLOG &amp; TIPS</div>
-  <h2>Handige artikelen voor je Curaçao vakantie</h2>
-  <p class="sub">Leer meer over Papiamentu, eilandcultuur en hoe je het meeste haalt uit je reis naar Kòrsou.</p>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px">
-
-    <a href="blog/papiamentu-leren-voor-beginners.html" style="background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#0077A8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,119,168,0.1)'" onmouseout="this.style.borderColor='#E8ECF1';this.style.transform='none';this.style.boxShadow='none'">
-      <div style="height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#E6F5F1,#C7EFE0)">🌱</div>
-      <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column">
-        <div style="font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Voor beginners</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px">Papiamentu leren voor beginners: van Bon Bini tot echte gesprekken</div>
-        <div style="font-size:13px;color:#5C6B7A;line-height:1.55;flex:1">Nog nooit een woord Papiaments gesproken? Zo leer je als Nederlander stap voor stap de basis.</div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:#0077A8">Lees meer →</div>
+  <div class="sh">
+    <div class="sh-eyebrow">Blog & Tips</div>
+    <h2>Lees je klaar voor Kòrsou</h2>
+    <p>Handige zinnen, uitspraaktips en eilandcultuur.</p>
+  </div>
+  <div class="blog-masonry">
+    <a href="blog/papiamentu-leren-voor-beginners.html" class="blog-tile">
+      <div class="blog-tile-cover" style="background:linear-gradient(145deg,#064e3b,#059669)"><div class="blog-tile-cover-emoji">🌱</div></div>
+      <div class="blog-tile-body">
+        <div class="blog-tile-cat" style="color:#059669">Voor beginners</div>
+        <div class="blog-tile-title">Papiamentu leren voor beginners: van Bon Bini tot echte gesprekken</div>
+        <div class="blog-tile-foot"><span class="blog-tile-time">7 min</span><span class="blog-tile-arrow">→</span></div>
       </div>
     </a>
-
-    <a href="blog/20-handige-papiamentu-zinnen.html" style="background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#0077A8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,119,168,0.1)'" onmouseout="this.style.borderColor='#E8ECF1';this.style.transform='none';this.style.boxShadow='none'">
-      <div style="height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#E6F1FB,#C7E0F4)">💬</div>
-      <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column">
-        <div style="font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Handige zinnen</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px">20 handige Papiamentu zinnen voor je Curaçao vakantie</div>
-        <div style="font-size:13px;color:#5C6B7A;line-height:1.55;flex:1">De zinnen die je het meest nodig hebt. Met uitspraak en vertaling, direct bruikbaar.</div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:#0077A8">Lees meer →</div>
+    <a href="blog/20-handige-papiamentu-zinnen.html" class="blog-tile">
+      <div class="blog-tile-cover" style="background:linear-gradient(145deg,#1e3a8a,#2563eb)"><div class="blog-tile-cover-emoji">💬</div></div>
+      <div class="blog-tile-body">
+        <div class="blog-tile-cat" style="color:#2563eb">Handige zinnen</div>
+        <div class="blog-tile-title">20 handige Papiamentu zinnen voor je Curaçao vakantie</div>
+        <div class="blog-tile-foot"><span class="blog-tile-time">6 min</span><span class="blog-tile-arrow">→</span></div>
       </div>
     </a>
-
-    <a href="blog/papiamentu-strand-restaurant-bestellen.html" style="background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#0077A8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,119,168,0.1)'" onmouseout="this.style.borderColor='#E8ECF1';this.style.transform='none';this.style.boxShadow='none'">
-      <div style="height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#ECFDF5,#A7F3D0)">🏖️</div>
-      <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column">
-        <div style="font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Strand &amp; restaurant</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px">Papiamentu op het strand en in restaurants: bestel als een local</div>
-        <div style="font-size:13px;color:#5C6B7A;line-height:1.55;flex:1">Van een serbes bestellen op Playa Kenepa tot kabritu stobá herkennen bij Marshe Bieu.</div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:#0077A8">Lees meer →</div>
+    <a href="blog/papiamentu-strand-restaurant-bestellen.html" class="blog-tile">
+      <div class="blog-tile-cover" style="background:linear-gradient(145deg,#0c4a6e,#0284c7)"><div class="blog-tile-cover-emoji">🏖️</div></div>
+      <div class="blog-tile-body">
+        <div class="blog-tile-cat" style="color:#0077A8">Strand & restaurant</div>
+        <div class="blog-tile-title">Papiamentu op het strand en in restaurants: bestel als een local</div>
+        <div class="blog-tile-foot"><span class="blog-tile-time">7 min</span><span class="blog-tile-arrow">→</span></div>
       </div>
     </a>
-
-    <a href="blog/papiaments-uitspraak-tips-nederlanders.html" style="background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#0077A8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,119,168,0.1)'" onmouseout="this.style.borderColor='#E8ECF1';this.style.transform='none';this.style.boxShadow='none'">
-      <div style="height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#F3E8FF,#DDD6FE)">🎤</div>
-      <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column">
-        <div style="font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Uitspraak</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px">Papiaments uitspraak: veelgemaakte fouten door Nederlanders</div>
-        <div style="font-size:13px;color:#5C6B7A;line-height:1.55;flex:1">De "sh" in dushi, de zachte "g" en de klemtoon. Zo klink je als een halve local.</div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:#0077A8">Lees meer →</div>
+    <a href="blog/papiaments-uitspraak-tips-nederlanders.html" class="blog-tile">
+      <div class="blog-tile-cover" style="background:linear-gradient(145deg,#4c1d95,#7c3aed)"><div class="blog-tile-cover-emoji">🎤</div></div>
+      <div class="blog-tile-body">
+        <div class="blog-tile-cat" style="color:#7c3aed">Uitspraak</div>
+        <div class="blog-tile-title">Papiaments uitspraak: veelgemaakte fouten door Nederlanders</div>
+        <div class="blog-tile-foot"><span class="blog-tile-time">6 min</span><span class="blog-tile-arrow">→</span></div>
       </div>
     </a>
-
-    <a href="blog/10-redenen-papiamentu-vakantie.html" style="background:#fff;border:1px solid #E8ECF1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#0077A8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,119,168,0.1)'" onmouseout="this.style.borderColor='#E8ECF1';this.style.transform='none';this.style.boxShadow='none'">
-      <div style="height:120px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#FBF4E8,#F5E2C0)">🌴</div>
-      <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column">
-        <div style="font-size:11px;font-weight:700;color:#0077A8;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Vakantietips</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px">10 redenen waarom Papiamentu spreken je vakantie leuker maakt</div>
-        <div style="font-size:13px;color:#5C6B7A;line-height:1.55;flex:1">Van warmere ontvangst door locals tot betere deals op de markt.</div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:#0077A8">Lees meer →</div>
+    <a href="blog/10-redenen-papiamentu-vakantie.html" class="blog-tile">
+      <div class="blog-tile-cover" style="background:linear-gradient(145deg,#78350f,#d97706)"><div class="blog-tile-cover-emoji">🌴</div></div>
+      <div class="blog-tile-body">
+        <div class="blog-tile-cat" style="color:#b45309">Vakantietips</div>
+        <div class="blog-tile-title">10 redenen waarom Papiamentu spreken je vakantie leuker maakt</div>
+        <div class="blog-tile-foot"><span class="blog-tile-time">5 min</span><span class="blog-tile-arrow">→</span></div>
       </div>
     </a>
-
-    <a href="blog/" style="background:linear-gradient(135deg,#1A2332,#005A7D);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:#fff;text-decoration:none;transition:all 0.2s;align-items:center;justify-content:center;min-height:200px;text-align:center;padding:28px" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-      <div style="font-size:36px;margin-bottom:12px">📚</div>
-      <div style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;margin-bottom:8px">Alle blogs bekijken</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:16px">Meer tips, zinnen en cultuur</div>
-      <div style="background:#F4A236;color:#1A2332;border-radius:10px;padding:10px 20px;font-size:13px;font-weight:700">Naar het blogoverzicht →</div>
+    <a href="blog/" class="blog-all-link">
+      <div>
+        <h3>Alle blogs bekijken</h3>
+        <p>Meer tips, zinnen en eilandcultuur</p>
+      </div>
+      <div class="blog-all-link-btn">Naar het blog →</div>
     </a>
-
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section section-sm" style="padding-top:16px;text-align:center">
-  <div class="section-label">Wat cursisten zeggen</div>
-  <h2>Ervaringen van vakantiegangers</h2>
-  <div class="testi-grid">
-    <div class="testi"><div class="testi-q">"</div><p>Ik zocht al jaren een manier om Papiamentu te leren voor onze vakantie. Dit is de eerste cursus die het écht goed uitlegt, alsof een local het je vertelt.</p><div class="stars">★★★★★</div><div class="author">- Sarah, Amsterdam</div></div>
-    <div class="testi"><div class="testi-q">"</div><p>Mijn man komt van Kòrsou en ik wilde zijn familie verrassen. Na 4 lessen kon ik eten bestellen en iedereen begroeten. Hun gezichten waren onbetaalbaar!</p><div class="stars">★★★★★</div><div class="author">- Michelle, Toronto</div></div>
-    <div class="testi"><div class="testi-q">"</div><p>We gingen voor het eerst naar Curaçao en wilden geen standaard toeristen zijn. Na een paar lessen bestelden we drankjes op het strand in Papiamentu. De barman was verbaasd!</p><div class="stars">★★★★★</div><div class="author">- James, Remote Worker</div></div>
-    <div class="testi"><div class="testi-q">"</div><p>Mi a kresé na Hulanda pero mi ke siña mi yiunan Papiamentu. E kurso akí ta perfekto pa esei!</p><div class="stars">★★★★★</div><div class="author">- Roseanne, Rotterdam</div></div>
+<section class="section section-sm" style="padding-top:0">
+  <div class="sh">
+    <div class="sh-eyebrow">Wat cursisten zeggen</div>
+    <h2>Ervaringen van<br>vakantiegangers</h2>
+  </div>
+  <div class="testi-new">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-text">Ik zocht al jaren een manier om Papiamentu te leren voor onze vakantie. Dit is de eerste cursus die het écht goed uitlegt, alsof een local het je vertelt.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div class="testi-info">
+          <div class="testi-name">Sarah</div>
+          <div class="testi-loc">Amsterdam</div>
+          <div class="testi-stars-new">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-text">Mijn man komt van Kòrsou en ik wilde zijn familie verrassen. Na 4 lessen kon ik eten bestellen en iedereen begroeten. Hun gezichten waren onbetaalbaar!</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#F4A236,#E8634A)">M</div>
+        <div class="testi-info">
+          <div class="testi-name">Michelle</div>
+          <div class="testi-loc">Toronto</div>
+          <div class="testi-stars-new">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-text">We gingen voor het eerst naar Curaçao en wilden geen standaard toeristen zijn. Na een paar lessen bestelden we drankjes in Papiamentu. De barman was verbaasd!</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#0F6E56,#0D9488)">J</div>
+        <div class="testi-info">
+          <div class="testi-name">James</div>
+          <div class="testi-loc">Remote Worker</div>
+          <div class="testi-stars-new">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <div class="testi-text">Mi a kresé na Hulanda pero mi ke siña mi yiunan Papiamentu. E kurso akí ta perfekto pa esei!</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#E8634A,#C94E38)">R</div>
+        <div class="testi-info">
+          <div class="testi-name">Roseanne</div>
+          <div class="testi-loc">Rotterdam</div>
+          <div class="testi-stars-new">★★★★★</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section-sm" id="faq" style="padding-top:16px;text-align:center">
-  <div class="section-label">Vragen?</div>
-  <h2>Veelgestelde vragen</h2>
-  <div class="faq-list" style="text-align:left">
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Is Papiamentu hetzelfde als Papiaments?</span> <span>+</span></div><div class="faq-a">Bijna! Papiamentu is de spelling op Curaçao en Bonaire, Papiamento is de Arubaanse variant. De talen zijn onderling verstaanbaar. Nederlanders zeggen vaak Papiaments. Onze cursus leert de Curaçaose variant, maar op Aruba word je ook prima begrepen.</div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Heb ik voorkennis nodig?</span> <span>+</span></div><div class="faq-a">Helemaal niet! We beginnen bij nul. Als je Nederlands spreekt herken je al veel woorden, want Papiamentu bevat invloeden van het Nederlands, Spaans en Portugees.</div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Is het echt 100% gratis?</span> <span>+</span></div><div class="faq-a">Ja! Alle 12 lessen, quizzen, dialogen en oefeningen zijn helemaal gratis. We worden ondersteund door reispartners. Je leerervaring wordt nooit onderbroken.</div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Hoelang duurt de cursus?</span> <span>+</span></div><div class="faq-a">De meeste mensen doen 1 tot 2 lessen per week en zijn klaar in 6 tot 8 weken. Elke les duurt 20 tot 30 minuten. Ga op je eigen tempo, de toegang verloopt nooit.</div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span>Kan ik echt Papiamentu spreken na deze cursus?</span> <span>+</span></div><div class="faq-a">Je kunt eten bestellen, drankjes op het strand bestellen, de weg vragen, over je familie praten en dagelijkse situaties aan op Curaçao. Perfect voor je vakantie!</div></div>
+<section class="section section-sm" id="faq" style="padding-top:0">
+  <div class="sh">
+    <div class="sh-eyebrow">Vragen?</div>
+    <h2>Veelgestelde vragen</h2>
+  </div>
+  <div class="faq-new">
+    <div class="faq-new-item" onclick="this.classList.toggle('open')">
+      <div class="faq-new-q"><span>Is Papiamentu hetzelfde als Papiaments?</span><div class="faq-new-icon">+</div></div>
+      <div class="faq-new-a">Bijna! Papiamentu is de spelling op Curaçao en Bonaire, Papiamento is de Arubaanse variant. De talen zijn onderling verstaanbaar. Nederlanders zeggen vaak Papiaments. Onze cursus leert de Curaçaose variant, maar op Aruba word je ook prima begrepen.</div>
+    </div>
+    <div class="faq-new-item" onclick="this.classList.toggle('open')">
+      <div class="faq-new-q"><span>Heb ik voorkennis nodig?</span><div class="faq-new-icon">+</div></div>
+      <div class="faq-new-a">Helemaal niet! We beginnen bij nul. Als je Nederlands spreekt herken je al veel woorden, want Papiamentu bevat invloeden van het Nederlands, Spaans en Portugees.</div>
+    </div>
+    <div class="faq-new-item" onclick="this.classList.toggle('open')">
+      <div class="faq-new-q"><span>Is het echt 100% gratis?</span><div class="faq-new-icon">+</div></div>
+      <div class="faq-new-a">Ja! Alle 12 lessen, quizzen, dialogen en oefeningen zijn helemaal gratis. Je leerervaring wordt nooit onderbroken.</div>
+    </div>
+    <div class="faq-new-item" onclick="this.classList.toggle('open')">
+      <div class="faq-new-q"><span>Hoelang duurt de cursus?</span><div class="faq-new-icon">+</div></div>
+      <div class="faq-new-a">De meeste mensen doen 1 tot 2 lessen per week en zijn klaar in 6 tot 8 weken. Elke les duurt 20 tot 30 minuten. Ga op je eigen tempo, de toegang verloopt nooit.</div>
+    </div>
+    <div class="faq-new-item" onclick="this.classList.toggle('open')">
+      <div class="faq-new-q"><span>Kan ik echt Papiamentu spreken na deze cursus?</span><div class="faq-new-icon">+</div></div>
+      <div class="faq-new-a">Je kunt eten bestellen, drankjes op het strand bestellen, de weg vragen, over je familie praten en dagelijkse situaties aan op Curaçao. Perfect voor je vakantie!</div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA EMAIL -->
 <section class="section" id="signup">
-  <div class="footer-cta">
-    <svg viewBox="0 0 70 50" width="56" height="40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 16px;display:block;opacity:0.7">
-      <rect x="3" y="20" width="12" height="22" rx="2" fill="#E8634A"/><polygon points="3,20 9,11 15,20" fill="#C94E38"/>
-      <rect x="17" y="16" width="12" height="26" rx="2" fill="#F4A236"/><polygon points="17,16 23,6 29,16" fill="#D4892E"/>
-      <rect x="31" y="18" width="12" height="24" rx="2" fill="#0077A8"/><polygon points="31,18 37,9 43,18" fill="#005A7D"/>
-      <rect x="45" y="22" width="12" height="20" rx="2" fill="#2A8E4F"/><polygon points="45,22 51,14 57,22" fill="#1E7A3E"/>
-      <path d="M0 44 Q15 39 30 44 Q45 49 60 44" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.8" stroke-linecap="round"/>
-    </svg>
-    <h2>Bon bini na bo aventura!</h2>
-    <p>Alle 12 lessen zijn gratis. Ontvang wekelijks een Papiamentu tip en reisdeals in je inbox.</p>
-    <div class="email-row">
+  <div class="cta-email-section">
+    <div class="cta-email-label">Bon bini!</div>
+    <h2>Start vandaag nog,<br>het is 100% gratis</h2>
+    <p>Alle 12 lessen zijn gratis. Ontvang wekelijks een Papiamentu tip in je inbox.</p>
+    <div class="email-form">
       <input type="email" id="email-input" placeholder="Vul je e-mail in" required>
       <button onclick="handleSignup()">Start gratis</button>
     </div>
-    <div id="signup-msg" style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5)"></div>
+    <div id="signup-msg" style="margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5)"></div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div style="margin-bottom:8px">
-    <svg viewBox="0 0 70 50" width="36" height="26" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:6px;opacity:0.5">
-      <rect x="3" y="20" width="12" height="22" rx="2" fill="#E8634A"/><polygon points="3,20 9,11 15,20" fill="#C94E38"/>
-      <rect x="17" y="16" width="12" height="26" rx="2" fill="#F4A236"/><polygon points="17,16 23,6 29,16" fill="#D4892E"/>
-      <rect x="31" y="18" width="12" height="24" rx="2" fill="#0077A8"/><polygon points="31,18 37,9 43,18" fill="#005A7D"/>
-      <rect x="45" y="22" width="12" height="20" rx="2" fill="#2A8E4F"/><polygon points="45,22 51,14 57,22" fill="#1E7A3E"/>
-    </svg>
-    <span style="font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#5C6B7A">Dushi <em style="font-weight:400;font-style:italic;color:#0077A8">Papiamentu</em></span>
-  </div>
-  <p><span>Gemaakt met ❤️ vanuit Kòrsou</span> · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-  <p style="margin-top:6px">© 2026 Dushi Papiamentu. All rights reserved.</p>
-</footer>
 
 <script>
 
