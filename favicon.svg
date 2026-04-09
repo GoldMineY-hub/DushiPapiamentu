@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#1A2332"/>
+  <!-- 4 gekleurde huisjes zoals het logo -->
+  <rect x="2" y="14" width="6" height="10" rx="1" fill="#E8634A"/>
+  <polygon points="2,14 5,9 8,14" fill="#C94E38"/>
+  <rect x="9" y="12" width="6" height="12" rx="1" fill="#F4A236"/>
+  <polygon points="9,12 12,7 15,12" fill="#D4892E"/>
+  <rect x="16" y="13" width="6" height="11" rx="1" fill="#0077A8"/>
+  <polygon points="16,13 19,8 22,13" fill="#005A7D"/>
+  <rect x="23" y="15" width="6" height="9" rx="1" fill="#2A8E4F"/>
+  <polygon points="23,15 26,10 29,15" fill="#1E7A3E"/>
+  <!-- Golfje -->
+  <path d="M1 26 Q8 24 16 26 Q24 28 31 26" fill="none" stroke="#0077A8" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+</svg>
