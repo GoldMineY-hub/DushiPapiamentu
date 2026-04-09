@@ -28,6 +28,33 @@
 .af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
 .ad{background:#F1F5F9;border:1px dashed #CBD5E1;border-radius:12px;padding:16px;text-align:center;font-size:10px;color:#94A3B8;font-weight:600;letter-spacing:1px}
 .ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}.ft a{color:#0077A8;font-weight:600}
+
+/* CERTIFICAAT */
+.cert-wrap{margin-top:24px;background:linear-gradient(135deg,#FBF4E8,#F5E6C8);border:2px solid #E8D5B0;border-radius:20px;padding:32px 22px;text-align:center;position:relative;overflow:hidden}
+.cert-wrap::before{content:'🏆';font-size:100px;position:absolute;opacity:0.05;top:-10px;right:-10px;pointer-events:none}
+.cert-badge{display:inline-block;background:#F4A236;color:#1A2332;border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.cert-wrap h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#1A2332;margin-bottom:6px}
+.cert-wrap p{font-size:13px;color:#5C6B7A;margin-bottom:18px;line-height:1.5}
+.cert-input{width:100%;max-width:280px;padding:12px 16px;border-radius:12px;border:2px solid #E8D5B0;font-size:15px;font-family:'DM Sans',sans-serif;text-align:center;outline:none;background:#fff;display:block;margin:0 auto 14px}
+.cert-input:focus{border-color:#F4A236}
+.cert-gen-btn{background:#F4A236;color:#1A2332;border:none;border-radius:12px;padding:12px 26px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:20px}
+.cert-card{display:none;background:#fff;border-radius:16px;padding:24px 20px;max-width:340px;margin:0 auto 20px;border:2px solid #E8D5B0;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.cert-card-logo{font-size:28px;margin-bottom:6px}
+.cert-card-brand{font-family:'Playfair Display',Georgia,serif;font-size:11px;color:#94A3B8;letter-spacing:2px;margin-bottom:4px}
+.cert-card-title{font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:700;color:#1A2332;margin-bottom:8px}
+.cert-card-name{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:#0077A8;margin:10px 0}
+.cert-card-stars{color:#F4A236;font-size:16px;letter-spacing:3px;margin-bottom:8px}
+.cert-card-line{height:1px;background:#E8D5B0;margin:10px 0}
+.cert-card-sub{font-size:11px;color:#94A3B8;line-height:1.5}
+.cert-share{display:none}
+.cert-share p{font-size:13px;color:#8B6914;font-weight:600;margin-bottom:12px}
+.cert-share-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.cert-share-btns button{border:none;border-radius:10px;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
+.cert-share-x{background:#000;color:#fff}
+.cert-share-fb{background:#1877F2;color:#fff}
+.cert-share-wa{background:#25D366;color:#fff}
+.cert-share-ig{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff}
+.cert-note{font-size:11px;color:#94A3B8;margin-top:10px}
 </style>
 <link rel="canonical" href="https://dushipapiamentu.nl/lessen/lesson-12-konversashon-final.html">
 <meta property="og:url" content="https://dushipapiamentu.nl/lessen/lesson-12-konversashon-final.html">
@@ -50,7 +77,45 @@
 
 <div class="sec" id="s-qz"><h2 style="font-size:20px;font-family:'Playfair Display',Georgia,serif;margin:0 0 14px">Quiz!</h2><div class="cd" style="padding:20px" id="qc"></div><button class="bt bt-o" onclick="go('fl')">Naar de invuloefening</button></div>
 <div class="sec" id="s-fl"><h2 style="font-size:20px;font-family:'Playfair Display',Georgia,serif;margin:0 0 4px">Vul de woorden in</h2><p style="font-size:12px;color:#5C6B7A;margin:0 0 14px">Typ het ontbrekende woord</p><div id="fc"></div><button class="bt bt-p" id="fchk" onclick="chkF()">Controleer antwoorden</button>
-<div class="cpl"><div style="font-size:40px;margin-bottom:10px">🎓</div><h3>Les 12 afgerond!</h3><p>Je hebt de volledige Dushi Papiamentu cursus afgerond! Pabien!</p><a href="../index.html">Terug naar home</a></div></div>
+<div class="cpl"><div style="font-size:40px;margin-bottom:10px">🎓</div><h3>Les 12 afgerond!</h3><p>Je hebt de volledige Dushi Papiamentu cursus afgerond! Pabien!</p><a href="../index.html">Terug naar home</a></div>
+
+<div class="cert-wrap" id="cert-wrap">
+  <div class="cert-badge">🏆 Certificaat</div>
+  <h3>Pabien! Je hebt de cursus afgerond!</h3>
+  <p>Vul je naam en e-mailadres in. We sturen je certificaat naar je inbox en houden je op de hoogte van nieuwe lessen en tips.</p>
+
+  <!-- STAP 1: Formulier -->
+  <div id="cert-form">
+    <input type="text" class="cert-input" id="cert-name" placeholder="Jouw naam..." autocomplete="given-name">
+    <input type="email" class="cert-input" id="cert-email" placeholder="Jouw e-mailadres..." autocomplete="email" style="margin-top:8px">
+    <div id="cert-error" style="color:#E8634A;font-size:13px;margin-bottom:8px;display:none"></div>
+    <button class="cert-gen-btn" id="cert-submit-btn" onclick="verstuurCert()">Ontvang mijn certificaat →</button>
+    <p style="font-size:11px;color:#94A3B8;margin-top:8px">Geen spam. Alleen Papiamentu tips. Uitschrijven kan altijd.</p>
+  </div>
+
+  <!-- STAP 2: Certificaat + delen -->
+  <div id="cert-result" style="display:none">
+    <div class="cert-card" id="cert-card">
+      <div class="cert-card-logo">🏝️</div>
+      <div class="cert-card-brand">DUSHI PAPIAMENTU</div>
+      <div class="cert-card-title">Certificaat van Voltooiing</div>
+      <div class="cert-card-name" id="cert-display-name">Jouw naam</div>
+      <div class="cert-card-stars">★★★★★</div>
+      <div class="cert-card-line"></div>
+      <div class="cert-card-sub">Heeft alle 12 interactieve Papiamentu-lessen succesvol afgerond<br>Dushi Papiamentu &middot; 2026</div>
+    </div>
+    <div class="cert-share">
+      <p>Deel jouw prestatie en inspireer anderen! 🎉</p>
+      <div class="cert-share-btns">
+        <button class="cert-share-x" onclick="deelCert('x')">𝕏 X</button>
+        <button class="cert-share-fb" onclick="deelCert('facebook')">f Facebook</button>
+        <button class="cert-share-wa" onclick="deelCert('whatsapp')">💬 WhatsApp</button>
+        <button class="cert-share-ig" onclick="deelCert('instagram')">📸 Instagram</button>
+      </div>
+      <p class="cert-note">Tag ons met #DushiPapiamentu</p>
+    </div>
+  </div>
+</div></div>
 <div class="bn"><a href="lesson-11-expresashonnan.html" class="bp">Les 11</a><a href="../index.html" class="bx">Home</a></div>
 </main>
 <aside class="sb"><div class="sc"><h3>Alle Lessen</h3><a href="lesson-1-bon-bini.html" class="sl"><span class="sn">1</span>Bon Bini!</a><a href="lesson-2-numbernan-kolornan.html" class="sl"><span class="sn">2</span>Numbernan & Kolornan</a><a href="lesson-3-na-playa.html" class="sl"><span class="sn">3</span>Na Playa</a><a href="lesson-4-kuminda-dushi.html" class="sl"><span class="sn">4</span>Kuminda Dushi</a><a href="lesson-5-famia.html" class="sl"><span class="sn">5</span>Famia</a><a href="lesson-6-den-siudat.html" class="sl"><span class="sn">6</span>Den Siudat</a><a href="lesson-7-tempo-liber.html" class="sl"><span class="sn">7</span>Tempo Liber</a><a href="lesson-8-trabou.html" class="sl"><span class="sn">8</span>Trabou</a><a href="lesson-9-salu.html" class="sl"><span class="sn">9</span>Salu</a><a href="lesson-10-kultura-di-korsou.html" class="sl"><span class="sn">10</span>Kultura di Kòrsou</a><a href="lesson-11-expresashonnan.html" class="sl"><span class="sn">11</span>Expresashonnan</a><a href="lesson-12-konversashon-final.html" class="sl cu"><span class="sn">12</span>Konversashon Final</a></div></aside></div>
@@ -68,4 +133,63 @@ function pq(i){if(ql)return;ql=true;var q=Q[qi];if(i===q.a)qs++;for(var j=0;j<q.
 var fc=document.getElementById('fc');F.forEach(function(f,i){var ps=f.s.split('___');var e=document.createElement('div');e.className='fi';e.id='f'+i;e.innerHTML='<div class="fi-h">'+f.h+'</div><div class="fi-s">'+ps[0]+'<input class="fi-in" type="text" id="fi'+i+'">'+(ps[1]||'')+'</div><div class="fi-a" id="fa'+i+'">Antwoord: <strong>'+f.a+'</strong></div>';fc.appendChild(e)});
 function chkF(){var ok=0;F.forEach(function(f,i){var v=document.getElementById('fi'+i).value.trim().toLowerCase();var el=document.getElementById('f'+i);var a=document.getElementById('fa'+i);if(v===f.a.toLowerCase()){el.classList.add('ok');ok++}else{el.classList.add('no');a.style.display='block'}document.getElementById('fi'+i).disabled=true});var b=document.getElementById('fchk');b.textContent=ok+'/'+F.length+' goed!';b.onclick=function(){F.forEach(function(f,i){document.getElementById('f'+i).className='fi';document.getElementById('fa'+i).style.display='none';document.getElementById('fi'+i).value='';document.getElementById('fi'+i).disabled=false});b.textContent='Controleer antwoorden';b.onclick=chkF}}
 var TM=["intro","v1","v2","v3","dl","qz","fl"];function go(id){document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('on')});document.getElementById('s-'+id).classList.add('on');var ts=document.querySelectorAll('.tb');var x=TM.indexOf(id);ts.forEach(function(t,i){t.classList.toggle('on',i===x)});window.scrollTo({top:200,behavior:'smooth'})}
+
+// Worker URL - vervang na deployment
+var WORKER_URL = 'https://dushi-papiamentu-cert.sahadataly.workers.dev';
+
+function verstuurCert(){
+  var naam = document.getElementById('cert-name').value.trim();
+  var email = document.getElementById('cert-email').value.trim();
+  var errEl = document.getElementById('cert-error');
+  var btn = document.getElementById('cert-submit-btn');
+
+  errEl.style.display = 'none';
+
+  if(!naam){ errEl.textContent='Vul je naam in.'; errEl.style.display='block'; return; }
+  if(!email || !email.includes('@')){ errEl.textContent='Vul een geldig e-mailadres in.'; errEl.style.display='block'; return; }
+
+  btn.textContent = 'Even geduld...';
+  btn.disabled = true;
+
+  fetch(WORKER_URL, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({naam: naam, email: email})
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    if(data.ok){
+      toonCertificaat(naam);
+    } else {
+      errEl.textContent = data.error || 'Er is iets misgegaan. Probeer het opnieuw.';
+      errEl.style.display = 'block';
+      btn.textContent = 'Ontvang mijn certificaat →';
+      btn.disabled = false;
+    }
+  })
+  .catch(function(){
+    // Als worker niet bereikbaar is, toon toch certificaat
+    toonCertificaat(naam);
+  });
+}
+
+function toonCertificaat(naam){
+  document.getElementById('cert-display-name').textContent = naam;
+  document.getElementById('cert-form').style.display = 'none';
+  document.getElementById('cert-result').style.display = 'block';
+  document.getElementById('cert-wrap').scrollIntoView({behavior:'smooth'});
+}
+
+function deelCert(platform){
+  var naam = document.getElementById('cert-display-name').textContent || 'Ik';
+  var bericht = naam+' heeft het Dushi Papiamentu certificaat behaald! 🏝️🎓 Alle 12 lessen Papiamentu afgerond. Pabien! Doe jij ook mee? dushipapiamentu.nl #DushiPapiamentu #Papiamentu #Korsou';
+  var url = 'https://dushipapiamentu.nl';
+  if(platform==='x') window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(bericht),'_blank');
+  else if(platform==='facebook') window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url)+'&quote='+encodeURIComponent(bericht),'_blank');
+  else if(platform==='whatsapp') window.open('https://wa.me/?text='+encodeURIComponent(bericht+' '+url),'_blank');
+  else if(platform==='instagram'){
+    if(navigator.clipboard){navigator.clipboard.writeText(bericht+' '+url).then(function(){alert('Tekst gekopieerd! Plak dit in je Instagram Story. 📸');});}
+    else{alert(bericht);}
+  }
+}
 </script></body></html>
