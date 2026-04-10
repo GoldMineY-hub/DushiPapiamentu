@@ -14,7 +14,8 @@
 <style>
 :root{--ac:#0077A8;--acd:#005A7D}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
+html,body{overflow-x:hidden;max-width:100%}
+body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased;word-wrap:break-word;overflow-wrap:break-word}
 a{text-decoration:none;color:inherit}
 button{font-family:'DM Sans',sans-serif;cursor:pointer}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -39,7 +40,7 @@ button{font-family:'DM Sans',sans-serif;cursor:pointer}
 @media(max-width:480px){.hd{padding:60px 16px 24px}}
 
 /* LAYOUT - 2 col desktop, 1 col mobile */
-.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:1fr 240px;gap:24px}
+.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:1fr 240px;gap:24px;overflow:hidden}
 @media(max-width:768px){.ly{grid-template-columns:1fr;padding:0 14px 48px}.sb{order:2}}
 @media(max-width:480px){.ly{padding:0 12px 40px;gap:16px}}
 
@@ -54,15 +55,15 @@ button{font-family:'DM Sans',sans-serif;cursor:pointer}
 .sec{display:none;animation:fadeIn 0.3s ease}.sec.on{display:block}
 
 /* CONTENT CARD */
-.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px}
-.cd h2{font-size:clamp(18px,4vw,22px);font-family:'Playfair Display',Georgia,serif;margin:0 0 12px}
-.cd p{font-size:14px;line-height:1.7;color:#5C6B7A}
+.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px;overflow:hidden;width:100%}
+.cd h2{font-size:clamp(18px,4vw,22px);font-family:'Playfair Display',Georgia,serif;margin:0 0 12px;word-wrap:break-word}
+.cd p{font-size:14px;line-height:1.7;color:#5C6B7A;word-wrap:break-word;overflow-wrap:break-word}
 @media(max-width:480px){.cd{padding:18px 16px;border-radius:14px}.cd h2{font-size:18px}}
 
 /* TIP */
-.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px}
+.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px;overflow:hidden;width:100%}
 .tp b{font-size:12px;font-weight:700;letter-spacing:1px;color:#F4A236;display:block;margin-bottom:6px}
-.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0}
+.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0;word-wrap:break-word;overflow-wrap:break-word}
 @media(max-width:480px){.tp{padding:14px 16px}.tp p{font-size:13px}}
 
 /* VOCAB GRID */
@@ -89,7 +90,7 @@ button{font-family:'DM Sans',sans-serif;cursor:pointer}
 .ms{display:flex;flex-direction:column;cursor:pointer}
 .ms.r{align-items:flex-end}.ms.l{align-items:flex-start}
 .ms-n{font-size:10px;font-weight:700;margin-bottom:3px;letter-spacing:0.5px}
-.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05);word-wrap:break-word;overflow-wrap:break-word}
 .ms-b.bl{background:linear-gradient(135deg,var(--ac),var(--acd));color:#fff;border-radius:16px 16px 16px 4px}
 .ms-b.wh{background:#fff;border:1px solid #E2E8F0;border-radius:16px 16px 4px 16px}
 .ms-t{font-size:15px;font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.4}
