@@ -47,6 +47,35 @@ article tr:hover td{background:#EEF5FB}
 blockquote{border-left:4px solid #0077A8;padding:12px 20px;margin:16px 0 20px;background:#F8FAFC;border-radius:0 8px 8px 0}
 blockquote p{font-style:italic;color:#1A2332;margin:0}
 @media(max-width:480px){article{padding:16px 16px 40px}.blog-header{padding:64px 16px 24px}.blog-header h1{font-size:22px}article h2{font-size:20px}article p,article li{font-size:14px}article table{font-size:12px}article th,article td{padding:8px 10px}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav{padding:10px 16px}
+  .nav-links a{display:none}
+  .hero{padding:72px 18px 44px}
+  .hero h1{font-size:clamp(22px,6vw,34px)}
+  .article-wrap{padding:32px 18px 60px}
+  .article-body h2{font-size:20px;margin:28px 0 10px}
+  .article-body p{font-size:15px;line-height:1.75}
+  .tip-box,.highlight-box,.info-box,.pap-box,.phrase-table,.vocab-table,.progress-visual{padding:16px 14px}
+  .post-links{gap:12px}
+}
+@media(max-width:480px){
+  .nav{padding:9px 14px}
+  .nav-logo span{font-size:15px}
+  .hero{padding:62px 14px 36px}
+  .hero h1{font-size:clamp(20px,7vw,28px);line-height:1.2}
+  .hero-meta{font-size:12px}
+  .article-wrap{padding:24px 14px 48px}
+  .article-body h2{font-size:18px;margin:24px 0 8px}
+  .article-body h3{font-size:16px}
+  .article-body p{font-size:14px;line-height:1.7}
+  .article-body ul li, .article-body ol li{font-size:14px;line-height:1.7}
+  .tip-box,.highlight-box,.info-box,.pap-box{padding:13px 12px;border-radius:10px}
+  .phrase-table td,.phrase-table th,.vocab-table td,.vocab-table th{padding:8px 10px;font-size:13px}
+  .post-links{grid-template-columns:1fr;gap:10px}
+  .nav-cta{padding:8px 14px;font-size:12px}
+}
 </style>
 <meta property="og:image" content="https://dushipapiamentu.nl/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -88,11 +117,11 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 
 <table>
 <tr><th>Papiamentu</th><th>Uitspraak</th><th>Nederlands</th></tr>
-<tr><td><strong>Un serbes fríu, por fabor</strong></td><td>oon ser-BES FREE-oo, por fa-BOR</td><td>Een koud biertje, alsjeblieft</td></tr>
-<tr><td><strong>Un awa di kòkò</strong></td><td>oon AH-wah dee KOH-koh</td><td>Een kokoswater</td></tr>
+<tr><td><strong>Un serbes fríu, por fabor</strong></td><td>oon ser-BES FRI-u, por fa-BOR</td><td>Een koud biertje, alsjeblieft</td></tr>
+<tr><td><strong>Un awa di kòkò</strong></td><td>oon AH-wah dee KOH-ko</td><td>Een kokoswater</td></tr>
 <tr><td><strong>E kuenta, por fabor</strong></td><td>e KWEN-ta, por fa-BOR</td><td>De rekening, alsjeblieft</td></tr>
 <tr><td><strong>Kuantu esaki ta kosta?</strong></td><td>KWAHN-tu e-SAH-kee ta KOS-ta</td><td>Hoeveel kost dit?</td></tr>
-<tr><td><strong>E ta dushi!</strong></td><td>eh tah DOO-shee</td><td>Het is lekker!</td></tr>
+<tr><td><strong>E ta dushi!</strong></td><td>eh tah DU-shee</td><td>Het is lekker!</td></tr>
 <tr><td><strong>Masha danki!</strong></td><td>MAH-sha DAN-kee</td><td>Heel erg bedankt!</td></tr>
 </table>
 
@@ -101,7 +130,7 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 <table>
 <tr><th>Papiamentu</th><th>Uitspraak</th><th>Nederlands</th></tr>
 <tr><td><strong>Unda e playa ta?</strong></td><td>UN-da e PLAH-ya ta</td><td>Waar is het strand?</td></tr>
-<tr><td><strong>Mi ta pèrdè</strong></td><td>mee ta PÈR-dè</td><td>Ik ben verdwaald</td></tr>
+<tr><td><strong>Ma pèrdè</strong></td><td>mee ta PÈR-dè</td><td>Ik ben verdwaald</td></tr>
 <tr><td><strong>Por yuda mi?</strong></td><td>por YU-da mee</td><td>Kun je me helpen?</td></tr>
 <tr><td><strong>Mi nomber ta...</strong></td><td>mee NOM-ber ta</td><td>Mijn naam is...</td></tr>
 <tr><td><strong>Mi ta bini di Hulanda</strong></td><td>mee tah BEE-nee dee hoo-LAHN-dah</td><td>Ik kom uit Nederland</td></tr>
@@ -114,7 +143,7 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 <table>
 <tr><th>Papiamentu</th><th>Uitspraak</th><th>Nederlands</th></tr>
 <tr><td><strong>Yudansa!</strong></td><td>yoo-DAHN-sah</td><td>Help!</td></tr>
-<tr><td><strong>Yama ambulansia!</strong></td><td>YAH-mah ahm-boo-LAHN-see-ah</td><td>Bel een ambulance!</td></tr>
+<tr><td><strong>Yama ambulans!</strong></td><td>YAH-mah ahm-boo-LAHN-see-ah</td><td>Bel een ambulance!</td></tr>
 </table>
 
 <p>Met deze 20 zinnen kom je een heel eind op Curaçao. Maar als je ze écht wilt onthouden (en nog veel meer wilt leren), dan is onze gratis Papiamentu cursus de perfecte volgende stap. In Les 1 leer je al deze begroetingen met interactieve oefeningen.</p>
