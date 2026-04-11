@@ -1,177 +1,35 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/favicon.svg">
-<meta name="theme-color" content="#0077A8">
+<link rel="apple-touch-icon" href="/favicon.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Lesson 11: Expresashonnan - Uitdrukkingen, straattaal en praten als een local. Gratis Papiamentu leren.">
 <title>Les 11: Expresashonnan - Dushi Papiamentu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ac:#0077A8;--acd:#005A7D}
-*{box-sizing:border-box;margin:0;padding:0}
-html{overflow-x:hidden}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased;word-wrap:break-word;overflow-wrap:break-word;overflow-x:hidden;width:100%;max-width:100vw}
-a{text-decoration:none;color:inherit}
-button{font-family:'DM Sans',sans-serif;cursor:pointer}
+:root{--ac:#7C3AED;--acd:#6D28D9}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE}a{text-decoration:none;color:inherit}button{font-family:'DM Sans',sans-serif;cursor:pointer}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}
-.nav a{display:flex;align-items:center;gap:8px}
-.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}
-.nb em{font-weight:400;font-style:italic;color:#00B8D4}
-.nr{display:flex;gap:16px;align-items:center}
-.nr a{font-size:12px;color:rgba(255,255,255,0.6)}
-.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
-@media(max-width:480px){.nr a{display:none}.nav{padding:10px 14px}.nb{font-size:14px}}
-
-/* HEADER */
-.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#0077A8,#005A7D 40%,#1A2332);position:relative;overflow:hidden}
-.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}
-.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}
-.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}
-.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px;line-height:1.1}
-.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
-@media(max-width:480px){.hd{padding:60px 16px 24px}}
-
-/* LAYOUT - 2 col desktop, 1 col mobile */
-.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px}
-@media(max-width:768px){.ly{grid-template-columns:minmax(0,1fr);padding:0 14px 48px;display:block}.sb{margin-top:24px}}
-@media(max-width:480px){.ly{padding:0 12px 40px}}
-
-/* TABS */
-main{width:100%;min-width:0}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 18px}
-.tb{background:#fff;color:#5C6B7A;border:1px solid #E2E8F0;border-radius:10px;padding:9px 13px;font-size:12px;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:5px;cursor:pointer;flex:0 0 auto}
-.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-@media(max-width:480px){.tabs{gap:6px;padding:12px 0 14px}.tb{padding:8px 11px;font-size:11px}}
-/* SECTIONS */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}.nav a{display:flex;align-items:center;gap:8px}.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}.nb em{font-weight:400;font-style:italic;color:#00B8D4}.nr{display:flex;gap:16px;align-items:center}.nr a{font-size:12px;color:rgba(255,255,255,0.6)}.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
+.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#7C3AED,#6D28D9 40%,#1A2332);position:relative;overflow:hidden}.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px}.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
+.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:1fr 240px;gap:24px}@media(max-width:768px){.ly{grid-template-columns:1fr}.sb{order:2}}
+.tabs{display:flex;gap:5px;overflow-x:auto;padding:14px 0 18px}.tb{background:#fff;color:#5C6B7A;border:1px solid #E2E8F0;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:4px;flex-shrink:0}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
 .sec{display:none;animation:fadeIn 0.3s ease}.sec.on{display:block}
-
-/* CONTENT CARD */
-.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px;overflow:hidden;width:100%;box-sizing:border-box}
-.cd h2{font-size:clamp(18px,4vw,22px);font-family:'Playfair Display',Georgia,serif;margin:0 0 12px;word-wrap:break-word}
-.cd p{font-size:14px;line-height:1.7;color:#5C6B7A;word-wrap:break-word;overflow-wrap:break-word}
-@media(max-width:480px){.cd{padding:18px 16px;border-radius:14px}.cd h2{font-size:18px}}
-
-/* TIP */
-.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px;overflow:hidden;width:100%;box-sizing:border-box}
-.tp b{font-size:12px;font-weight:700;letter-spacing:1px;color:#F4A236;display:block;margin-bottom:6px}
-.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0;word-wrap:break-word;overflow-wrap:break-word}
-@media(max-width:480px){.tp{padding:14px 16px}.tp p{font-size:13px}}
-
-/* VOCAB GRID */
-.vg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:600px){.vg{grid-template-columns:1fr 1fr;gap:8px}}
-@media(max-width:360px){.vg{grid-template-columns:1fr}}
-
-/* VOCAB CARD */
-.vc{cursor:pointer;border-radius:14px;padding:18px 14px;min-height:110px;display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid #E2E8F0;transition:all 0.3s}
-.vc.fl{background:linear-gradient(135deg,var(--ac),var(--acd));border:none;box-shadow:0 6px 20px rgba(0,119,168,0.22);transform:scale(1.02)}
-.vc-w{font-size:18px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:3px}
-.vc-pr{font-size:11px;color:#5C6B7A}
-.vc.fl .vc-pr{color:rgba(255,255,255,0.7)}
-.vc-t{font-size:10px;color:var(--ac);margin-top:8px;font-weight:700;letter-spacing:1px}
-.vc.fl .vc-t{display:none}
-.vc-e,.vc-r,.vc-x{display:none}
-.vc.fl .vc-e{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
-.vc.fl .vc-r{display:block;font-size:15px;color:rgba(255,255,255,0.9);font-family:'Playfair Display',Georgia,serif;font-style:italic;margin-bottom:6px}
-.vc.fl .vc-x{display:block;font-size:11px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.2);padding-top:6px;line-height:1.4}
-@media(max-width:480px){.vc{padding:14px 12px;min-height:90px;border-radius:12px}.vc-w{font-size:16px}.vc.fl .vc-e{font-size:12px}.vc.fl .vc-r{font-size:13px}.vc.fl .vc-x{font-size:10px}}
-
-/* DIALOGUE */
-.dl{display:flex;flex-direction:column;gap:8px}
-.ms{display:flex;flex-direction:column;cursor:pointer}
-.ms.r{align-items:flex-end}.ms.l{align-items:flex-start}
-.ms-n{font-size:10px;font-weight:700;margin-bottom:3px;letter-spacing:0.5px}
-.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05);word-wrap:break-word;overflow-wrap:break-word}
-.ms-b.bl{background:linear-gradient(135deg,var(--ac),var(--acd));color:#fff;border-radius:16px 16px 16px 4px}
-.ms-b.wh{background:#fff;border:1px solid #E2E8F0;border-radius:16px 16px 4px 16px}
-.ms-t{font-size:15px;font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.4}
-.ms-tr{font-size:12px;margin-top:4px;opacity:0.7;font-style:italic;display:none}
-@media(max-width:480px){.ms-b{max-width:92%;padding:10px 13px}.ms-t{font-size:14px}.ms-tr{font-size:11px}}
-
-/* QUIZ */
-.qb{display:flex;gap:3px;margin-bottom:16px}
-.qb div{flex:1;height:4px;border-radius:2px;background:#E2E8F0}
-.qb div.d{background:#2A8E4F}.qb div.c{background:var(--ac)}
-.qq{font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
-.qo{display:block;width:100%;background:#fff;border:2px solid #E2E8F0;border-radius:10px;padding:11px 14px;text-align:left;font-size:14px;font-weight:500;margin-bottom:7px;transition:all 0.2s;cursor:pointer}
-.qo.ok{background:#ECFDF5;border-color:#2A8E4F;color:#065F46}
-.qo.no{background:#FEF2F2;border-color:#E8634A;color:#991B1B}
-@media(max-width:480px){.qq{font-size:15px}.qo{font-size:13px;padding:10px 12px}}
-
-/* FILL-IN */
-.fi{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.fi.ok{background:#ECFDF5;border-color:#2A8E4F}
-.fi.no{background:#FEF2F2;border-color:#E8634A}
-.fi-h{font-size:11px;color:#5C6B7A;font-weight:600;margin-bottom:6px}
-.fi-s{font-size:16px;font-family:'Playfair Display',Georgia,serif;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.fi-in{width:110px;padding:6px 8px;font-size:15px;font-family:'Playfair Display',Georgia,serif;border:2px solid var(--ac);border-radius:8px;background:#F8FAFC;font-weight:600;outline:none;text-align:center}
-.fi-a{margin-top:5px;font-size:12px;color:#E8634A;font-weight:600;display:none}
-@media(max-width:480px){.fi{padding:12px 14px}.fi-s{font-size:14px}.fi-in{width:90px;font-size:13px}}
-
-/* BUTTONS */
-.bt{border:none;border-radius:14px;padding:16px 24px;font-size:16px;font-weight:600;width:100%;margin-top:20px;transition:opacity 0.2s}
-.bt:hover{opacity:0.92}
-.bt-p{background:var(--ac);color:#fff}
-.bt-o{background:transparent;color:var(--ac);border:2px solid var(--ac);margin-top:12px}
-@media(max-width:480px){.bt{padding:14px 20px;font-size:15px;border-radius:12px}}
-
-/* BOTTOM NAV */
-.bn{display:flex;gap:10px;margin-top:24px}
-.bn a{flex:1;text-align:center;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:600}
-.bp{background:#F1F5F9;color:#5C6B7A}
-.bx{background:var(--ac);color:#fff}
-@media(max-width:480px){.bn{gap:8px}.bn a{padding:12px 10px;font-size:13px;border-radius:10px}}
-
-/* COMPLETION */
-.cpl{border-radius:18px;padding:28px 22px;text-align:center;margin-top:24px;background:linear-gradient(135deg,var(--ac),#1A2332)}
-.cpl h3{font-size:22px;font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px}
-.cpl p{font-size:13px;color:rgba(255,255,255,0.65);margin:0 0 16px}
-.cpl a{display:inline-block;background:rgba(255,255,255,0.12);border-radius:12px;padding:14px 24px;color:#F4A236;font-size:14px;font-weight:600}
-@media(max-width:480px){.cpl{padding:22px 16px;border-radius:14px}.cpl h3{font-size:18px}}
-
-/* SIDEBAR */
-.sb{display:flex;flex-direction:column;gap:14px;padding-top:14px}
-.sc{background:#fff;border:1px solid #E8ECF1;border-radius:14px;padding:18px 16px}
-.sc h3{font-size:14px;font-weight:700;margin-bottom:10px}
-.sl{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:12px;color:#5C6B7A}
-.sl:last-child{border-bottom:none}
-.sl:hover{color:#0077A8}
-.sl.cu{color:#0077A8;font-weight:700}
-.sn{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:#F1F5F9;color:#94A3B8}
-.sl.cu .sn{background:#E6F1FB;color:#0077A8}
-@media(max-width:768px){.sc{padding:14px 14px}}
-
-/* AFFILIATE */
-.af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}
-.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}
-.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}
-.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
-
-/* AD */
+.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px}.cd h2{font-size:22px;font-family:'Playfair Display',Georgia,serif;margin:0 0 12px}.cd p{font-size:14px;line-height:1.7;color:#5C6B7A}
+.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px}.tp b{font-size:12px;font-weight:700;letter-spacing:1px;color:#F4A236;display:block;margin-bottom:6px}.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:480px){.vg{grid-template-columns:1fr}}
+.vc{cursor:pointer;border-radius:14px;padding:18px 14px;min-height:120px;display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid #E2E8F0;transition:all 0.3s}.vc.fl{background:linear-gradient(135deg,var(--ac),var(--acd));border:none;box-shadow:0 6px 20px #7C3AED33;transform:scale(1.02)}.vc-w{font-size:19px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:3px}.vc-pr{font-size:11px;color:#5C6B7A}.vc.fl .vc-pr{color:rgba(255,255,255,0.7)}.vc-t{font-size:10px;color:var(--ac);margin-top:8px;font-weight:700;letter-spacing:1px}.vc.fl .vc-t{display:none}.vc-e,.vc-r,.vc-x{display:none}.vc.fl .vc-e{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}.vc.fl .vc-r{display:block;font-size:16px;color:rgba(255,255,255,0.9);font-family:'Playfair Display',Georgia,serif;font-style:italic;margin-bottom:6px}.vc.fl .vc-x{display:block;font-size:11px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.2);padding-top:6px;line-height:1.4}
+.dl{display:flex;flex-direction:column;gap:8px}.ms{display:flex;flex-direction:column;cursor:pointer}.ms.r{align-items:flex-end}.ms.l{align-items:flex-start}.ms-n{font-size:10px;font-weight:700;margin-bottom:3px}.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}.ms-b.bl{background:linear-gradient(135deg,var(--ac),var(--acd));color:#fff;border-radius:16px 16px 16px 4px}.ms-b.wh{background:#fff;border:1px solid #E2E8F0;border-radius:16px 16px 4px 16px}.ms-t{font-size:15px;font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.4}.ms-tr{font-size:12px;margin-top:4px;opacity:0.7;font-style:italic;display:none}
+.qo{display:block;width:100%;background:#fff;border:2px solid #E2E8F0;border-radius:10px;padding:11px 14px;text-align:left;font-size:14px;font-weight:500;margin-bottom:7px;transition:all 0.2s}.qo.ok{background:#ECFDF5;border-color:#2A8E4F;color:#065F46}.qo.no{background:#FEF2F2;border-color:#E8634A;color:#991B1B}
+.fi{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;margin-bottom:12px}.fi.ok{background:#ECFDF5;border-color:#2A8E4F}.fi.no{background:#FEF2F2;border-color:#E8634A}.fi-h{font-size:11px;color:#5C6B7A;font-weight:600;margin-bottom:6px}.fi-s{font-size:16px;font-family:'Playfair Display',Georgia,serif;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.fi-in{width:110px;padding:6px 8px;font-size:15px;font-family:'Playfair Display',Georgia,serif;border:2px solid var(--ac);border-radius:8px;background:#F8FAFC;font-weight:600;outline:none;text-align:center}.fi-a{margin-top:5px;font-size:12px;color:#E8634A;font-weight:600;display:none}
+.bt{border:none;border-radius:14px;padding:16px 24px;font-size:16px;font-weight:600;width:100%;margin-top:20px}.bt:hover{opacity:0.92}.bt-p{background:var(--ac);color:#fff}.bt-o{background:transparent;color:var(--ac);border:2px solid var(--ac);margin-top:12px}
+.bn{display:flex;gap:10px;margin-top:24px}.bn a{flex:1;text-align:center;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:600}.bp{background:#F1F5F9;color:#5C6B7A}.bx{background:var(--ac);color:#fff}
+.cpl{border-radius:18px;padding:28px 22px;text-align:center;margin-top:24px;background:linear-gradient(135deg,var(--ac),#1A2332)}.cpl h3{font-size:22px;font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px}.cpl p{font-size:13px;color:rgba(255,255,255,0.65);margin:0 0 16px}.cpl a{display:inline-block;background:rgba(255,255,255,0.12);border-radius:12px;padding:14px 24px;color:#F4A236;font-size:14px;font-weight:600}
+.sb{display:flex;flex-direction:column;gap:14px;padding-top:14px}.sc{background:#fff;border:1px solid #E8ECF1;border-radius:14px;padding:18px 16px}.sc h3{font-size:14px;font-weight:700;margin-bottom:10px}.sl{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:12px;color:#5C6B7A}.sl:last-child{border-bottom:none}.sl:hover{color:#0077A8}.sl.cu{color:#0077A8;font-weight:700}.sn{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:#F1F5F9;color:#94A3B8}.sl.cu .sn{background:#E6F1FB;color:#0077A8}
+.af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
 .ad{background:#F1F5F9;border:1px dashed #CBD5E1;border-radius:12px;padding:16px;text-align:center;font-size:10px;color:#94A3B8;font-weight:600;letter-spacing:1px}
-
-/* FOOTER */
-.ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}
-.ft a{color:#0077A8;font-weight:600}
-@media(max-width:480px){.ft{padding:24px 16px}}
-
-/* RESULTS */
-.rs{text-align:center;padding:24px}
-.rs-e{font-size:48px;margin-bottom:10px}
-.rs-t{font-size:24px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:4px}
-.rs-s{font-size:16px;color:#5C6B7A;margin-bottom:16px}
-@media(max-width:480px){.rs-t{font-size:20px}.rs-s{font-size:14px}}
-
-/* TOUCH */
-@media(hover:none){.vc:hover{transform:none;box-shadow:none}.bt:hover{opacity:1}.qo:hover{border-color:#E2E8F0}.vc.fl{transform:none}}
-
-/* REDUCE MOTION */
-@media(prefers-reduced-motion:reduce){.sec.on{animation:none}}
+.ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}.ft a{color:#0077A8;font-weight:600}
 </style>
 <link rel="canonical" href="https://dushipapiamentu.nl/lessen/lesson-11-expresashonnan.html">
 <meta property="og:url" content="https://dushipapiamentu.nl/lessen/lesson-11-expresashonnan.html">
@@ -200,10 +58,10 @@ main{width:100%;min-width:0}
 <aside class="sb"><div class="sc"><h3>Alle Lessen</h3><a href="lesson-1-bon-bini.html" class="sl"><span class="sn">1</span>Bon Bini!</a><a href="lesson-2-numbernan-kolornan.html" class="sl"><span class="sn">2</span>Numbernan & Kolornan</a><a href="lesson-3-na-playa.html" class="sl"><span class="sn">3</span>Na Playa</a><a href="lesson-4-kuminda-dushi.html" class="sl"><span class="sn">4</span>Kuminda Dushi</a><a href="lesson-5-famia.html" class="sl"><span class="sn">5</span>Famia</a><a href="lesson-6-den-siudat.html" class="sl"><span class="sn">6</span>Den Siudat</a><a href="lesson-7-tempo-liber.html" class="sl"><span class="sn">7</span>Tempo Liber</a><a href="lesson-8-trabou.html" class="sl"><span class="sn">8</span>Trabou</a><a href="lesson-9-salu.html" class="sl"><span class="sn">9</span>Salu</a><a href="lesson-10-kultura-di-korsou.html" class="sl"><span class="sn">10</span>Kultura di Kòrsou</a><a href="lesson-11-expresashonnan.html" class="sl cu"><span class="sn">11</span>Expresashonnan</a><a href="lesson-12-konversashon-final.html" class="sl"><span class="sn">12</span>Konversashon Final</a></div></aside></div>
 <footer class="ft"><strong style="font-family:'Playfair Display',Georgia,serif">Dushi <em style="color:#0077A8;font-style:italic">Papiamentu</em></strong><p style="margin-top:6px">Gemaakt met ❤️ vanuit Kòrsou · <a href="#">Privacy</a> · <a href="#">Voorwaarden</a> - 2026</p></footer>
 <script>
-var V=[[{"p":"Ata!","e":"Daar is het! / Kijk!","r":"AH-tah","x":"Ata! Mi a bisa bo! - See! I told you!"},{"p":"Kon ta?","e":"Hoe is het? / Wat is er?","r":"kon tah","x":"Hé, kon ta?"},{"p":"No ta nada","e":"Het is niets","r":"no tah NAH-dah","x":"No ta nada, no preokupá."},{"p":"Laga e bai","e":"Laat het gaan","r":"LAH-gah eh bai","x":"Laga e bai, no bal e pena."},{"p":"Wak afo!","e":"Pas op!","r":"wahk AH-foh","x":"Wak afo, e outo!"},{"p":"Na abo!","e":"Op jou! / Proost!","r":"nah AH-boh","x":"Na abo! Salud!"}],[{"p":"Dòl","e":"Gek / Wild (positief)","r":"dohl","x":"E fiesta tabata dòl!"},{"p":"Heavy","e":"Intens / Serieus","r":"HEH-vee","x":"E situashon ta heavy."},{"p":"Kòri","e":"Cool / Nice","r":"KOH-ree","x":"E músika ta kòri!"},{"p":"Mata","e":"To nail it","r":"MAH-tah","x":"Bo a mata e presentashon!"},{"p":"Pela","e":"Feesten","r":"PEH-lah","x":"Nos a pela anochi! - We partied last night!"},{"p":"Chèk","e":"Check / Look at","r":"chehk","x":"Chèk e atardi! - Check out the sunset!"}],[{"p":"Awa ta kòre pa laman","e":"Things work out","r":"AH-wah tah KOH-reh","x":"No preokupá, awa ta kòre pa laman."},{"p":"Tur kushina tin fogón","e":"Elk gezin heeft problemen","r":"toor koo-SHEE-nah","x":"Tur kushina tin fogón - no ta bo so."},{"p":"Poko poko","e":"Beetje bij beetje","r":"POH-koh POH-koh","x":"Poko poko bo ta siña."},{"p":"Ku Dios su boluntat","e":"God willing","r":"koo dee-OHS","x":"Mañan nos ta bai, ku Dios su boluntat."},{"p":"Lora ta sali for di saku","e":"Truth comes out","r":"LOH-rah tah SAH-lee","x":"Semper lora ta sali for di saku."}]];
-var D=[{"s":"Kevin","p":"Bro, kon ta? Bo a bai e fiesta ayera?","e":"Bro, hoe is het? Ben jij gisteren naar het feest geweest?","d":"l"},{"s":"Danny","p":"Sí dushi, tabata dòl! Nos a pela te mainta!","e":"Ja man, het was wild! We hebben gefeest tot de ochtend!","d":"r"},{"s":"Kevin","p":"No way! Mi a keda kas. Mi tabata kansá.","e":"Echt niet! Ik ben thuis gebleven. Ik was moe.","d":"l"},{"s":"Danny","p":"Bo a pèrdè! E DJ a mata e set. E músika tabata kòri!","e":"Je hebt wat gemist! De DJ was geweldig. De muziek was top!","d":"r"},{"s":"Kevin","p":"Próksimo biaha mi ta bai segur.","e":"Volgende keer ga ik zeker.","d":"l"},{"s":"Danny","p":"Poko poko bo ta sali mas. Ban pela próksimo wikènt!","e":"Beetje bij beetje ga je meer uit. Laten we volgend weekend feesten!","d":"r"},{"s":"Kevin","p":"Na abo! Ban goza!","e":"Op jou! Laten we genieten!","d":"l"}];
+var V=[[{"p": "Ata!", "e": "Daar is het! / Kijk!", "r": "AH-tah", "x": "Ata! Mi a bisa bo! - Zie je wel! Ik zei het toch!"}, {"p": "Kon ta?", "e": "Hoe is het?", "r": "kon tah", "x": "Hé, kon ta? - Hé, hoe is het?"}, {"p": "No ta nada", "e": "Het is niets", "r": "no tah NAH-dah", "x": "No ta nada, no preokupá. - Het is niets, maak je geen zorgen."}, {"p": "Laga e bai", "e": "Laat het gaan", "r": "LAH-gah eh bai", "x": "Laga e bai, no bal e pena. - Laat het gaan, het is het niet waard."}, {"p": "Kidou!", "e": "Pas op!", "r": "kee-DOW", "x": "Kidou! E outo ta bin! - Pas op! De auto komt eraan!"}, {"p": "Proost!", "e": "Proost!", "r": "proost", "x": "Proost! Na nos tur! - Proost! Op ons allemaal!"}], [{"p": "Hopi bon", "e": "Heel goed / Geweldig", "r": "HOH-pee bon", "x": "Hopi bon! Bo a logra! - Heel goed! Je hebt het gedaan!"}, {"p": "Konta bai", "e": "Hoe gaat het schatje", "r": "KON-tah bai", "x": "Konta bai, dushi? - Hoe gaat het schatje?"}, {"p": "Chil", "e": "Chillen / Relaxen", "r": "chil", "x": "Ban chil na playa. - Laten we chillen op het strand."}, {"p": "Awo", "e": "Hey! (begroeting tussen vrienden)", "r": "AH-wo", "x": "Awo! Kon ta bai? - Hey! Hoe gaat het?"}, {"p": "Se swa", "e": "Dat is zo / Precies", "r": "seh swah", "x": "Se swa! Bo tin rason. - Precies! Je hebt gelijk."}, {"p": "Figo", "e": "Lekker / Geweldig", "r": "FEE-go", "x": "E kuminda ta figo! - Het eten is geweldig!"}], [{"p": "Poko poko", "e": "Beetje bij beetje", "r": "POH-ko POH-ko", "x": "Poko poko bo ta siña. - Beetje bij beetje leer je het."}, {"p": "Mihó lat ku nunka", "e": "Beter laat dan nooit", "r": "mee-HOH laht koo NUNK-ah", "x": "Mihó lat ku nunka! - Beter laat dan nooit!"}, {"p": "Unda ta bai", "e": "Waar gaat het naartoe?", "r": "UN-dah tah bai", "x": "Unda ta bai? - Waar gaat het naartoe?"}, {"p": "Bo ta dushi", "e": "Je bent lief", "r": "bo tah DU-shee", "x": "Masha danki, bo ta dushi! - Heel erg bedankt, je bent lief!"}, {"p": "E ta bai", "e": "Het gaat / Het lukt", "r": "eh tah bai", "x": "No preokupá, e ta bai! - Maak je geen zorgen, het komt goed!"}, {"p": "Kiko ta kiko", "e": "Wat is wat / Hoe zit het", "r": "KEE-ko tah KEE-ko", "x": "Kiko ta kiko? Kontami! - Hoe zit het? Vertel me!"}]];
+var D=[{"s": "Kevin", "p": "Awo bro! Kon ta? Bo a bai e fiesta ayera?", "e": "Awo bro! Hoe is het? Ben jij gisteren naar het feest geweest?", "d": "l"}, {"s": "Danny", "p": "Sí bro! Nos a chil te mainta! E musik tabata figo!", "e": "Ja bro! We hebben gechill tot de ochtend! De muziek was geweldig!", "d": "r"}, {"s": "Kevin", "p": "Serio? Mi a keda kas. Mi tabata kansá.", "e": "Serius? Ik ben thuis gebleven. Ik was moe.", "d": "l"}, {"s": "Danny", "p": "Bo a pèrdè! Próksimo biaha bo mester bai!", "e": "Je hebt wat gemist! Volgende keer moet je gaan!", "d": "r"}, {"s": "Kevin", "p": "Klaro! Ban chil próksimo wikènt?", "e": "Zeker! Gaan we volgend weekend chillen?", "d": "l"}, {"s": "Danny", "p": "Se swa! Proost na nos dos!", "e": "Precies! Proost op ons tweeën!", "d": "r"}];
 var Q=[{"q":"\"Ata!\" gebruik je wanneer...","o":["Afscheid nemen","Iets aanwijzen","Eten bestellen","De weg vragen"],"a":1},{"q":"Als een feest \"dòl\" was, was het...","o":["Saai","Duur","Gek/wild","Klein"],"a":2},{"q":"\"Poko poko\" betekent...","o":["Heel snel","Beetje bij beetje","Veel","Te veel"],"a":1},{"q":"\"Laga e bai\" betekent...","o":["Laten we gaan","Kom hier","Laat het gaan","Pas op"],"a":2},{"q":"\"Wak afo!\" gebruik je om...","o":["Hallo zeggen","Iemand waarschuwen","Order food","Tot ziens zeggen"],"a":1},{"q":"\"Tur kushina tin fogón\" betekent...","o":["Iedereen kookt","Elk gezin heeft problemen","Eten is geweldig","Koken is leuk"],"a":1},{"q":"\"Bo a mata e!\" betekent...","o":["Je hebt het verpest","Je hebt het geweldig gedaan","Je bent het vergeten","Jij begon het"],"a":1},{"q":"\"Pela\" betekent...","o":["Huilen","Koken","Feesten","Slapen"],"a":2}];
-var F=[{"s":"___! Mi a bisa bo!","a":"ata","h":"Zie je wel! Ik zei het toch!"},{"s":"E fiesta tabata ___!","a":"dòl","h":"Gek / Wild"},{"s":"___ poko bo ta siña.","a":"poko","h":"Beetje bij beetje"},{"s":"Laga e ___.","a":"bai","h":"Laat het gaan"},{"s":"___ afo! E outo!","a":"wak","h":"Pas op!"}];
+var F=[{"s": "___! Mi a bisa bo!", "a": "Ata", "h": "Zie je wel! Ik zei het toch!"}, {"s": "Ban ___ na playa.", "a": "chil", "h": "Laten we chillen op het strand."}, {"s": "Poko ___ bo ta siña.", "a": "poko", "h": "Beetje bij beetje leer je het."}, {"s": "Laga e ___.", "a": "bai", "h": "Laat het gaan."}, {"s": "No preokupá, e ta ___!", "a": "bai", "h": "Maak je geen zorgen, het komt goed!"}];
 function bv(d,id){var c=document.getElementById(id);d.forEach(function(w){var e=document.createElement('div');e.className='vc';e.innerHTML='<div class="vc-w">'+w.p+'</div><div class="vc-pr">/'+w.r+'/</div><div class="vc-t">TIK OM TE ONTHULLEN</div><div class="vc-e">'+w.e+'</div><div class="vc-r">'+w.p+'</div><div class="vc-x">'+w.x+'</div>';e.onclick=function(){this.classList.toggle('fl')};c.appendChild(e)})}
 V.forEach(function(v,i){bv(v,'g'+(i+1))});
 var db=document.getElementById('dlb');D.forEach(function(m){var e=document.createElement('div');e.className='ms '+m.d;e.innerHTML='<div class="ms-n" style="color:'+(m.d==='l'?'var(--ac)':'#2A8E4F')+'">'+m.s.toUpperCase()+'</div><div class="ms-b '+(m.d==='l'?'bl':'wh')+'"><div class="ms-t">'+m.p+'</div><div class="ms-tr">'+m.e+'</div></div>';e.onclick=function(){var t=this.querySelector('.ms-tr');t.style.display=t.style.display==='block'?'none':'block'};db.appendChild(e)});
