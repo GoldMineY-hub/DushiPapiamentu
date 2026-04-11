@@ -9,10 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ac:#7C3AED;--acd:#6D28D9}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE}a{text-decoration:none;color:inherit}button{font-family:'DM Sans',sans-serif;cursor:pointer}
+:root{--ac:#0077A8;--acd:#6D28D9}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE}a{text-decoration:none;color:inherit}button{font-family:'DM Sans',sans-serif;cursor:pointer}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}.nav a{display:flex;align-items:center;gap:8px}.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}.nb em{font-weight:400;font-style:italic;color:#00B8D4}.nr{display:flex;gap:16px;align-items:center}.nr a{font-size:12px;color:rgba(255,255,255,0.6)}.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
-.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#7C3AED,#6D28D9 40%,#1A2332);position:relative;overflow:hidden}.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px}.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
+.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#0077A8,#005A7D 40%,#1A2332);position:relative;overflow:hidden}.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px}.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
 .ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:1fr 240px;gap:24px}@media(max-width:768px){.ly{grid-template-columns:1fr}.sb{order:2}}
 .tabs{display:flex;gap:5px;overflow-x:auto;padding:14px 0 18px}.tb{background:#fff;color:#5C6B7A;border:1px solid #E2E8F0;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:4px;flex-shrink:0}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
 .sec{display:none;animation:fadeIn 0.3s ease}.sec.on{display:block}
@@ -30,6 +30,26 @@
 .af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
 .ad{background:#F1F5F9;border:1px dashed #CBD5E1;border-radius:12px;padding:16px;text-align:center;font-size:10px;color:#94A3B8;font-weight:600;letter-spacing:1px}
 .ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}.ft a{color:#0077A8;font-weight:600}
+
+@media(max-width:480px){.nr a{display:none}.nav{padding:10px 14px}.nb{font-size:14px}}
+@media(max-width:480px){.hd{padding:52px 14px 20px}}
+@media(max-width:768px){.ly{grid-template-columns:minmax(0,1fr);padding:0 14px 48px;display:block}.sb{margin-top:24px}}
+@media(max-width:480px){.ly{padding:0 10px 36px}}
+@media(max-width:480px){.tabs{gap:5px;padding:10px 0 12px;overflow-x:auto;flex-wrap:nowrap}.tb{padding:7px 10px;font-size:10px;flex-shrink:0}}
+@media(max-width:480px){.cd{padding:16px 14px;border-radius:12px}.cd h2{font-size:17px}}
+@media(max-width:480px){.tp{padding:12px 14px}.tp p{font-size:12px}}
+@media(max-width:480px){.vc{padding:12px 10px;min-height:86px;border-radius:11px}.vc-w{font-size:15px}.vc.fl .vc-e{font-size:12px}.vc.fl .vc-r{font-size:12px}.vc.fl .vc-x{font-size:10px}}
+@media(max-width:480px){.ms-b{max-width:94%;padding:9px 12px}.ms-t{font-size:13px}.ms-tr{font-size:11px}}
+@media(max-width:480px){.qq{font-size:14px}.qo{font-size:12px;padding:9px 11px}}
+@media(max-width:480px){.fi{padding:11px 13px}.fi-s{font-size:13px}.fi-in{width:86px;font-size:12px}}
+@media(max-width:480px){.bt{padding:13px 18px;font-size:14px;border-radius:11px}}
+@media(max-width:480px){.bn{gap:6px}.bn a{padding:11px 8px;font-size:12px;border-radius:9px}}
+@media(max-width:480px){.cpl{padding:20px 14px;border-radius:12px}.cpl h3{font-size:17px}}
+@media(max-width:480px){.ft{padding:22px 14px;font-size:12px}}
+@media(max-width:768px){.sc{padding:12px 12px}}
+@media(hover:none){.vc:hover{transform:none;box-shadow:none}.bt:hover{opacity:1}.qo:hover{border-color:#E2E8F0}.vc.fl{transform:none}}
+@media(prefers-reduced-motion:reduce){.sec.on{animation:none}}
+
 </style>
 <link rel="canonical" href="https://dushipapiamentu.nl/lessen/lesson-11-expresashonnan.html">
 <meta property="og:url" content="https://dushipapiamentu.nl/lessen/lesson-11-expresashonnan.html">
