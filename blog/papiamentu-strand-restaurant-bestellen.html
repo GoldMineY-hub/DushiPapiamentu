@@ -47,6 +47,35 @@ article tr:hover td{background:#EEF5FB}
 blockquote{border-left:4px solid #0077A8;padding:12px 20px;margin:16px 0 20px;background:#F8FAFC;border-radius:0 8px 8px 0}
 blockquote p{font-style:italic;color:#1A2332;margin:0}
 @media(max-width:480px){article{padding:16px 16px 40px}.blog-header{padding:64px 16px 24px}.blog-header h1{font-size:22px}article h2{font-size:20px}article p,article li{font-size:14px}article table{font-size:12px}article th,article td{padding:8px 10px}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav{padding:10px 16px}
+  .nav-links a{display:none}
+  .hero{padding:72px 18px 44px}
+  .hero h1{font-size:clamp(22px,6vw,34px)}
+  .article-wrap{padding:32px 18px 60px}
+  .article-body h2{font-size:20px;margin:28px 0 10px}
+  .article-body p{font-size:15px;line-height:1.75}
+  .tip-box,.highlight-box,.info-box,.pap-box,.phrase-table,.vocab-table,.progress-visual{padding:16px 14px}
+  .post-links{gap:12px}
+}
+@media(max-width:480px){
+  .nav{padding:9px 14px}
+  .nav-logo span{font-size:15px}
+  .hero{padding:62px 14px 36px}
+  .hero h1{font-size:clamp(20px,7vw,28px);line-height:1.2}
+  .hero-meta{font-size:12px}
+  .article-wrap{padding:24px 14px 48px}
+  .article-body h2{font-size:18px;margin:24px 0 8px}
+  .article-body h3{font-size:16px}
+  .article-body p{font-size:14px;line-height:1.7}
+  .article-body ul li, .article-body ol li{font-size:14px;line-height:1.7}
+  .tip-box,.highlight-box,.info-box,.pap-box{padding:13px 12px;border-radius:10px}
+  .phrase-table td,.phrase-table th,.vocab-table td,.vocab-table th{padding:8px 10px;font-size:13px}
+  .post-links{grid-template-columns:1fr;gap:10px}
+  .nav-cta{padding:8px 14px;font-size:12px}
+}
 </style>
 <meta property="og:image" content="https://dushipapiamentu.nl/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -71,11 +100,11 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 
 <table>
 <tr><th>Wat je wilt zeggen</th><th>Papiamentu</th><th>Uitspraak</th></tr>
-<tr><td>Een koud biertje alsjeblieft</td><td><strong>Un serbes fríu, por fabor</strong></td><td>oon ser-BES FREE-oo</td></tr>
-<tr><td>Een kokoswater</td><td><strong>Un awa di kòkò</strong></td><td>oon AH-wah dee KOH-koh</td></tr>
+<tr><td>Een koud biertje alsjeblieft</td><td><strong>Un serbes fríu, por fabor</strong></td><td>oon ser-BES FRI-u</td></tr>
+<tr><td>Een kokoswater</td><td><strong>Un awa di kòkò</strong></td><td>oon AH-wah dee KOH-ko</td></tr>
 <tr><td>Een fruitsap</td><td><strong>Un djùs di fruta</strong></td><td>oon joos dee FROO-tah</td></tr>
 <tr><td>Een koffie met melk</td><td><strong>Un kòfi ku lechi</strong></td><td>oon KOH-fee koo LEH-chee</td></tr>
-<tr><td>Een fles water</td><td><strong>Un botèl di awa</strong></td><td>oon boh-TEL dee AH-wah</td></tr>
+<tr><td>Een fles water</td><td><strong>Un bòter di awa</strong></td><td>oon BOH-ter dee AH-wah</td></tr>
 <tr><td>Nog eentje!</td><td><strong>Un mas!</strong></td><td>oon mahs</td></tr>
 <tr><td>De rekening alsjeblieft</td><td><strong>E kuenta, por fabor</strong></td><td>eh KWEN-tah</td></tr>
 </table>
@@ -89,8 +118,8 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 <tr><td>Ik wil graag het dagmenu</td><td><strong>Mi ke e plato di dia, por fabor</strong></td></tr>
 <tr><td>Wat raadt u aan?</td><td><strong>Kiko bo ta rekomendá?</strong></td></tr>
 <tr><td>Het is lekker!</td><td><strong>E ta dushi!</strong></td></tr>
-<tr><td>Het is pittig!</td><td><strong>E ta pikante!</strong></td></tr>
-<tr><td>Mag ik nog brood?</td><td><strong>Por fabor, un poco mas pan?</strong></td></tr>
+<tr><td>Het is pittig!</td><td><strong>E ta pika!</strong></td></tr>
+<tr><td>Mag ik nog brood?</td><td><strong>Mi por hanja un tiki mas pan?</strong></td></tr>
 </table>
 
 <h2>Lokale gerechten die je moet kennen</h2>
@@ -102,8 +131,8 @@ blockquote p{font-style:italic;color:#1A2332;margin:0}
 <li><strong>Funchi</strong> (FOON-chee): Een stevig bijgerecht van maismeel, vergelijkbaar met polenta</li>
 <li><strong>Pastechi</strong> (pahs-TEH-chee): Gefrituurde deegzakjes met kaas, vlees of vis. Het ultieme Curaçaose snack!</li>
 <li><strong>Keshi yená</strong> (KEH-shee yeh-NAH): Gevulde kaas met kip of vlees. Een Hollandse Edam, Curaçaose stijl</li>
-<li><strong>Pan bati</strong> (pahn BAH-tee): Plat maisbrood, heerlijk bij stoba</li>
-<li><strong>Bòl di kabritu</strong> (bohl dee kah-BREE-too): Geitensoep, perfect voor een krachtig ontbijt</li>
+<li><strong>Pan sera</strong> (pahn SEH-rah): Zacht maisbrood, heerlijk bij stoba</li>
+<li><strong>Sopi di kabritu</strong> (SOH-pee dee kah-BREE-too): Geitensoep, perfect voor een stevig ontbijt</li>
 </ul>
 
 <div class="tip"><b>MARSHE BIEU TIP</b><p>Bij Marshe Bieu wijs je gewoon aan wat er lekker uitziet en zeg je: "Mi ke esaki, por fabor!" (Ik wil dit graag!). Een compleet bord kost rond de 15 tot 20 NAf. Contant betalen is gebruikelijk.</p></div>
