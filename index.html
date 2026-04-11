@@ -756,7 +756,7 @@ function handleSignup() {
   fetch('https://dushi-papiamentu-cert.sahadataly.workers.dev', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({naam: '', email: email})
+    body: JSON.stringify({naam: '', email: email, source: 'signup'})
   })
   .then(function(r){ return r.json(); })
   .then(function(data){
