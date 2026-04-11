@@ -1,177 +1,35 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/favicon.svg">
-<meta name="theme-color" content="#0077A8">
+<link rel="apple-touch-icon" href="/favicon.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Lesson 10: Kultura di Kòrsou - Traditions, history, identity and heritage. Learn Papiamentu free online.">
 <title>Les 10: Kultura di Kòrsou - Dushi Papiamentu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ac:#0077A8;--acd:#005A7D}
-*{box-sizing:border-box;margin:0;padding:0}
-html{overflow-x:hidden}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased;word-wrap:break-word;overflow-wrap:break-word;overflow-x:hidden;width:100%;max-width:100vw}
-a{text-decoration:none;color:inherit}
-button{font-family:'DM Sans',sans-serif;cursor:pointer}
+:root{--ac:#B8860B;--acd:#8B6914}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE}a{text-decoration:none;color:inherit}button{font-family:'DM Sans',sans-serif;cursor:pointer}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}
-.nav a{display:flex;align-items:center;gap:8px}
-.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}
-.nb em{font-weight:400;font-style:italic;color:#00B8D4}
-.nr{display:flex;gap:16px;align-items:center}
-.nr a{font-size:12px;color:rgba(255,255,255,0.6)}
-.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
-@media(max-width:480px){.nr a{display:none}.nav{padding:10px 14px}.nb{font-size:14px}}
-
-/* HEADER */
-.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#0077A8,#005A7D 40%,#1A2332);position:relative;overflow:hidden}
-.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}
-.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}
-.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}
-.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px;line-height:1.1}
-.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
-@media(max-width:480px){.hd{padding:60px 16px 24px}}
-
-/* LAYOUT - 2 col desktop, 1 col mobile */
-.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px}
-@media(max-width:768px){.ly{grid-template-columns:minmax(0,1fr);padding:0 14px 48px;display:block}.sb{margin-top:24px}}
-@media(max-width:480px){.ly{padding:0 12px 40px}}
-
-/* TABS */
-main{width:100%;min-width:0}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 18px}
-.tb{background:#fff;color:#5C6B7A;border:1px solid #E2E8F0;border-radius:10px;padding:9px 13px;font-size:12px;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:5px;cursor:pointer;flex:0 0 auto}
-.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-@media(max-width:480px){.tabs{gap:6px;padding:12px 0 14px}.tb{padding:8px 11px;font-size:11px}}
-/* SECTIONS */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}.nav a{display:flex;align-items:center;gap:8px}.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}.nb em{font-weight:400;font-style:italic;color:#00B8D4}.nr{display:flex;gap:16px;align-items:center}.nr a{font-size:12px;color:rgba(255,255,255,0.6)}.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700}
+.hd{padding:68px 20px 28px;background:linear-gradient(135deg,#B8860B,#8B6914 40%,#1A2332);position:relative;overflow:hidden}.hd::after{content:'';position:absolute;bottom:0;left:0;right:0;height:20px;background:#FAFCFE;border-radius:20px 20px 0 0}.hd-i{position:relative;z-index:1;max-width:700px;margin:0 auto}.bdg{display:inline-block;background:rgba(255,255,255,0.1);border-radius:8px;padding:4px 12px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:1.5px;margin-bottom:8px}.hd h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,5vw,34px);font-weight:700;color:#fff;margin:0 0 4px}.hd p{font-size:13px;color:rgba(255,255,255,0.6)}
+.ly{max-width:900px;margin:0 auto;padding:0 16px 60px;display:grid;grid-template-columns:1fr 240px;gap:24px}@media(max-width:768px){.ly{grid-template-columns:1fr}.sb{order:2}}
+.tabs{display:flex;gap:5px;overflow-x:auto;padding:14px 0 18px}.tb{background:#fff;color:#5C6B7A;border:1px solid #E2E8F0;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:4px;flex-shrink:0}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
 .sec{display:none;animation:fadeIn 0.3s ease}.sec.on{display:block}
-
-/* CONTENT CARD */
-.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px;overflow:hidden;width:100%;box-sizing:border-box}
-.cd h2{font-size:clamp(18px,4vw,22px);font-family:'Playfair Display',Georgia,serif;margin:0 0 12px;word-wrap:break-word}
-.cd p{font-size:14px;line-height:1.7;color:#5C6B7A;word-wrap:break-word;overflow-wrap:break-word}
-@media(max-width:480px){.cd{padding:18px 16px;border-radius:14px}.cd h2{font-size:18px}}
-
-/* TIP */
-.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px;overflow:hidden;width:100%;box-sizing:border-box}
-.tp b{font-size:12px;font-weight:700;letter-spacing:1px;color:#F4A236;display:block;margin-bottom:6px}
-.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0;word-wrap:break-word;overflow-wrap:break-word}
-@media(max-width:480px){.tp{padding:14px 16px}.tp p{font-size:13px}}
-
-/* VOCAB GRID */
-.vg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:600px){.vg{grid-template-columns:1fr 1fr;gap:8px}}
-@media(max-width:360px){.vg{grid-template-columns:1fr}}
-
-/* VOCAB CARD */
-.vc{cursor:pointer;border-radius:14px;padding:18px 14px;min-height:110px;display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid #E2E8F0;transition:all 0.3s}
-.vc.fl{background:linear-gradient(135deg,var(--ac),var(--acd));border:none;box-shadow:0 6px 20px rgba(0,119,168,0.22);transform:scale(1.02)}
-.vc-w{font-size:18px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:3px}
-.vc-pr{font-size:11px;color:#5C6B7A}
-.vc.fl .vc-pr{color:rgba(255,255,255,0.7)}
-.vc-t{font-size:10px;color:var(--ac);margin-top:8px;font-weight:700;letter-spacing:1px}
-.vc.fl .vc-t{display:none}
-.vc-e,.vc-r,.vc-x{display:none}
-.vc.fl .vc-e{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
-.vc.fl .vc-r{display:block;font-size:15px;color:rgba(255,255,255,0.9);font-family:'Playfair Display',Georgia,serif;font-style:italic;margin-bottom:6px}
-.vc.fl .vc-x{display:block;font-size:11px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.2);padding-top:6px;line-height:1.4}
-@media(max-width:480px){.vc{padding:14px 12px;min-height:90px;border-radius:12px}.vc-w{font-size:16px}.vc.fl .vc-e{font-size:12px}.vc.fl .vc-r{font-size:13px}.vc.fl .vc-x{font-size:10px}}
-
-/* DIALOGUE */
-.dl{display:flex;flex-direction:column;gap:8px}
-.ms{display:flex;flex-direction:column;cursor:pointer}
-.ms.r{align-items:flex-end}.ms.l{align-items:flex-start}
-.ms-n{font-size:10px;font-weight:700;margin-bottom:3px;letter-spacing:0.5px}
-.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05);word-wrap:break-word;overflow-wrap:break-word}
-.ms-b.bl{background:linear-gradient(135deg,var(--ac),var(--acd));color:#fff;border-radius:16px 16px 16px 4px}
-.ms-b.wh{background:#fff;border:1px solid #E2E8F0;border-radius:16px 16px 4px 16px}
-.ms-t{font-size:15px;font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.4}
-.ms-tr{font-size:12px;margin-top:4px;opacity:0.7;font-style:italic;display:none}
-@media(max-width:480px){.ms-b{max-width:92%;padding:10px 13px}.ms-t{font-size:14px}.ms-tr{font-size:11px}}
-
-/* QUIZ */
-.qb{display:flex;gap:3px;margin-bottom:16px}
-.qb div{flex:1;height:4px;border-radius:2px;background:#E2E8F0}
-.qb div.d{background:#2A8E4F}.qb div.c{background:var(--ac)}
-.qq{font-size:16px;font-weight:600;margin-bottom:14px;line-height:1.4}
-.qo{display:block;width:100%;background:#fff;border:2px solid #E2E8F0;border-radius:10px;padding:11px 14px;text-align:left;font-size:14px;font-weight:500;margin-bottom:7px;transition:all 0.2s;cursor:pointer}
-.qo.ok{background:#ECFDF5;border-color:#2A8E4F;color:#065F46}
-.qo.no{background:#FEF2F2;border-color:#E8634A;color:#991B1B}
-@media(max-width:480px){.qq{font-size:15px}.qo{font-size:13px;padding:10px 12px}}
-
-/* FILL-IN */
-.fi{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.fi.ok{background:#ECFDF5;border-color:#2A8E4F}
-.fi.no{background:#FEF2F2;border-color:#E8634A}
-.fi-h{font-size:11px;color:#5C6B7A;font-weight:600;margin-bottom:6px}
-.fi-s{font-size:16px;font-family:'Playfair Display',Georgia,serif;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.fi-in{width:110px;padding:6px 8px;font-size:15px;font-family:'Playfair Display',Georgia,serif;border:2px solid var(--ac);border-radius:8px;background:#F8FAFC;font-weight:600;outline:none;text-align:center}
-.fi-a{margin-top:5px;font-size:12px;color:#E8634A;font-weight:600;display:none}
-@media(max-width:480px){.fi{padding:12px 14px}.fi-s{font-size:14px}.fi-in{width:90px;font-size:13px}}
-
-/* BUTTONS */
-.bt{border:none;border-radius:14px;padding:16px 24px;font-size:16px;font-weight:600;width:100%;margin-top:20px;transition:opacity 0.2s}
-.bt:hover{opacity:0.92}
-.bt-p{background:var(--ac);color:#fff}
-.bt-o{background:transparent;color:var(--ac);border:2px solid var(--ac);margin-top:12px}
-@media(max-width:480px){.bt{padding:14px 20px;font-size:15px;border-radius:12px}}
-
-/* BOTTOM NAV */
-.bn{display:flex;gap:10px;margin-top:24px}
-.bn a{flex:1;text-align:center;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:600}
-.bp{background:#F1F5F9;color:#5C6B7A}
-.bx{background:var(--ac);color:#fff}
-@media(max-width:480px){.bn{gap:8px}.bn a{padding:12px 10px;font-size:13px;border-radius:10px}}
-
-/* COMPLETION */
-.cpl{border-radius:18px;padding:28px 22px;text-align:center;margin-top:24px;background:linear-gradient(135deg,var(--ac),#1A2332)}
-.cpl h3{font-size:22px;font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px}
-.cpl p{font-size:13px;color:rgba(255,255,255,0.65);margin:0 0 16px}
-.cpl a{display:inline-block;background:rgba(255,255,255,0.12);border-radius:12px;padding:14px 24px;color:#F4A236;font-size:14px;font-weight:600}
-@media(max-width:480px){.cpl{padding:22px 16px;border-radius:14px}.cpl h3{font-size:18px}}
-
-/* SIDEBAR */
-.sb{display:flex;flex-direction:column;gap:14px;padding-top:14px}
-.sc{background:#fff;border:1px solid #E8ECF1;border-radius:14px;padding:18px 16px}
-.sc h3{font-size:14px;font-weight:700;margin-bottom:10px}
-.sl{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:12px;color:#5C6B7A}
-.sl:last-child{border-bottom:none}
-.sl:hover{color:#0077A8}
-.sl.cu{color:#0077A8;font-weight:700}
-.sn{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:#F1F5F9;color:#94A3B8}
-.sl.cu .sn{background:#E6F1FB;color:#0077A8}
-@media(max-width:768px){.sc{padding:14px 14px}}
-
-/* AFFILIATE */
-.af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}
-.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}
-.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}
-.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
-
-/* AD */
+.cd{background:#fff;border-radius:18px;padding:24px 20px;border:1px solid #E2E8F0;margin-bottom:14px}.cd h2{font-size:22px;font-family:'Playfair Display',Georgia,serif;margin:0 0 12px}.cd p{font-size:14px;line-height:1.7;color:#5C6B7A}
+.tp{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border-radius:14px;padding:18px 20px;border:1px solid #E8D5B0;margin-bottom:20px}.tp b{font-size:12px;font-weight:700;letter-spacing:1px;color:#F4A236;display:block;margin-bottom:6px}.tp p{font-size:14px;line-height:1.6;color:#1A2332;font-style:italic;font-family:'Playfair Display',Georgia,serif;margin:0}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:480px){.vg{grid-template-columns:1fr}}
+.vc{cursor:pointer;border-radius:14px;padding:18px 14px;min-height:120px;display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid #E2E8F0;transition:all 0.3s}.vc.fl{background:linear-gradient(135deg,var(--ac),var(--acd));border:none;box-shadow:0 6px 20px #B8860B33;transform:scale(1.02)}.vc-w{font-size:19px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:3px}.vc-pr{font-size:11px;color:#5C6B7A}.vc.fl .vc-pr{color:rgba(255,255,255,0.7)}.vc-t{font-size:10px;color:var(--ac);margin-top:8px;font-weight:700;letter-spacing:1px}.vc.fl .vc-t{display:none}.vc-e,.vc-r,.vc-x{display:none}.vc.fl .vc-e{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}.vc.fl .vc-r{display:block;font-size:16px;color:rgba(255,255,255,0.9);font-family:'Playfair Display',Georgia,serif;font-style:italic;margin-bottom:6px}.vc.fl .vc-x{display:block;font-size:11px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.2);padding-top:6px;line-height:1.4}
+.dl{display:flex;flex-direction:column;gap:8px}.ms{display:flex;flex-direction:column;cursor:pointer}.ms.r{align-items:flex-end}.ms.l{align-items:flex-start}.ms-n{font-size:10px;font-weight:700;margin-bottom:3px}.ms-b{padding:11px 15px;max-width:85%;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}.ms-b.bl{background:linear-gradient(135deg,var(--ac),var(--acd));color:#fff;border-radius:16px 16px 16px 4px}.ms-b.wh{background:#fff;border:1px solid #E2E8F0;border-radius:16px 16px 4px 16px}.ms-t{font-size:15px;font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.4}.ms-tr{font-size:12px;margin-top:4px;opacity:0.7;font-style:italic;display:none}
+.qo{display:block;width:100%;background:#fff;border:2px solid #E2E8F0;border-radius:10px;padding:11px 14px;text-align:left;font-size:14px;font-weight:500;margin-bottom:7px;transition:all 0.2s}.qo.ok{background:#ECFDF5;border-color:#2A8E4F;color:#065F46}.qo.no{background:#FEF2F2;border-color:#E8634A;color:#991B1B}
+.fi{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;margin-bottom:12px}.fi.ok{background:#ECFDF5;border-color:#2A8E4F}.fi.no{background:#FEF2F2;border-color:#E8634A}.fi-h{font-size:11px;color:#5C6B7A;font-weight:600;margin-bottom:6px}.fi-s{font-size:16px;font-family:'Playfair Display',Georgia,serif;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.fi-in{width:110px;padding:6px 8px;font-size:15px;font-family:'Playfair Display',Georgia,serif;border:2px solid var(--ac);border-radius:8px;background:#F8FAFC;font-weight:600;outline:none;text-align:center}.fi-a{margin-top:5px;font-size:12px;color:#E8634A;font-weight:600;display:none}
+.bt{border:none;border-radius:14px;padding:16px 24px;font-size:16px;font-weight:600;width:100%;margin-top:20px}.bt:hover{opacity:0.92}.bt-p{background:var(--ac);color:#fff}.bt-o{background:transparent;color:var(--ac);border:2px solid var(--ac);margin-top:12px}
+.bn{display:flex;gap:10px;margin-top:24px}.bn a{flex:1;text-align:center;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:600}.bp{background:#F1F5F9;color:#5C6B7A}.bx{background:var(--ac);color:#fff}
+.cpl{border-radius:18px;padding:28px 22px;text-align:center;margin-top:24px;background:linear-gradient(135deg,var(--ac),#1A2332)}.cpl h3{font-size:22px;font-family:'Playfair Display',Georgia,serif;color:#fff;margin:0 0 6px}.cpl p{font-size:13px;color:rgba(255,255,255,0.65);margin:0 0 16px}.cpl a{display:inline-block;background:rgba(255,255,255,0.12);border-radius:12px;padding:14px 24px;color:#F4A236;font-size:14px;font-weight:600}
+.sb{display:flex;flex-direction:column;gap:14px;padding-top:14px}.sc{background:#fff;border:1px solid #E8ECF1;border-radius:14px;padding:18px 16px}.sc h3{font-size:14px;font-weight:700;margin-bottom:10px}.sl{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:12px;color:#5C6B7A}.sl:last-child{border-bottom:none}.sl:hover{color:#0077A8}.sl.cu{color:#0077A8;font-weight:700}.sn{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:#F1F5F9;color:#94A3B8}.sl.cu .sn{background:#E6F1FB;color:#0077A8}
+.af{background:linear-gradient(135deg,#F5E6C8,#FBF4E8);border:1px solid #E8D5B0;border-radius:14px;padding:18px 16px}.af h3{font-size:13px;font-weight:700;color:#8B4513;margin-bottom:6px}.af p{font-size:12px;color:#5C6B7A;line-height:1.5;margin-bottom:10px}.af a{display:block;background:#0077A8;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;text-align:center}
 .ad{background:#F1F5F9;border:1px dashed #CBD5E1;border-radius:12px;padding:16px;text-align:center;font-size:10px;color:#94A3B8;font-weight:600;letter-spacing:1px}
-
-/* FOOTER */
-.ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}
-.ft a{color:#0077A8;font-weight:600}
-@media(max-width:480px){.ft{padding:24px 16px}}
-
-/* RESULTS */
-.rs{text-align:center;padding:24px}
-.rs-e{font-size:48px;margin-bottom:10px}
-.rs-t{font-size:24px;font-weight:700;font-family:'Playfair Display',Georgia,serif;margin-bottom:4px}
-.rs-s{font-size:16px;color:#5C6B7A;margin-bottom:16px}
-@media(max-width:480px){.rs-t{font-size:20px}.rs-s{font-size:14px}}
-
-/* TOUCH */
-@media(hover:none){.vc:hover{transform:none;box-shadow:none}.bt:hover{opacity:1}.qo:hover{border-color:#E2E8F0}.vc.fl{transform:none}}
-
-/* REDUCE MOTION */
-@media(prefers-reduced-motion:reduce){.sec.on{animation:none}}
+.ft{text-align:center;padding:32px 20px;font-size:12px;color:#94A3B8;border-top:1px solid #E8ECF1;margin-top:20px}.ft a{color:#0077A8;font-weight:600}
 </style>
 <link rel="canonical" href="https://dushipapiamentu.nl/lessen/lesson-10-kultura-di-korsou.html">
 <meta property="og:url" content="https://dushipapiamentu.nl/lessen/lesson-10-kultura-di-korsou.html">
@@ -200,10 +58,10 @@ main{width:100%;min-width:0}
 <aside class="sb"><div class="sc"><h3>Alle Lessen</h3><a href="lesson-1-bon-bini.html" class="sl"><span class="sn">1</span>Bon Bini!</a><a href="lesson-2-numbernan-kolornan.html" class="sl"><span class="sn">2</span>Numbernan & Kolornan</a><a href="lesson-3-na-playa.html" class="sl"><span class="sn">3</span>Na Playa</a><a href="lesson-4-kuminda-dushi.html" class="sl"><span class="sn">4</span>Kuminda Dushi</a><a href="lesson-5-famia.html" class="sl"><span class="sn">5</span>Famia</a><a href="lesson-6-den-siudat.html" class="sl"><span class="sn">6</span>Den Siudat</a><a href="lesson-7-tempo-liber.html" class="sl"><span class="sn">7</span>Tempo Liber</a><a href="lesson-8-trabou.html" class="sl"><span class="sn">8</span>Trabou</a><a href="lesson-9-salu.html" class="sl"><span class="sn">9</span>Salu</a><a href="lesson-10-kultura-di-korsou.html" class="sl cu"><span class="sn">10</span>Kultura di Kòrsou</a><a href="lesson-11-expresashonnan.html" class="sl"><span class="sn">11</span>Expresashonnan</a><a href="lesson-12-konversashon-final.html" class="sl"><span class="sn">12</span>Konversashon Final</a></div></aside></div>
 <footer class="ft"><strong style="font-family:'Playfair Display',Georgia,serif">Dushi <em style="color:#0077A8;font-style:italic">Papiamentu</em></strong><p style="margin-top:6px">Gemaakt met ❤️ vanuit Kòrsou · <a href="#">Privacy</a> · <a href="#">Voorwaarden</a> - 2026</p></footer>
 <script>
-var V=[[{"p":"Tradishon","e":"Traditioneleie","r":"trah-dee-SHON","x":"Kòrsou tin hopi tradishon bunita."},{"p":"Karnaval","e":"Carnaval","r":"kar-nah-VAHL","x":"Karnaval ta e fiesta mas grandi!"},{"p":"Seu","e":"Oogstfeest","r":"seh-OO","x":"Seu ta un tradishon di tempu di siembra."},{"p":"Dande","e":"Nieuwjaarsmuziek","r":"DAHN-deh","x":"Dande ta pa aña nobo."},{"p":"Tambú","e":"Trommelmuziek / Ritueel","r":"tahm-BOO","x":"Tambú ta raís di nos kultura."},{"p":"Hari di Bandera","e":"Vlaggendag","r":"HAH-ree dee bahn-DEH-rah","x":"Dos di yüli ta Hari di Bandera."}],[{"p":"Historia","e":"Geschiedenis","r":"ees-TOH-ree-ah","x":"E historia di Kòrsou ta riku."},{"p":"Sklabitut","e":"Slavernij","r":"sklah-bee-TOOT","x":"Sklabitut a kaba na 1863."},{"p":"Libertad","e":"Vrijheid","r":"lee-ber-TAHT","x":"Nos ta selebrá libertad."},{"p":"Tula","e":"Tula (freedom fighter)","r":"TOO-lah","x":"Tula ta un héroe di Kòrsou."},{"p":"Monumento","e":"Monument","r":"moh-noo-MEN-toh","x":"E monumento di Tula ta na Willemstad."},{"p":"Herencia","e":"Erfgoed","r":"heh-REN-see-ah","x":"Nos herencia ta importante."}],[{"p":"Yu di Kòrsou","e":"Kind van Curaçao","r":"yew dee KOR-sow","x":"Mi ta un yu di Kòrsou."},{"p":"Bandera","e":"Vlag","r":"bahn-DEH-rah","x":"E bandera tin dos strea."},{"p":"Dushi tera","e":"Zoet land","r":"DOO-shee TEH-rah","x":"Kòrsou, mi dushi tera!"},{"p":"Orguyo","e":"Trots","r":"or-GOO-yoh","x":"Mi ta orguyo di mi isla."},{"p":"Raís","e":"Root(s)","r":"rah-EES","x":"Mi raísnan ta na Kòrsou."},{"p":"Himno","e":"National anthem","r":"EEM-noh","x":"Nos himno ta bunita."}]];
-var D=[{"s":"Ana","p":"Bo sa ku promé di agosto ta un dia importante?","e":"Weet je dat 1 augustus een belangrijke dag is?","d":"l"},{"s":"Marco","p":"Sí! Ta Dia di Emansipashon! Sklabitut a kaba na 1863.","e":"Ja! Emancipatiedag! De slavernij eindigde in 1863.","d":"r"},{"s":"Ana","p":"I bo sa kiko Tula a hasi?","e":"En weet je wat Tula heeft gedaan?","d":"l"},{"s":"Marco","p":"Tula a lidera e rebelion di 1795. E ta un héroe.","e":"Tula leidde de opstand van 1795. Hij is een held.","d":"r"},{"s":"Ana","p":"Mi ta orguyo di nos historia. I Karnaval, ki bo ta pensa?","e":"Ik ben trots op onze geschiedenis. En Karnaval, wat denk jij?","d":"l"},{"s":"Marco","p":"E Gran Marsha! Tur e kolornan i músika di Tumba!","e":"De Grote Mars! Alle kleuren en Tumba-muziek!","d":"r"},{"s":"Ana","p":"Kòrsou ta un dushi tera ku kultura riku.","e":"Curaçao is een heerlijk eiland met rijke cultuur.","d":"l"}];
-var Q=[{"q":"\"Yu di Kòrsou\" betekent...","o":["Toerist","Kind van Curaçao","Stad","Strand"],"a":1},{"q":"Wanneer eindigde de slavernij op Curaçao?","o":["1795","1863","1954","1900"],"a":1},{"q":"Wie is Tula?","o":["Een muzikant","Een vrijheidsstrijder","Een politicus","Een kok"],"a":1},{"q":"\"Dushi tera\" betekent...","o":["Heet land","Groot land","Zoet land","Groen land"],"a":2},{"q":"Wat is \"Dande\"?","o":["Een gerecht","Nieuwjaarsmuziek","Een strand","Carnavalsmuziek"],"a":1},{"q":"\"Hari di Bandera\" is...","o":["Kerst","Pasen","Vlaggendag","Nieuwjaar"],"a":2},{"q":"\"Herencia\" betekent...","o":["Geschiedenis","Erfgoed","Feestdag","Held"],"a":1},{"q":"\"Orguyo\" betekent...","o":["Blij","Verdrietig","Trots","Boos"],"a":2}];
-var F=[{"s":"Mi ta un ___ di Kòrsou.","a":"yu","h":"Ik ben een kind van Curaçao"},{"s":"___ ta raís di nos kultura.","a":"tambú","h":"Traditionele trommelmuziek"},{"s":"Mi ta ___ di mi isla.","a":"orguyo","h":"Ik ben trots"},{"s":"Kòrsou, mi dushi ___!","a":"tera","h":"Zoet land"},{"s":"___ a kaba na 1863.","a":"sklabitut","h":"Slavernij eindigde"}];
+var V=[[{"p": "Tradishon", "e": "Traditie", "r": "trah-dee-SHON", "x": "Kòrsou tin hopi tradishon bunita. - Curaçao heeft veel mooie tradities."}, {"p": "Karnaval", "e": "Carnaval", "r": "kar-nah-VAHL", "x": "Karnaval ta e fiesta mas grandi! - Carnaval is het grootste feest!"}, {"p": "Seu", "e": "Oogstfeest", "r": "SEH-u", "x": "Seu ta un tradishon di tempu di siembra. - Seu is een traditie van het oogstseizoen."}, {"p": "Pasku", "e": "Kerstmis", "r": "PAS-ku", "x": "Pasku ta un fiesta di famia. - Kerstmis is een familiefeest."}, {"p": "Tambú", "e": "Trommelmuziek / Ritueel", "r": "tam-BUU", "x": "Tambú ta raís di nos kultura. - Tambú is de wortel van onze cultuur."}, {"p": "Dia di Bandera", "e": "Vlaggendag", "r": "DEE-ah dee ban-DEH-rah", "x": "Dos di yüli ta Dia di Bandera. - 2 juli is Vlaggendag."}], [{"p": "Historia", "e": "Geschiedenis", "r": "ees-toh-REE-ah", "x": "Nos historia ta importante. - Onze geschiedenis is belangrijk."}, {"p": "Sklabitut", "e": "Slavernij", "r": "sklah-bee-TUT", "x": "Sklabitut a kaba na 1863. - De slavernij eindigde in 1863."}, {"p": "Libertad", "e": "Vrijheid", "r": "lee-ber-TAD", "x": "Libertad ta un derecho di tur hende. - Vrijheid is een recht van iedereen."}, {"p": "Tula", "e": "Vrijheidsstrijder", "r": "TU-lah", "x": "Tula a lidera e rebelion di 1795. - Tula leidde de opstand van 1795."}, {"p": "Monumento", "e": "Monument", "r": "mo-nu-MEN-to", "x": "Tin un monumento pa Tula. - Er is een monument voor Tula."}, {"p": "Herencia", "e": "Erfgoed", "r": "heh-REN-see-ah", "x": "Nos herencia ta riku. - Ons erfgoed is rijk."}], [{"p": "Yu di Kòrsou", "e": "Kind van Curaçao", "r": "YU dee KOR-sow", "x": "Mi ta un yu di Kòrsou. - Ik ben een kind van Curaçao."}, {"p": "Bandera", "e": "Vlag", "r": "ban-DEH-rah", "x": "Nos bandera ta blou i geel. - Onze vlag is blauw en geel."}, {"p": "Dushi tera", "e": "Zoet land", "r": "DU-shee TEH-rah", "x": "Kòrsou, mi dushi tera! - Curaçao, mijn lief land!"}, {"p": "Orguyo", "e": "Trots", "r": "or-GU-yo", "x": "Mi ta orguyo di mi isla. - Ik ben trots op mijn eiland."}, {"p": "Raís", "e": "Wortels", "r": "rah-EES", "x": "Nos raís ta fuerte. - Onze wortels zijn sterk."}, {"p": "Himno", "e": "Volkslied", "r": "EEM-no", "x": "Nos himno ta bunita. - Ons volkslied is mooi."}]];
+var D=[{"s":"Ana","p":"Bo sa ku promé di agosto ta un dia importante?","e":"Weet je dat 1 augustus een belangrijke dag is?","d":"l"},{"s":"Marco","p":"Sí! Ta Dia di Emansipashon! Sklabitut a kaba na 1863.","e":"Ja! Emancipatiedag! De slavernij eindigde in 1863.","d":"r"},{"s":"Ana","p":"I bo sa kiko Tula a hasi?","e":"En weet je wat Tula heeft gedaan?","d":"l"},{"s":"Marco","p":"Tula a lidera e rebelion di 1795. E ta un héro.","e":"Tula leidde de opstand van 1795. Hij is een held.","d":"r"},{"s":"Ana","p":"Mi ta orguyo di nos historia. I Karnaval, ki bo ta pensa?","e":"Ik ben trots op onze geschiedenis. En Karnaval, wat denk jij?","d":"l"},{"s":"Marco","p":"E Gran Marsha! Tur e kolornan i músika di Tumba!","e":"De Grote Mars! Alle kleuren en Tumba-muziek!","d":"r"},{"s":"Ana","p":"Kòrsou ta un dushi tera ku kultura riku.","e":"Curaçao is een heerlijk eiland met rijke cultuur.","d":"l"}];
+var Q=[{"q": "\"Yu di Kòrsou\" betekent...", "o": ["Toerist", "Kind van Curaçao", "Stad", "Strand"], "a": 1}, {"q": "Wanneer eindigde de slavernij op Curaçao?", "o": ["1795", "1863", "1954", "1900"], "a": 1}, {"q": "Wie is Tula?", "o": ["Een muzikant", "Een vrijheidsstrijder", "Een politicus", "Een kok"], "a": 1}, {"q": "\"Dushi tera\" betekent...", "o": ["Heet land", "Groot land", "Zoet land", "Groen land"], "a": 2}, {"q": "Wat is \"Pasku\"?", "o": ["Een gerecht", "Kerstmuziek", "Een strand", "Carnavalsmuziek"], "a": 1}, {"q": "\"Dia di Bandera\" is...", "o": ["Kerst", "Pasen", "Vlaggendag", "Nieuwjaar"], "a": 2}, {"q": "\"Herencia\" betekent...", "o": ["Geschiedenis", "Erfgoed", "Feestdag", "Held"], "a": 1}, {"q": "\"Orguyo\" betekent...", "o": ["Blij", "Verdrietig", "Trots", "Boos"], "a": 2}];
+var F=[{"s": "Mi ta un ___ di Kòrsou.", "a": "yu", "h": "Ik ben een kind van Curaçao."}, {"s": "Mi ta ___ di mi isla.", "a": "orguyo", "h": "Ik ben trots op mijn eiland."}, {"s": "Kòrsou ta un dushi ___.", "a": "tera", "h": "Curaçao is een heerlijk land."}, {"s": "Nos ___ ta riku.", "a": "herencia", "h": "Ons erfgoed is rijk."}, {"s": "Sklabitut a kaba na ___.", "a": "1863", "h": "De slavernij eindigde in 1863."}];
 function bv(d,id){var c=document.getElementById(id);d.forEach(function(w){var e=document.createElement('div');e.className='vc';e.innerHTML='<div class="vc-w">'+w.p+'</div><div class="vc-pr">/'+w.r+'/</div><div class="vc-t">TIK OM TE ONTHULLEN</div><div class="vc-e">'+w.e+'</div><div class="vc-r">'+w.p+'</div><div class="vc-x">'+w.x+'</div>';e.onclick=function(){this.classList.toggle('fl')};c.appendChild(e)})}
 V.forEach(function(v,i){bv(v,'g'+(i+1))});
 var db=document.getElementById('dlb');D.forEach(function(m){var e=document.createElement('div');e.className='ms '+m.d;e.innerHTML='<div class="ms-n" style="color:'+(m.d==='l'?'var(--ac)':'#2A8E4F')+'">'+m.s.toUpperCase()+'</div><div class="ms-b '+(m.d==='l'?'bl':'wh')+'"><div class="ms-t">'+m.p+'</div><div class="ms-tr">'+m.e+'</div></div>';e.onclick=function(){var t=this.querySelector('.ms-tr');t.style.display=t.style.display==='block'?'none':'block'};db.appendChild(e)});
