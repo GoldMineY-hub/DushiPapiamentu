@@ -31,16 +31,18 @@
 .nr a{font-size:12px;color:rgba(255,255,255,0.6);white-space:nowrap}
 .nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap}
 @media(max-width:600px){.nr a{display:none}}
-.hero{text-align:center;background:linear-gradient(135deg,#0077A8 0%,#005A7D 40%,#1A2332 100%);padding:90px 24px 56px;position:relative;overflow:hidden}
+@media(max-width:360px){.nr button{padding:6px 12px;font-size:11px}}
+.hero{background:linear-gradient(135deg,#0077A8 0%,#005A7D 40%,#1A2332 100%);padding:90px 24px 56px;text-align:center;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:32px;background:#FAFCFE;border-radius:32px 32px 0 0}
 .breadcrumb{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:14px}
-.breadcrumb a{color:rgba(255,255,255,0.5)}
+.breadcrumb a{color:rgba(255,255,255,0.5);text-decoration:none}
 .breadcrumb a:hover{color:#fff}
 .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px}
-.hero p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:600px}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto}
 .hero-meta{font-size:13px;color:rgba(255,255,255,0.45);margin-top:14px}
-@media(max-width:360px){.nr button{padding:6px 12px;font-size:11px}}
+@media(max-width:768px){.hero{padding:72px 18px 44px}.hero h1{font-size:clamp(22px,6vw,34px)}}
+@media(max-width:480px){.hero{padding:62px 14px 36px}.hero h1{font-size:clamp(20px,7vw,28px);line-height:1.2}.hero-meta{font-size:12px}}
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;overflow-x:hidden}a{text-decoration:none;color:inherit}
 article{max-width:720px;margin:0 auto;padding:32px 20px 80px}
 article h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,4vw,26px);font-weight:700;color:#1A2332;margin:36px 0 12px;line-height:1.3}

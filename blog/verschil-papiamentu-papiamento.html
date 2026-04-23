@@ -47,16 +47,18 @@
 .nr a{font-size:12px;color:rgba(255,255,255,0.6);white-space:nowrap}
 .nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap}
 @media(max-width:600px){.nr a{display:none}}
-.hero{text-align:center;background:linear-gradient(135deg,#854F0B 0%,#B8860B 40%,#1A2332 100%);padding:90px 24px 56px;position:relative;overflow:hidden}
+@media(max-width:360px){.nr button{padding:6px 12px;font-size:11px}}
+.hero{background:linear-gradient(135deg,#854F0B 0%,#B8860B 40%,#1A2332 100%);padding:90px 24px 56px;text-align:center;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:32px;background:#FAFCFE;border-radius:32px 32px 0 0}
 .breadcrumb{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:14px}
-.breadcrumb a{color:rgba(255,255,255,0.5)}
+.breadcrumb a{color:rgba(255,255,255,0.5);text-decoration:none}
 .breadcrumb a:hover{color:#fff}
 .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px}
-.hero p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:600px}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto}
 .hero-meta{font-size:13px;color:rgba(255,255,255,0.45);margin-top:14px}
-@media(max-width:360px){.nr button{padding:6px 12px;font-size:11px}}
+@media(max-width:768px){.hero{padding:72px 18px 44px}.hero h1{font-size:clamp(22px,6vw,34px)}}
+@media(max-width:480px){.hero{padding:62px 14px 36px}.hero h1{font-size:clamp(20px,7vw,28px);line-height:1.2}.hero-meta{font-size:12px}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
@@ -70,14 +72,6 @@ button{font-family:'DM Sans',sans-serif}
 .nav-links a:hover{color:#fff}
 .nav-cta{background:#F4A236;color:#1A2332;border:none;border-radius:10px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer}
 
-.hero{background:linear-gradient(135deg,#005A7D 0%,#0077A8 40%,#1A2332 100%);padding:90px 24px 56px;text-align:center;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:32px;background:#FAFCFE;border-radius:32px 32px 0 0}
-.breadcrumb{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:14px}
-.breadcrumb a{color:rgba(255,255,255,0.5)}
-.breadcrumb a:hover{color:#fff}
-.hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:5px 16px;font-size:11px;color:#F4A236;font-weight:700;letter-spacing:2px;margin-bottom:14px;text-transform:uppercase}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.15;max-width:680px;margin:0 auto 12px}
-.hero-meta{font-size:13px;color:rgba(255,255,255,0.45)}
 
 .article-wrap{max-width:700px;margin:0 auto;padding:48px 24px 80px}
 .article-body h2{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:#1A2332;margin:36px 0 12px}
@@ -143,17 +137,14 @@ button{font-family:'DM Sans',sans-serif}
 /* RESPONSIVE */
 @media(max-width:768px){
     .nav-links a{display:none}
-  .hero{padding:72px 18px 44px}
-  .hero h1{font-size:clamp(22px,6vw,34px)}
-  .article-wrap{padding:32px 18px 60px}
+      .article-wrap{padding:32px 18px 60px}
   .article-body h2{font-size:20px;margin:28px 0 10px}
   .article-body p{font-size:15px}
   .diff-table td,.diff-table th{padding:9px 12px;font-size:13px}
   .post-links{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-    .hero{padding:62px 14px 36px}
-  .article-wrap{padding:24px 14px 48px}
+      .article-wrap{padding:24px 14px 48px}
   .article-body h2{font-size:18px}
   .article-body p{font-size:14px;line-height:1.7}
   .island-card{padding:18px 16px}
