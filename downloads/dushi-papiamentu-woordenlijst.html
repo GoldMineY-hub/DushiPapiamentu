@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dushi Papiamentu — Gratis Woordenlijst</title>
+<style>
+/* ===== SCHERM STIJL ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:#F8FAFC;color:#1A2332;max-width:900px;margin:0 auto;padding:20px}
+
+.header{background:linear-gradient(135deg,#0A1628 0%,#0D4A6B 60%,#0A7A9A 100%);border-radius:16px;padding:32px 24px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8634A,#F4A236,#2A8E4F,#0077A8)}
+.header h1{font-size:32px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-0.5px}
+.header h1 em{font-style:italic;color:#00C8E8}
+.header .sub{font-size:14px;color:rgba(255,255,255,0.80);margin-bottom:4px}
+.header .note{font-size:12px;color:rgba(255,255,255,0.4)}
+
+.print-bar{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.print-bar p{font-family:'DM Sans',Arial,sans-serif;font-size:14px;color:#5C6B7A}
+.print-btn{background:#0077A8;color:#fff;border:none;border-radius:10px;padding:10px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:Arial,sans-serif;transition:background 0.2s}
+.print-btn:hover{background:#005A7D}
+.dl-btn{display:inline-flex;align-items:center;justify-content:center;background:#2A8E4F;color:#fff;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:700;text-decoration:none;font-family:Arial,sans-serif}
+.dl-btn:hover{background:#1E7A3E}
+.btn-row{display:flex;gap:8px;flex-shrink:0;align-items:center}
+@media(max-width:600px){.print-bar{flex-direction:column;text-align:center;align-items:center;gap:10px}.print-bar p{font-size:13px}.btn-row{display:flex;flex-direction:column;align-items:stretch;gap:8px;width:100%}.print-btn{width:100%;box-sizing:border-box}.dl-btn{width:100%;box-sizing:border-box;text-align:center}}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+.section{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0}
+.section-header{padding:10px 14px;display:flex;align-items:center;gap:8px}
+.section-header .icon{font-size:16px}
+.section-header h2{font-size:13px;font-weight:700;color:#fff;letter-spacing:0.5px;text-transform:uppercase}
+
+.word-row{display:grid;grid-template-columns:38% 28% 34%;border-bottom:1px solid #F1F5F9;padding:0}
+.word-row:last-child{border-bottom:none}
+.word-row:nth-child(even){background:#F8FAFC}
+.word-row > div{padding:6px 10px;font-size:13px}
+.word-row .pap{font-weight:700;color:#1A2332}
+.word-row .pron{font-style:italic;color:#5C6B7A;font-size:11px}
+.word-row .nl{color:#374151}
+
+.col-header{display:grid;grid-template-columns:38% 28% 34%;background:#F1F5F9;border-bottom:1px solid #E2E8F0}
+.col-header > span{padding:5px 10px;font-size:10px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,sans-serif}
+
+.footer{text-align:center;padding:20px;font-family:Arial,sans-serif;font-size:11px;color:#94A3B8;border-top:1px solid #E2E8F0;margin-top:24px}
+.footer strong{color:#0077A8}
+
+/* ===== PRINT STIJL ===== */
+@media print {
+  body{background:#fff;padding:10px;max-width:100%}
+  .print-bar{display:none}
+  .header{background:#0A1628 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:8px;padding:20px}
+  .section{break-inside:avoid;border:1px solid #E2E8F0}
+  .section-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .word-row:nth-child(even){background:#F8FAFC !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:15mm;size:A4}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Dushi <em>Papiamentu</em></h1>
+  <p class="sub">Gratis Woordenlijst &amp; Uitspraaggids &middot; 100 woorden voor Cura&ccedil;ao, Bonaire &amp; Aruba</p>
+  <p class="note">dushipapiamentu.nl &middot; Gemaakt door native speakers van K&ograve;rsou</p>
+</div>
+
+<div class="print-bar">
+  <p>💡 Gebruik offline of print als cheatsheet voor je vakantie naar Kòrsou</p>
+  <div class="btn-row">
+    <button class="print-btn" onclick="window.print()">🖨️ Printen / PDF</button>
+    <a href="dushi-papiamentu-woordenlijst.pdf" download class="dl-btn">📥 Download als PDF</a>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- BEGROETINGEN -->
+  <div class="section">
+    <div class="section-header" style="background:#0077A8">
+      <span class="icon">👋</span>
+      <h2>Begroetingen</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Bon bini</div><div class="pron">bon BEE-nee</div><div class="nl">Welkom</div></div>
+    <div class="word-row"><div class="pap">Bon dia</div><div class="pron">bon DEE-ya</div><div class="nl">Goedemorgen</div></div>
+    <div class="word-row"><div class="pap">Bon tardi</div><div class="pron">bon TAR-dee</div><div class="nl">Goedemiddag</div></div>
+    <div class="word-row"><div class="pap">Bon nochi</div><div class="pron">bon NO-chi</div><div class="nl">Goedenavond</div></div>
+    <div class="word-row"><div class="pap">Ayo</div><div class="pron">AH-yo</div><div class="nl">Tot ziens</div></div>
+    <div class="word-row"><div class="pap">Kon ta bai?</div><div class="pron">kon ta BAI</div><div class="nl">Hoe gaat het?</div></div>
+    <div class="word-row"><div class="pap">Mi ta bon</div><div class="pron">mee ta BON</div><div class="nl">Het gaat goed</div></div>
+    <div class="word-row"><div class="pap">Danki</div><div class="pron">DAN-kee</div><div class="nl">Dank je</div></div>
+    <div class="word-row"><div class="pap">Masha danki</div><div class="pron">MAH-sha DAN-kee</div><div class="nl">Heel erg bedankt</div></div>
+    <div class="word-row"><div class="pap">Di nada</div><div class="pron">dee NAH-da</div><div class="nl">Graag gedaan</div></div>
+  </div>
+
+  <!-- KENNISMAKING -->
+  <div class="section">
+    <div class="section-header" style="background:#2A8E4F">
+      <span class="icon">🤝</span>
+      <h2>Kennismaking</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Mi nomber ta...</div><div class="pron">mee NOM-ber ta</div><div class="nl">Mijn naam is...</div></div>
+    <div class="word-row"><div class="pap">Ki bo nomber ta?</div><div class="pron">kee boh NOM-ber ta</div><div class="nl">Wat is jouw naam?</div></div>
+    <div class="word-row"><div class="pap">Muchu gustu</div><div class="pron">MOO-choo GOOS-too</div><div class="nl">Aangenaam</div></div>
+    <div class="word-row"><div class="pap">Mi ta bini di...</div><div class="pron">mee ta BEE-nee dee</div><div class="nl">Ik kom uit...</div></div>
+    <div class="word-row"><div class="pap">Por fabor</div><div class="pron">por fa-BOR</div><div class="nl">Alsjeblieft</div></div>
+    <div class="word-row"><div class="pap">Unda bo ta biba?</div><div class="pron">OON-da boh ta BEE-ba</div><div class="nl">Waar woon jij?</div></div>
+  </div>
+
+  <!-- GETALLEN -->
+  <div class="section">
+    <div class="section-header" style="background:#F4A236">
+      <span class="icon">🔢</span>
+      <h2>Getallen 1-10</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Un</div><div class="pron">oon</div><div class="nl">1 &mdash; Een</div></div>
+    <div class="word-row"><div class="pap">Dos</div><div class="pron">dohs</div><div class="nl">2 &mdash; Twee</div></div>
+    <div class="word-row"><div class="pap">Tres</div><div class="pron">trehs</div><div class="nl">3 &mdash; Drie</div></div>
+    <div class="word-row"><div class="pap">Kuater</div><div class="pron">kwah-TER</div><div class="nl">4 &mdash; Vier</div></div>
+    <div class="word-row"><div class="pap">Sinku</div><div class="pron">SEEN-koo</div><div class="nl">5 &mdash; Vijf</div></div>
+    <div class="word-row"><div class="pap">Seis</div><div class="pron">says</div><div class="nl">6 &mdash; Zes</div></div>
+    <div class="word-row"><div class="pap">Shete</div><div class="pron">SHEH-teh</div><div class="nl">7 &mdash; Zeven</div></div>
+    <div class="word-row"><div class="pap">Ocho</div><div class="pron">OH-cho</div><div class="nl">8 &mdash; Acht</div></div>
+    <div class="word-row"><div class="pap">Nuebe</div><div class="pron">NWEH-beh</div><div class="nl">9 &mdash; Negen</div></div>
+    <div class="word-row"><div class="pap">Dies</div><div class="pron">dees</div><div class="nl">10 &mdash; Tien</div></div>
+  </div>
+
+  <!-- GROTE GETALLEN -->
+  <div class="section">
+    <div class="section-header" style="background:#B45309">
+      <span class="icon">💯</span>
+      <h2>Grote getallen</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Binti</div><div class="pron">BEEN-tee</div><div class="nl">20 &mdash; Twintig</div></div>
+    <div class="word-row"><div class="pap">Trinta</div><div class="pron">TREEN-tah</div><div class="nl">30 &mdash; Dertig</div></div>
+    <div class="word-row"><div class="pap">Kuarenta</div><div class="pron">kwah-REN-tah</div><div class="nl">40 &mdash; Veertig</div></div>
+    <div class="word-row"><div class="pap">Sinkuenta</div><div class="pron">seen-KWEN-tah</div><div class="nl">50 &mdash; Vijftig</div></div>
+    <div class="word-row"><div class="pap">Shen</div><div class="pron">shen</div><div class="nl">100 &mdash; Honderd</div></div>
+    <div class="word-row"><div class="pap">Mil</div><div class="pron">meel</div><div class="nl">1000 &mdash; Duizend</div></div>
+  </div>
+
+  <!-- KLEUREN -->
+  <div class="section">
+    <div class="section-header" style="background:#E8634A">
+      <span class="icon">🎨</span>
+      <h2>Kleuren</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Kora</div><div class="pron">koh-RAH</div><div class="nl">Rood</div></div>
+    <div class="word-row"><div class="pap">Blou</div><div class="pron">blow</div><div class="nl">Blauw</div></div>
+    <div class="word-row"><div class="pap">Berde</div><div class="pron">BEHR-deh</div><div class="nl">Groen</div></div>
+    <div class="word-row"><div class="pap">Geel</div><div class="pron">hehl</div><div class="nl">Geel</div></div>
+    <div class="word-row"><div class="pap">Blanku</div><div class="pron">BLAHN-koo</div><div class="nl">Wit</div></div>
+    <div class="word-row"><div class="pap">Pretu</div><div class="pron">PREH-too</div><div class="nl">Zwart</div></div>
+    <div class="word-row"><div class="pap">Oranjo</div><div class="pron">oh-RAHN-yoh</div><div class="nl">Oranje</div></div>
+    <div class="word-row"><div class="pap">Roos</div><div class="pron">rohs</div><div class="nl">Roze</div></div>
+  </div>
+
+  <!-- STRAND -->
+  <div class="section">
+    <div class="section-header" style="background:#0891B2">
+      <span class="icon">🏖️</span>
+      <h2>Strand en natuur</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Playa</div><div class="pron">PLAH-yah</div><div class="nl">Strand</div></div>
+    <div class="word-row"><div class="pap">Laman</div><div class="pron">lah-MAHN</div><div class="nl">Zee</div></div>
+    <div class="word-row"><div class="pap">Solo</div><div class="pron">SOH-loh</div><div class="nl">Zon</div></div>
+    <div class="word-row"><div class="pap">Awa</div><div class="pron">AH-wah</div><div class="nl">Water</div></div>
+    <div class="word-row"><div class="pap">Bientu</div><div class="pron">bee-EN-too</div><div class="nl">Wind</div></div>
+    <div class="word-row"><div class="pap">Dushi</div><div class="pron">DOO-shi</div><div class="nl">Lekker / Lief / Mooi</div></div>
+  </div>
+
+  <!-- BESTELLEN -->
+  <div class="section">
+    <div class="section-header" style="background:#7C3AED">
+      <span class="icon">🛒</span>
+      <h2>Bestellen en winkelen</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Kuantu ta kosta?</div><div class="pron">KWAN-too ta KOS-ta</div><div class="nl">Hoeveel kost dit?</div></div>
+    <div class="word-row"><div class="pap">Mi ke...</div><div class="pron">mee keh</div><div class="nl">Ik wil...</div></div>
+    <div class="word-row"><div class="pap">Un serbes</div><div class="pron">oon SER-bes</div><div class="nl">Een biertje</div></div>
+    <div class="word-row"><div class="pap">Awa di koko</div><div class="pron">AH-wah dee KOH-koh</div><div class="nl">Kokoswater</div></div>
+    <div class="word-row"><div class="pap">E kuenta</div><div class="pron">eh KWEN-ta</div><div class="nl">De rekening</div></div>
+    <div class="word-row"><div class="pap">Mi ta paga</div><div class="pron">mee ta PAH-gah</div><div class="nl">Ik betaal</div></div>
+  </div>
+
+  <!-- ETEN -->
+  <div class="section">
+    <div class="section-header" style="background:#0F6E56">
+      <span class="icon">🍽️</span>
+      <h2>Eten en drinken</h2>
+    </div>
+    <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+    <div class="word-row"><div class="pap">Kuminda</div><div class="pron">koo-MEEN-da</div><div class="nl">Eten / Voedsel</div></div>
+    <div class="word-row"><div class="pap">Kabritu stoba</div><div class="pron">kah-BREE-too stoh-BAH</div><div class="nl">Geitenstoofpot</div></div>
+    <div class="word-row"><div class="pap">Funchi</div><div class="pron">FOON-chi</div><div class="nl">Maisbrij</div></div>
+    <div class="word-row"><div class="pap">Pastechi</div><div class="pron">pas-TEH-chi</div><div class="nl">Gevulde pastei</div></div>
+    <div class="word-row"><div class="pap">Keshi yena</div><div class="pron">KEH-shi yeh-NAH</div><div class="nl">Gevulde kaas</div></div>
+    <div class="word-row"><div class="pap">Karni</div><div class="pron">KAR-nee</div><div class="nl">Vlees</div></div>
+    <div class="word-row"><div class="pap">Piska</div><div class="pron">pis-KAH</div><div class="nl">Vis</div></div>
+    <div class="word-row"><div class="pap">Berdura</div><div class="pron">ber-DOO-rah</div><div class="nl">Groente</div></div>
+  </div>
+
+</div>
+
+<!-- HANDIGE ZINNEN — volle breedte -->
+<div class="section" style="margin-bottom:16px">
+  <div class="section-header" style="background:#534AB7">
+    <span class="icon">💬</span>
+    <h2>Handige zinnen</h2>
+  </div>
+  <div class="col-header"><span>Papiamentu</span><span>Uitspraak</span><span>Nederlands</span></div>
+  <div class="word-row"><div class="pap">Unda ta...?</div><div class="pron">OON-da ta</div><div class="nl">Waar is...?</div></div>
+  <div class="word-row"><div class="pap">Mi no ta komprende</div><div class="pron">mee no ta kom-PREN-deh</div><div class="nl">Ik begrijp het niet</div></div>
+  <div class="word-row"><div class="pap">Papia mas poko poko</div><div class="pron">PAH-pee-ah mas POH-koh POH-koh</div><div class="nl">Praat alsjeblieft langzamer</div></div>
+  <div class="word-row"><div class="pap">Ta bon</div><div class="pron">ta BON</div><div class="nl">Prima / Goed</div></div>
+  <div class="word-row"><div class="pap">Niun problema</div><div class="pron">nee-OON pro-BLEH-ma</div><div class="nl">Geen probleem</div></div>
+  <div class="word-row"><div class="pap">Te aworo</div><div class="pron">teh ah-WOH-roh</div><div class="nl">Tot straks</div></div>
+  <div class="word-row"><div class="pap">Bon nochi</div><div class="pron">bon NO-chi</div><div class="nl">Welterusten</div></div>
+  <div class="word-row"><div class="pap">Dushi bida!</div><div class="pron">DOO-shi BEE-da</div><div class="nl">Het goede leven!</div></div>
+</div>
+
+<div class="footer">
+  <strong>Dushi Papiamentu</strong> &mdash; dushipapiamentu.nl<br>
+  Leer Papiamentu gratis in 12 interactieve lessen &middot; Gemaakt door native speakers van K&ograve;rsou &middot; 2026
+</div>
+
+</body>
+</html>
