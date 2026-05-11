@@ -1,2 +1,6 @@
-# Redirect old URLs if needed in the future
-# /https://dushipapiamentu.pages.dev  /https://dushipapiamentu.nl  301
+# Dushi Papiamentu — URL Redirects
+# Formaat: /oude-url  /nieuwe-url  301
+
+# Blog naamswijzigingen
+/blog/verschil-papiamentu              /blog/verschil-papiamentu-papiamento  301
+/blog/papiamentu-leren-voor-beginners  /blog/papiaments-leren-voor-beginners 301
