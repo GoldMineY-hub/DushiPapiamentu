@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://dushipapiamentu.nl/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -86,7 +86,7 @@
   <!-- Blog overzicht -->
   <url>
     <loc>https://dushipapiamentu.nl/blog/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -94,37 +94,37 @@
   <!-- Blogs — Papiaments leren -->
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiaments-leren-voor-beginners</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiamentu-leren-tips</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/snel-papiaments-leren</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiaments-uitspraak-tips-nederlanders</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/antilliaans-leren</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiamentu-woordenlijst-pdf</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -132,25 +132,25 @@
   <!-- Blogs — Over de taal -->
   <url>
     <loc>https://dushipapiamentu.nl/blog/wat-is-papiamentu</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/verschil-papiamentu-papiamento</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiamentu-geschiedenis</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/welke-taal-curacao-bonaire-aruba</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -158,47 +158,54 @@
   <!-- Blogs — Cultuur en vakantie -->
   <url>
     <loc>https://dushipapiamentu.nl/blog/wat-betekent-dushi</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/20-handige-papiamentu-zinnen</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/papiamentu-strand-restaurant-bestellen</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/10-redenen-papiamentu-vakantie</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/curacao-tips-voor-toeristen</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://dushipapiamentu.nl/blog/beste-restaurants-curacao</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://dushipapiamentu.nl/blog/wat-betekent-bon-bini</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dushipapiamentu.nl/over-ons</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
