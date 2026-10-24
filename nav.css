@@ -12,8 +12,9 @@
 .dpn .dpn-cta{display:inline-block;background:#F4A236;color:#1A2332;border-radius:8px;padding:8px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
 .dpn .dpn-toggle{display:none}
 @media(max-width:760px){
+  .nav.dpn{padding-top:8px;padding-bottom:8px}
   .dpn .dpn-right{gap:10px}
-  .dpn .dpn-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:42px;height:42px;padding:0;background:transparent;border:1px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer}
+  .dpn .dpn-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:38px;height:38px;padding:0;background:transparent;border:1px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer}
   .dpn .dpn-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:#fff;transition:transform .2s,opacity .2s}
   .dpn.open .dpn-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
   .dpn.open .dpn-toggle span:nth-child(2){opacity:0}
