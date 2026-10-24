@@ -26,3 +26,7 @@
   .dpn .dpn-links a[aria-current="page"]{box-shadow:none;color:#F4A236}
 }
 @media(max-width:360px){.dpn .dpn-cta{padding:7px 11px;font-size:11px}.dpn .nb{font-size:14px}}
+/* Social links in de footer */
+.dps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0 4px}
+.dps a{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#0077A8;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:100px;padding:6px 14px;text-decoration:none;transition:border-color .2s,background .2s}
+.dps a:hover{border-color:#0077A8;background:#fff}
