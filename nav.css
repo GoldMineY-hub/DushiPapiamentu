@@ -1,0 +1,27 @@
+/* Dushi Papiamentu: gedeeld hoofdmenu (desktop + mobiel) */
+.dpn{gap:12px}
+.dpn .dpn-logo{display:flex;align-items:center;gap:8px;text-decoration:none;min-width:0}
+.dpn .dpn-logo svg{flex-shrink:0}
+.dpn .nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff;white-space:nowrap}
+.dpn .nb em{font-weight:400;font-style:italic;color:#00B8D4}
+.dpn .dpn-right{display:flex;align-items:center;gap:18px}
+.dpn .dpn-links{display:flex;align-items:center;gap:20px}
+.dpn .dpn-links a{display:block;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;white-space:nowrap;transition:color .2s}
+.dpn .dpn-links a:hover,.dpn .dpn-links a[aria-current="page"]{color:#fff}
+.dpn .dpn-links a[aria-current="page"]{box-shadow:inset 0 -2px 0 #F4A236}
+.dpn .dpn-cta{display:inline-block;background:#F4A236;color:#1A2332;border-radius:8px;padding:8px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.dpn .dpn-toggle{display:none}
+@media(max-width:760px){
+  .dpn .dpn-right{gap:10px}
+  .dpn .dpn-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:42px;height:42px;padding:0;background:transparent;border:1px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer}
+  .dpn .dpn-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:#fff;transition:transform .2s,opacity .2s}
+  .dpn.open .dpn-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .dpn.open .dpn-toggle span:nth-child(2){opacity:0}
+  .dpn.open .dpn-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .dpn .dpn-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 14px;background:rgba(26,35,50,0.98);border-top:1px solid rgba(255,255,255,0.08);box-shadow:0 12px 24px rgba(0,0,0,0.25)}
+  .dpn.open .dpn-links{display:flex}
+  .dpn .dpn-links a{font-size:16px;color:#fff;padding:14px 2px;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .dpn .dpn-links a:last-child{border-bottom:0}
+  .dpn .dpn-links a[aria-current="page"]{box-shadow:none;color:#F4A236}
+}
+@media(max-width:360px){.dpn .dpn-cta{padding:7px 11px;font-size:11px}.dpn .nb{font-size:14px}}
