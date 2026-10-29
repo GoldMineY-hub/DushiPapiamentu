@@ -1,0 +1,33 @@
+/* Dushi Papiamentu: aanmeldboxen in blogartikelen */
+.dsu{font-family:'DM Sans',system-ui,sans-serif;border-radius:18px;margin:36px 0;position:relative;overflow:hidden}
+.dsu *{box-sizing:border-box}
+.dsu-mid{background:#E6F1FB;border:1px solid #B5D4F4;padding:20px 22px}
+.dsu-mid .dsu-t{font-size:17px;font-weight:700;color:#1A2332;margin:0 0 4px;line-height:1.35}
+.dsu-mid .dsu-s{font-size:14px;color:#5C6B7A;margin:0 0 14px;line-height:1.5}
+.dsu-end{background:linear-gradient(145deg,#1A2332 0%,#1e3d5a 55%,#005A7D 100%);padding:32px 26px;text-align:center;color:#fff}
+.dsu-end::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#E8634A,#F4A236,#0077A8,#2A8E4F)}
+.dsu-end .dsu-k{display:inline-block;background:rgba(244,162,54,.15);border:1px solid rgba(244,162,54,.35);color:#F4A236;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px}
+.dsu-end .dsu-t{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#fff;margin:0 0 10px;line-height:1.15}
+.dsu-end .dsu-s{font-size:15px;color:rgba(255,255,255,.75);margin:0 auto 6px;max-width:460px;line-height:1.6}
+.dsu-end ul{list-style:none;padding:0;margin:12px auto 20px;max-width:360px;text-align:left}
+.dsu-end li{font-size:14px;color:rgba(255,255,255,.88);padding:4px 0 4px 26px;position:relative;line-height:1.45}
+.dsu-end li::before{content:'\2713';position:absolute;left:4px;color:#7FE3F2;font-weight:700}
+.dsu-f{display:flex;gap:8px;max-width:480px}
+.dsu-end .dsu-f{margin:0 auto}
+.dsu-f input{flex:1;min-width:0;padding:13px 15px;border-radius:12px;font-size:15px;font-family:inherit;outline:none}
+.dsu-mid .dsu-f input{border:1px solid #B5D4F4;background:#fff;color:#1A2332}
+.dsu-end .dsu-f input{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff}
+.dsu-end .dsu-f input::placeholder{color:rgba(255,255,255,.45)}
+.dsu-f button{border:none;border-radius:12px;padding:13px 20px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap}
+.dsu-mid .dsu-f button{background:#0077A8;color:#fff}
+.dsu-end .dsu-f button{background:#F4A236;color:#1A2332}
+.dsu-f button:disabled{opacity:.6;cursor:default}
+.dsu-m{font-size:13px;margin-top:10px;min-height:1px}
+.dsu-mid .dsu-m{color:#005A7D}
+.dsu-end .dsu-m{color:rgba(255,255,255,.9)}
+.dsu-p{font-size:11.5px;margin:10px 0 0;line-height:1.5}
+.dsu-mid .dsu-p{color:#7A8796}
+.dsu-end .dsu-p{color:rgba(255,255,255,.55)}
+.dsu-p a{color:inherit;text-decoration:underline}
+.dsu-ok .dsu-f{display:none}
+@media(max-width:480px){.dsu-f{flex-direction:column}.dsu-f button{width:100%}.dsu-end{padding:28px 18px}.dsu-end .dsu-t{font-size:23px}}

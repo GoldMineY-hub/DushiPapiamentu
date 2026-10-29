@@ -854,6 +854,7 @@ function handleSignup() {
     return;
   }
 
+  try { localStorage.setItem('dp_signed_up', '1'); } catch (e) {}
   msg.style.color = 'rgba(255,255,255,0.7)';
   msg.textContent = 'Even geduld...';
   btn.disabled = true;
