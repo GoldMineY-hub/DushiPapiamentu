@@ -14,6 +14,15 @@
       d.innerHTML =
         '<p class="dsu-t">&#127965;&#65039; Elke week een eilandtip in je inbox?</p>' +
         '<p class="dsu-s">Taal, cultuur en tips van native speakers van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
+    } else if (kind === 'les') {
+      d.className = 'dsu dsu-end dsu-les';
+      d.innerHTML =
+        '<div class="dsu-k">Bon trabou!</div>' +
+        '<p class="dsu-t">Goed bezig! Blijf oefenen met een eilandtip per week</p>' +
+        '<p class="dsu-s">Zo blijft wat je leert hangen, ook tussen de lessen door:</p>' +
+        '<ul><li>Elke week een echte eilandtip van native speakers</li>' +
+        '<li>Gratis woordenlijst met 100 woorden en uitspraak</li>' +
+        '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     } else {
       d.innerHTML =
         '<div class="dsu-k">Bon bini!</div>' +
@@ -66,8 +75,11 @@
   }
 
   function init() {
+    if (done()) return;
+    var lesMain = document.querySelector('.ly > main');
+    if (lesMain) { lesMain.appendChild(box('les')); return; }
     var art = document.querySelector('article');
-    if (!art || done()) return;
+    if (!art) return;
     var back = null, links = art.querySelectorAll('a[href="/blog/"]');
     for (var i = 0; i < links.length; i++) { if (/Terug/.test(links[i].textContent)) { back = links[i].parentNode; break; } }
 
