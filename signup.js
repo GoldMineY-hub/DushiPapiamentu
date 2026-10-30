@@ -1,6 +1,7 @@
 /* Dushi Papiamentu: aanmeldboxen in blogartikelen (halverwege en onderaan) */
 (function () {
   var ENDPOINT = 'https://dushi-papiamentu-cert.sahadataly.workers.dev';
+  var LEZERS = 380; /* LEZERS: wordt dagelijks bijgewerkt */
   var PRIV = 'Gratis. Afmelden kan altijd. Lees onze <a href="/privacy">privacyverklaring</a>.';
 
   function done() {
@@ -33,6 +34,7 @@
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
     d.innerHTML +=
+      '<p class="dsu-n">&#127796; Al ruim <b>' + LEZERS + '</b> mensen krijgen onze eilandtips</p>' +
       '<form class="dsu-f" novalidate>' +
       '<input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres" required>' +
       '<button type="submit">' + (kind === 'mid' ? 'Aanmelden' : 'Ja, stuur me de tips') + '</button>' +

@@ -30,4 +30,8 @@
 .dsu-end .dsu-p{color:rgba(255,255,255,.55)}
 .dsu-p a{color:inherit;text-decoration:underline}
 .dsu-ok .dsu-f{display:none}
+.dsu-n{font-size:13px;font-weight:600;margin:0 0 10px;line-height:1.4}
+.dsu-mid .dsu-n{color:#005A7D}
+.dsu-end .dsu-n{color:#F4A236}
+.dsu-ok .dsu-n{display:none}
 @media(max-width:480px){.dsu-f{flex-direction:column}.dsu-f button{width:100%}.dsu-end{padding:28px 18px}.dsu-end .dsu-t{font-size:23px}}
