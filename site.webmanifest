@@ -1,0 +1,14 @@
+{
+  "name": "Dushi Papiamentu",
+  "short_name": "Dushi Papiamentu",
+  "description": "Gratis Papiamentu leren in 12 lessen, door native speakers van Kòrsou.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF4E8",
+  "theme_color": "#1A2332",
+  "lang": "nl",
+  "icons": [
+    { "src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
