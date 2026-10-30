@@ -8,3 +8,9 @@
 
 /lessen/*.html
   Cache-Control: public, max-age=86400
+
+/signup.js
+  Cache-Control: public, max-age=3600
+
+/signup.css
+  Cache-Control: public, max-age=3600
