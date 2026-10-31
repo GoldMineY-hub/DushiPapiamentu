@@ -22,7 +22,7 @@
         '<p class="dsu-t">Goed bezig! Blijf oefenen met een eilandtip per week</p>' +
         '<p class="dsu-s">Zo blijft wat je leert hangen, ook tussen de lessen door:</p>' +
         '<ul><li>Elke week een echte eilandtip van native speakers</li>' +
-        '<li>Gratis woordenlijst met 100 woorden en uitspraak</li>' +
+        '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     } else {
       d.innerHTML =
@@ -30,7 +30,7 @@
         '<p class="dsu-t">Leer Papiamentu met een eilandtip per week</p>' +
         '<p class="dsu-s">Vond je dit artikel nuttig? Dan vind je dit ook leuk:</p>' +
         '<ul><li>Elke week een echte eilandtip van native speakers</li>' +
-        '<li>Gratis woordenlijst met 100 woorden en uitspraak</li>' +
+        '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
     d.innerHTML +=
