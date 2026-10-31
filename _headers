@@ -20,7 +20,3 @@
 
 /.well-known/traffic-advice
   Content-Type: application/trafficadvice+json
-
-/mailtmp/*
-  X-Robots-Tag: noindex
-  Content-Type: text/plain; charset=utf-8
