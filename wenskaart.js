@@ -36,21 +36,21 @@
   ];
   /* Ontwerpen. top = zone voor wens [y0,y1]; bot = y van de onderste regel(s); dark = lichte tekst */
   var D = [
-    { id: 'avond', naam: 'Handelskade bij avond', img: 'avond', foto: 1, top: [40, 330], bot: 935, wish: '#FFF6E6', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.55], panel: 'dark' },
-    { id: 'brug-avond', naam: 'Pontjesbrug', img: 'brug-avond', foto: 1, top: [60, 330], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.6], panel: 'dark' },
-    { id: 'handelskade', naam: 'Handelskade', img: 'handelskade', foto: 1, top: [50, 420], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.5], panel: 'dark' },
-    { id: 'strand', naam: 'Strand', img: 'strand', foto: 1, top: [70, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.5], panel: 'dark' },
-    { id: 'brug', naam: 'Pontjesbrug (getekend)', img: 'brug', top: [60, 400], bot: 985, wish: '#FFF6E6', small: '#FFF6E6', brand: '#FFD84D', shade: [0, 0], panel: 'dark' },
-    { id: 'huisjes', naam: 'Willemstad-huisjes', img: 'huisjes', top: [60, 520], allTop: 1, wish: '#C93A55', small: '#5C6B7A', brand: 'pill', shade: [0, 0], panel: 'light', noShadow: 1 },
-    { id: 'kadushi', naam: 'Kadushi met lichtjes', img: 'kadushi', top: [50, 290], bot: 950, wish: '#2F7D4F', small: '#3E2E1E', brand: '#5C4430', shade: [0, 0], panel: 'light', noShadow: 1 },
-    { id: 'goud', naam: 'Goud en sterren', img: 'goud', top: [330, 840], allTop: 1, wish: 'gold', small: '#F4EAD0', brand: '#E2B045', shade: [0, 0], panel: 'dark', noShadow: 1 },
-    { id: 'eigen', naam: 'Eigen foto', eigen: 1, foto: 1, top: [60, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.5, 0.6], panel: 'dark' }
+    { id: 'avond', fy: 0.47, naam: 'Handelskade bij avond', img: 'avond', foto: 1, top: [40, 330], bot: 935, wish: '#FFF6E6', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.55], panel: 'dark' },
+    { id: 'brug-avond', fy: 0.45, naam: 'Pontjesbrug', img: 'brug-avond', foto: 1, top: [60, 330], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.6], panel: 'dark' },
+    { id: 'handelskade', fy: 0.42, naam: 'Handelskade', img: 'handelskade', foto: 1, top: [50, 420], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.5], panel: 'dark' },
+    { id: 'strand', fy: 0.5, naam: 'Strand', img: 'strand', foto: 1, top: [70, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.5], panel: 'dark' },
+    { id: 'brug', fy: 0.62, naam: 'Pontjesbrug (getekend)', img: 'brug', top: [60, 400], bot: 985, wish: '#FFF6E6', small: '#FFF6E6', brand: '#FFD84D', shade: [0, 0], panel: 'dark' },
+    { id: 'huisjes', fy: 0.78, naam: 'Willemstad-huisjes', img: 'huisjes', top: [60, 520], allTop: 1, wish: '#C93A55', small: '#5C6B7A', brand: 'pill', shade: [0, 0], panel: 'light', noShadow: 1 },
+    { id: 'kadushi', fy: 0.56, naam: 'Kadushi met lichtjes', img: 'kadushi', top: [50, 290], bot: 950, wish: '#2F7D4F', small: '#3E2E1E', brand: '#5C4430', shade: [0, 0], panel: 'light', noShadow: 1 },
+    { id: 'goud', fy: 0.4, naam: 'Goud en sterren', img: 'goud', top: [330, 840], allTop: 1, wish: 'gold', small: '#F4EAD0', brand: '#E2B045', shade: [0, 0], panel: 'dark', noShadow: 1 },
+    { id: 'eigen', fy: 0.5, naam: 'Eigen foto', eigen: 1, foto: 1, top: [60, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.5, 0.6], panel: 'dark' }
   ];
 
   var $ = function (id) { return document.getElementById(id); };
   var cv = $('wk-canvas'); if (!cv) return;
   var cx = cv.getContext('2d');
-  var st = { d: 0, w: 0, r: 1, l: 0, mode: 'kort', voor: '', van: '' };
+  var st = { d: 0, w: 0, r: 1, l: 0, mode: 'kort', voor: '', van: '', ew: '', er: '' };
   var imgs = {}, eigenImg = null;
 
   function loadImg(src) {
@@ -125,37 +125,50 @@
     return getBg(d).then(function (bg) {
       cx.clearRect(0, 0, S, S);
       cx.textAlign = 'center'; cx.textBaseline = 'alphabetic';
+      var LM = st.mode === 'lang', lf = null, pt = S;
+      var voor = st.voor ? 'Voor ' + st.voor : '', van = st.van ? 'Van ' + st.van : '';
+      if (LM) {
+        lf = fit([
+          { text: voor, style: 'italic', weight: 400, size: 34, fam: SERIF, lh: 1.3, gap: 0 },
+          { text: LANG[st.l].p, style: 'italic', weight: 400, size: 40, fam: SERIF, lh: 1.42, gap: voor ? 14 : 0, big: 1 },
+          { text: van, style: 'italic', weight: 400, size: 34, fam: SERIF, lh: 1.3, gap: 20 }
+        ], 880, 520);
+        pt = Math.max(440, S - lf.h - 150);
+      }
       if (bg) {
         var iw = bg.naturalWidth || bg.width, ih = bg.naturalHeight || bg.height, sc = Math.max(S / iw, S / ih);
-        var w = iw * sc, h = ih * sc;
-        cx.drawImage(bg, (S - w) / 2, (S - h) / 2, w, h);
+        var w = iw * sc, h = ih * sc, ox = (S - w) / 2, oy = (S - h) / 2;
+        if (LM) {
+          /* lange wens: onderwerp van de foto in het bovenste deel zetten */
+          oy = Math.min(0, Math.max(pt - h, pt / 2 - (d.fy || 0.5) * h));
+          cx.save(); cx.beginPath(); cx.rect(0, 0, S, pt); cx.clip();
+          cx.drawImage(bg, ox, oy, w, h); cx.restore();
+        } else cx.drawImage(bg, ox, oy, w, h);
       } else {
         var gg = cx.createLinearGradient(0, 0, 0, S); gg.addColorStop(0, '#0B2E6B'); gg.addColorStop(1, '#1A2332');
         cx.fillStyle = gg; cx.fillRect(0, 0, S, S);
       }
-      if (d.shade[0]) { var t = cx.createLinearGradient(0, 0, 0, 560); t.addColorStop(0, 'rgba(0,0,0,' + d.shade[0] + ')'); t.addColorStop(1, 'rgba(0,0,0,0)'); cx.fillStyle = t; cx.fillRect(0, 0, S, 560); }
-      if (d.shade[1]) { var b = cx.createLinearGradient(0, 760, 0, S); b.addColorStop(0, 'rgba(0,0,0,0)'); b.addColorStop(1, 'rgba(0,0,0,' + d.shade[1] + ')'); cx.fillStyle = b; cx.fillRect(0, 760, S, 320); }
+      if (d.shade[0] && st.mode !== 'lang') { var t = cx.createLinearGradient(0, 0, 0, 560); t.addColorStop(0, 'rgba(0,0,0,' + d.shade[0] + ')'); t.addColorStop(1, 'rgba(0,0,0,0)'); cx.fillStyle = t; cx.fillRect(0, 0, S, 560); }
+      if (d.shade[1] && !LM) { var b = cx.createLinearGradient(0, 760, 0, S); b.addColorStop(0, 'rgba(0,0,0,0)'); b.addColorStop(1, 'rgba(0,0,0,' + d.shade[1] + ')'); cx.fillStyle = b; cx.fillRect(0, 760, S, 320); }
 
       var shadow = !d.noShadow;
       function sh(on) { cx.shadowColor = on ? 'rgba(0,0,0,0.55)' : 'transparent'; cx.shadowBlur = on ? 18 : 0; cx.shadowOffsetY = on ? 3 : 0; }
-      var voor = st.voor ? 'Voor ' + st.voor : '', van = st.van ? 'Van ' + st.van : '';
 
-      if (st.mode === 'lang') {
-        var lt = LANG[st.l].p;
-        var px = 80, pw = S - 160;
-        cx.font = font('italic', 400, 40, SERIF);
-        var f = fit([
-          { text: voor, style: 'italic', weight: 400, size: 38, fam: SERIF, lh: 1.25, gap: 0 },
-          { text: lt, style: 'italic', weight: 700, size: 50, fam: SERIF, lh: 1.32, gap: voor ? 22 : 0, big: 1 },
-          { text: van, style: 'italic', weight: 400, size: 38, fam: SERIF, lh: 1.25, gap: 26 }
-        ], pw - 100, 700);
-        var ph = f.h + 110, py = Math.round((S - ph) / 2) - 20;
+      if (LM) {
+        var light = d.panel === 'light';
+        var pc = light ? '#FFF8EE' : '#101B34', main = light ? '#1A2332' : '#FFFFFF', acc = light ? (d.wish && d.wish.charAt(0) === '#' ? d.wish : '#C93A55') : '#F4C766';
+        var f = lf;
         sh(false);
-        cx.fillStyle = d.panel === 'light' ? 'rgba(255,255,255,0.88)' : 'rgba(10,18,40,0.62)';
-        roundRect(px, py, pw, ph, 34); cx.fill();
-        drawItems(f, py + 55, { wish: d.panel === 'light' ? '#1A2332' : '#FFFFFF', small: d.panel === 'light' ? '#5C6B7A' : '#F4EAD0' }, d);
+        var fade = cx.createLinearGradient(0, pt - 70, 0, pt);
+        fade.addColorStop(0, light ? 'rgba(255,248,238,0)' : 'rgba(16,27,52,0)'); fade.addColorStop(1, pc);
+        cx.fillStyle = fade; cx.fillRect(0, pt - 70, S, 70);
+        cx.fillStyle = pc; cx.fillRect(0, pt, S, S - pt);
+        cx.fillStyle = acc; cx.fillRect(S / 2 - 40, pt + 18, 80, 4);
+        drawItems(f, pt + 52, { wish: main, small: acc }, d);
+        d = { brand: light ? '#5C6B7A' : '#F4C766', foto: d.foto, eigen: d.eigen };
       } else {
-        var wish = WENSEN[st.w].p, regel = st.mode === 'regel' ? REGELS[st.r].p : '';
+        var eig = st.mode === 'eigen';
+        var wish = eig ? (st.ew || 'Bon Pasku!') : WENSEN[st.w].p, regel = st.mode === 'regel' ? REGELS[st.r].p : (eig ? st.er : '');
         var top = [
           { text: voor, style: 'italic', weight: 400, size: 44, fam: SERIF, lh: 1.25, gap: 0 },
           { text: wish, style: 'italic', weight: 700, size: wish.length > 22 ? 104 : 124, fam: SERIF, lh: 1.08, gap: voor ? 16 : 0, big: 1 }
@@ -173,7 +186,7 @@
             { text: regel, style: 'italic', weight: 400, size: 44, fam: SERIF, lh: 1.25, gap: 0 },
             { text: van, style: 'italic', weight: 400, size: 40, fam: SERIF, lh: 1.25, gap: regel ? 12 : 0 }
           ];
-          var fb = fit(bot, 900, 190);
+          var fb = fit(bot, 900, regel.length > 60 ? 240 : 190);
           drawItems(fb, d.bot - fb.h + 30, d, d);
         }
       }
@@ -199,7 +212,9 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function uitleg() {
     var h = '';
-    if (st.mode === 'lang') {
+    if (st.mode === 'eigen') {
+      h = '<p class="wk-u-n">Je gebruikt je eigen tekst. Twijfel je over de spelling? Kijk in onze <a href="/blog/papiamentu-woordenlijst-pdf" style="color:#0077A8;text-decoration:underline">woordenlijst</a> of bij de <a href="/blog/fijne-feestdagen-papiaments" style="color:#0077A8;text-decoration:underline">feestdagenwensen</a>.</p>';
+    } else if (st.mode === 'lang') {
       h = '<p class="wk-u-p">' + esc(LANG[st.l].p) + '</p><p class="wk-u-n">' + esc(LANG[st.l].n) + '</p>';
     } else {
       var w = WENSEN[st.w];
@@ -253,7 +268,8 @@
   function setMode(m) {
     st.mode = m;
     var bs = document.querySelectorAll('.wk-m'); for (var i = 0; i < bs.length; i++) bs[i].classList.toggle('on', bs[i].getAttribute('data-m') === m);
-    $('wk-rij-wens').style.display = m === 'lang' ? 'none' : '';
+    $('wk-rij-wens').style.display = (m === 'lang' || m === 'eigen') ? 'none' : '';
+    $('wk-rij-eigen').style.display = m === 'eigen' ? '' : 'none';
     $('wk-rij-regel').style.display = m === 'regel' ? '' : 'none';
     $('wk-rij-lang').style.display = m === 'lang' ? '' : 'none';
     render();
@@ -265,6 +281,8 @@
   var tmr;
   function onName() { st.voor = $('wk-voor').value.trim().slice(0, 40); st.van = $('wk-van').value.trim().slice(0, 40); clearTimeout(tmr); tmr = setTimeout(render, 120); }
   $('wk-voor').oninput = onName; $('wk-van').oninput = onName;
+  function onEigen() { st.ew = $('wk-ew').value.trim().slice(0, 50); st.er = $('wk-er').value.trim().replace(/\s+/g, ' ').slice(0, 160); clearTimeout(tmr); tmr = setTimeout(render, 120); }
+  $('wk-ew').oninput = onEigen; $('wk-er').oninput = onEigen;
 
   function blob() { return new Promise(function (res) { cv.toBlob(function (b) { res(b); }, 'image/jpeg', 0.92); }); }
   function msg(t) { $('wk-msg').textContent = t; }

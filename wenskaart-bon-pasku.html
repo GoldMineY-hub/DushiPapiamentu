@@ -106,11 +106,11 @@ article tr:nth-child(even) td{background:#F8FAFC}
 .wk-t img{width:100%;height:100%;object-fit:cover;display:block}
 .wk-t.on{border-color:#F4A236}
 .wk-t-eigen{font-size:11px;font-weight:700;color:#1A2332;line-height:1.3;font-family:'DM Sans',sans-serif}
-.wk-ms{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
+.wk-ms{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:12px}
 .wk-m{border:1.5px solid #CBD5E1;background:#fff;border-radius:10px;padding:9px 6px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:'DM Sans',sans-serif}
 .wk-m.on{background:#1A2332;border-color:#1A2332;color:#fff}
 .wk-l{display:block;font-size:13px;font-weight:600;color:#374151;margin:10px 0 5px}
-.wk select,.wk input[type=text]{width:100%;font-size:16px;padding:11px 12px;border:1.5px solid #CBD5E1;border-radius:10px;font-family:'DM Sans',sans-serif;background:#fff;color:#1A2332}
+.wk select,.wk input[type=text],.wk textarea{resize:vertical;width:100%;font-size:16px;padding:11px 12px;border:1.5px solid #CBD5E1;border-radius:10px;font-family:'DM Sans',sans-serif;background:#fff;color:#1A2332}
 .wk select:focus,.wk input:focus{outline:none;border-color:#0077A8}
 .wk-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .wk-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -216,7 +216,7 @@ article tr:nth-child(even) td{background:#F8FAFC}
 <link rel="stylesheet" href="/signup.css?v=2">
 <script src="/signup.js?v=3" defer></script>
 <script src="/progress.js?v=1" defer></script>
-<script src="/wenskaart.js?v=1" defer></script>
+<script src="/wenskaart.js?v=2" defer></script>
 </head>
 <body>
 <nav class="nav dpn" aria-label="Hoofdmenu">
@@ -253,9 +253,15 @@ article tr:nth-child(even) td{background:#F8FAFC}
         <button type="button" class="wk-m on" data-m="kort">Korte wens</button>
         <button type="button" class="wk-m" data-m="regel">Wens + regel</button>
         <button type="button" class="wk-m" data-m="lang">Lange wens</button>
+        <button type="button" class="wk-m" data-m="eigen">Eigen tekst</button>
       </div>
       <div id="wk-rij-wens"><label class="wk-l" for="wk-wens">Wens</label><select id="wk-wens"></select></div>
       <div id="wk-rij-regel" style="display:none"><label class="wk-l" for="wk-regel">Regel eronder</label><select id="wk-regel"></select></div>
+      <div id="wk-rij-eigen" style="display:none">
+        <label class="wk-l" for="wk-ew">Grote tekst</label><input type="text" id="wk-ew" maxlength="50" placeholder="bijv. Bon Pasku!" autocomplete="off">
+        <label class="wk-l" for="wk-er">Kleinere tekst eronder (mag leeg)</label><textarea id="wk-er" maxlength="160" rows="3" placeholder="bijv. Hopi brasa for di Hulanda!"></textarea>
+        <p class="wk-sub">Je tekst blijft op je apparaat en wordt niet opgeslagen.</p>
+      </div>
       <div id="wk-rij-lang" style="display:none"><label class="wk-l" for="wk-lang">Lange wens</label><select id="wk-lang"></select></div>
     </div>
     <div class="wk-blok">
@@ -286,7 +292,7 @@ article tr:nth-child(even) td{background:#F8FAFC}
 <article>
 
 <h2>Zo maak je een kaartje in het Papiaments</h2>
-<p>Met deze wenskaartjesmaker stuur je in een minuut een echt Papiaments kerst- of nieuwjaarskaartje. Kies een korte wens, een wens met een warme regel eronder, of een lange wens als een brief. Kies daarna een foto van Curaçao, een getekend ontwerp of je eigen foto, en typ voor wie het kaartje is.</p>
+<p>Met deze wenskaartjesmaker stuur je in een minuut een echt Papiaments kerst- of nieuwjaarskaartje. Kies een korte wens, een wens met een warme regel eronder, een lange wens als een brief, of schrijf je eigen tekst. Kies daarna een foto van Curaçao, een getekend ontwerp of je eigen foto, en typ voor wie het kaartje is.</p>
 <p>Alle teksten zijn geschreven en gecontroleerd door native speakers van Kòrsou, in de spelling van Curaçao. Onder het kaartje zie je wat de wens betekent en hoe je hem uitspreekt. Zo weet je precies wat je verstuurt.</p>
 
 <h2>Wat betekenen de wensen?</h2>
