@@ -12,6 +12,9 @@
 /signup.js
   Cache-Control: public, max-age=3600
 
+/wenskaart.js
+  Cache-Control: public, max-age=3600
+
 /progress.js
   Cache-Control: public, max-age=3600
 
