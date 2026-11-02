@@ -38,7 +38,12 @@
   var D = [
     { id: 'avond', fy: 0.47, naam: 'Handelskade bij avond', img: 'avond', foto: 1, top: [40, 330], bot: 935, wish: '#FFF6E6', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.55], panel: 'dark' },
     { id: 'brug-avond', fy: 0.45, naam: 'Pontjesbrug', img: 'brug-avond', foto: 1, top: [60, 330], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFD84D', shade: [0.45, 0.6], panel: 'dark' },
-    { id: 'handelskade', fy: 0.42, naam: 'Handelskade', img: 'handelskade', foto: 1, top: [50, 420], bot: 915, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.5], panel: 'dark' },
+    { id: 'vuurwerk', fy: 0.22, naam: 'Vuurwerk', img: 'vuurwerk', foto: 1, top: [560, 830], bot: 965, wish: '#FFE9B0', small: '#FFFFFF', brand: '#FFD84D', shade: [0, 0.4], panel: 'dark' },
+    { id: 'kerstboom-strand', fy: 0.45, naam: 'Kerstboom op het strand', img: 'kerstboom-strand', foto: 1, top: [50, 470], allTop: 1, band: 1, wish: '#B3261E', small: '#1A2332', brand: '#FFFFFF', shade: [0, 0.45], panel: 'light', noShadow: 1 },
+    { id: 'pier', fy: 0.5, naam: 'Lichtjes aan zee', img: 'pier', foto: 1, top: [50, 330], bot: 960, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFD84D', shade: [0.25, 0.45], panel: 'dark' },
+    { id: 'bootjes', fy: 0.55, naam: 'Vissersbootjes', img: 'bootjes', foto: 1, top: [40, 300], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.6], panel: 'dark' },
+    { id: 'flamingo', fy: 0.55, naam: 'Flamingo\'s', img: 'flamingo', foto: 1, top: [40, 320], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.5], panel: 'dark' },
+    { id: 'kadushi-foto', fy: 0.5, naam: 'Kadushi aan zee', img: 'kadushi-foto', foto: 1, top: [50, 380], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.6], panel: 'dark' },
     { id: 'strand', fy: 0.5, naam: 'Strand', img: 'strand', foto: 1, top: [70, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.5], panel: 'dark' },
     { id: 'brug', fy: 0.62, naam: 'Pontjesbrug (getekend)', img: 'brug', top: [60, 400], bot: 985, wish: '#FFF6E6', small: '#FFF6E6', brand: '#FFD84D', shade: [0, 0], panel: 'dark' },
     { id: 'huisjes', fy: 0.78, naam: 'Willemstad-huisjes', img: 'huisjes', top: [60, 520], allTop: 1, wish: '#C93A55', small: '#5C6B7A', brand: 'pill', shade: [0, 0], panel: 'light', noShadow: 1 },
@@ -180,6 +185,7 @@
         var ft = fit(top, 900, d.top[1] - d.top[0]);
         sh(shadow);
         var y0 = d.allTop ? d.top[0] + Math.round((d.top[1] - d.top[0] - ft.h) / 2) : d.top[0];
+        if (d.band) { sh(false); cx.fillStyle = 'rgba(255,255,255,0.78)'; roundRect(60, y0 - 36, S - 120, ft.h + 72, 28); cx.fill(); sh(shadow); }
         drawItems(ft, y0, d, d);
         if (!d.allTop) {
           var bot = [
