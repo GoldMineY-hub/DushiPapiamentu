@@ -44,11 +44,6 @@
     { id: 'bootjes', fy: 0.55, naam: 'Vissersbootjes', img: 'bootjes', foto: 1, top: [40, 300], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.6], panel: 'dark' },
     { id: 'flamingo', fy: 0.55, naam: 'Flamingo\'s', img: 'flamingo', foto: 1, top: [40, 320], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.35, 0.5], panel: 'dark' },
     { id: 'kadushi-foto', fy: 0.5, naam: 'Kadushi aan zee', img: 'kadushi-foto', foto: 1, top: [50, 380], bot: 965, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.6], panel: 'dark' },
-    { id: 'strand', fy: 0.5, naam: 'Strand', img: 'strand', foto: 1, top: [70, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.3, 0.5], panel: 'dark' },
-    { id: 'brug', fy: 0.62, naam: 'Pontjesbrug (getekend)', img: 'brug', top: [60, 400], bot: 985, wish: '#FFF6E6', small: '#FFF6E6', brand: '#FFD84D', shade: [0, 0], panel: 'dark' },
-    { id: 'huisjes', fy: 0.78, naam: 'Willemstad-huisjes', img: 'huisjes', top: [60, 520], allTop: 1, wish: '#C93A55', small: '#5C6B7A', brand: 'pill', shade: [0, 0], panel: 'light', noShadow: 1 },
-    { id: 'kadushi', fy: 0.56, naam: 'Kadushi met lichtjes', img: 'kadushi', top: [50, 290], bot: 950, wish: '#2F7D4F', small: '#3E2E1E', brand: '#5C4430', shade: [0, 0], panel: 'light', noShadow: 1 },
-    { id: 'goud', fy: 0.4, naam: 'Goud en sterren', img: 'goud', top: [330, 840], allTop: 1, wish: 'gold', small: '#F4EAD0', brand: '#E2B045', shade: [0, 0], panel: 'dark', noShadow: 1 },
     { id: 'eigen', fy: 0.5, naam: 'Eigen foto', eigen: 1, foto: 1, top: [60, 360], bot: 930, wish: '#FFFFFF', small: '#FFFFFF', brand: '#FFFFFF', shade: [0.5, 0.6], panel: 'dark' }
   ];
 
