@@ -59,12 +59,24 @@
   var imgs = {}, eigenImg = null;
 
   function loadImg(src) {
-    return new Promise(function (res) { var i = new Image(); i.onload = function () { res(i); }; i.onerror = function () { res(null); }; i.src = src; });
+    return new Promise(function (res) {
+      var i = new Image();
+      i.onload = function () { if (i.decode) i.decode().then(function () { res(i); }, function () { res(i); }); else res(i); };
+      i.onerror = function () { res(null); };
+      i.src = src;
+    });
   }
+  var pending = {};
   function getBg(d) {
     if (d.eigen) return Promise.resolve(eigenImg);
     if (imgs[d.img]) return Promise.resolve(imgs[d.img]);
-    return loadImg('/images/wenskaart/' + d.img + '.webp').then(function (i) { imgs[d.img] = i; return i; });
+    if (!pending[d.img]) pending[d.img] = loadImg('/images/wenskaart/' + d.img + '.webp').then(function (i) { if (i) imgs[d.img] = i; delete pending[d.img]; return i; });
+    return pending[d.img];
+  }
+  /* Alle ontwerpen alvast op de achtergrond laden, zodat wisselen direct gaat */
+  function preloadAll() {
+    var list = D.filter(function (d) { return !d.eigen; }), k = 0;
+    (function next() { if (k >= list.length) return; getBg(list[k++]).then(function () { setTimeout(next, 50); }); })();
   }
 
   function font(style, weight, size, fam) { return style + ' ' + weight + ' ' + size + 'px ' + fam; }
@@ -125,9 +137,14 @@
     return y;
   }
 
+  var renderId = 0;
   function render() {
-    var d = D[st.d];
+    var d = D[st.d], my = ++renderId;
+    var wait = setTimeout(function () { if (my === renderId) cv.style.opacity = '0.55'; }, 120);
     return getBg(d).then(function (bg) {
+      clearTimeout(wait);
+      if (my !== renderId) return; /* er is intussen iets anders gekozen */
+      cv.style.opacity = '1';
       cx.clearRect(0, 0, S, S);
       cx.textAlign = 'center'; cx.textBaseline = 'alphabetic';
       var LM = st.mode === 'lang', lf = null, pt = S;
@@ -314,6 +331,8 @@
   var ready = document.fonts && document.fonts.load ? Promise.all([
     document.fonts.load("italic 700 60px 'Playfair Display'"), document.fonts.load("italic 400 40px 'Playfair Display'"), document.fonts.load("700 24px 'DM Sans'")
   ]).catch(function () {}) : Promise.resolve();
-  ready.then(function () { setMode('kort'); });
+  ready.then(function () { setMode('kort'); setTimeout(preloadAll, 400); });
+  /* Als de lettertypes later binnenkomen, het kaartje opnieuw tekenen */
+  if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', function () { render(); });
   window.__wk = { st: st, render: render, D: D };
 })();
