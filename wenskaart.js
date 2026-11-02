@@ -64,7 +64,7 @@
   function getBg(d) {
     if (d.eigen) return Promise.resolve(eigenImg);
     if (imgs[d.img]) return Promise.resolve(imgs[d.img]);
-    return loadImg('/images/wenskaart/' + d.img + '.jpg').then(function (i) { imgs[d.img] = i; return i; });
+    return loadImg('/images/wenskaart/' + d.img + '.webp').then(function (i) { imgs[d.img] = i; return i; });
   }
 
   function font(style, weight, size, fam) { return style + ' ' + weight + ' ' + size + 'px ' + fam; }
@@ -247,7 +247,7 @@
     var b = document.createElement('button'); b.type = 'button'; b.className = 'wk-t' + (i === 0 ? ' on' : '');
     b.setAttribute('aria-label', d.naam); b.title = d.naam;
     if (d.eigen) b.innerHTML = '<span class="wk-t-eigen">📷<br>Eigen foto</span>';
-    else b.innerHTML = '<img src="/images/wenskaart/t-' + d.img + '.jpg" alt="" width="80" height="80" loading="lazy">';
+    else b.innerHTML = '<img src="/images/wenskaart/t-' + d.img + '.webp" alt="" width="80" height="80" loading="lazy">';
     b.onclick = function () {
       if (d.eigen && !eigenImg) { $('wk-file').click(); return; }
       kies(i);
