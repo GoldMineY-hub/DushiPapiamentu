@@ -75,6 +75,8 @@
   }
   /* Alle ontwerpen alvast op de achtergrond laden, zodat wisselen direct gaat */
   function preloadAll() {
+    var c = navigator.connection;
+    if (c && (c.saveData || /2g/.test(c.effectiveType || ''))) return; /* databesparing of trage verbinding: niet voorladen */
     var list = D.filter(function (d) { return !d.eigen; }), k = 0;
     (function next() { if (k >= list.length) return; getBg(list[k++]).then(function () { setTimeout(next, 50); }); })();
   }
