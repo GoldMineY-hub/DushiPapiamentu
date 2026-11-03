@@ -25,7 +25,7 @@
     { p: 'Leu for di bista, serka di kurason.', n: 'Ver uit het zicht, dicht bij het hart.' },
     { p: 'Hopi brasa for di Kòrsou!', n: 'Veel knuffels van Curaçao!' },
     { p: 'Danki pa tur loke bo a hasi pa mi e aña aki.', n: 'Dank je voor alles wat je dit jaar voor me hebt gedaan.' },
-    { p: 'Mi stimabu.', n: 'Ik hou van jou.' },
+    { p: 'Mi stimabo.', n: 'Ik hou van jou.' },
     { p: 'Mi ta stima boso.', n: 'Ik hou van jullie.' }
   ];
   var LANG = [
