@@ -29,3 +29,6 @@
 
 /.well-known/traffic-advice
   Content-Type: application/trafficadvice+json
+
+/downloads/dushi-papiamentu-woordenlijst.pdf
+  Link: <https://dushipapiamentu.nl/blog/papiamentu-woordenlijst-pdf>; rel="canonical"
