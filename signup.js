@@ -1,7 +1,7 @@
 /* Dushi Papiamentu: aanmeldboxen in blogartikelen (halverwege en onderaan) */
 (function () {
   var ENDPOINT = 'https://dushi-papiamentu-cert.sahadataly.workers.dev';
-  var LEZERS = 410; /* LEZERS: wordt dagelijks bijgewerkt */
+  var LEZERS = 420; /* LEZERS: wordt dagelijks bijgewerkt */
   var PRIV = 'Gratis. Afmelden kan altijd. Lees onze <a href="/privacy">privacyverklaring</a>.';
 
   function done() {
