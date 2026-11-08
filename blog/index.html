@@ -515,7 +515,7 @@ function filterCat(cat, btn) {
 }
 </script>
 <script>
-(function(){var now=Date.now();document.querySelectorAll('.blog-row[data-date]').forEach(function(a){var d=Date.parse(a.getAttribute('data-date'));if(now-d<30*864e5){var t=a.querySelector('.blog-row-title');if(t){var s=document.createElement('span');s.className='nw';s.textContent='Nieuw';t.appendChild(s);}}});})();
+(function(){var now=Date.now(),r=[].slice.call(document.querySelectorAll('.blog-row[data-date]')).map(function(a){return [Date.parse(a.getAttribute('data-date')),a];}).filter(function(x){return now-x[0]<14*864e5;}).sort(function(a,b){return b[0]-a[0];}).slice(0,3);r.forEach(function(x){var t=x[1].querySelector('.blog-row-title');if(t){var s=document.createElement('span');s.className='nw';s.textContent='Nieuw';t.appendChild(s);}});})();
 </script>
 </body>
 </html>
