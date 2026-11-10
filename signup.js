@@ -79,6 +79,7 @@
 
   /* Deelknoppen onder blogartikelen: gewone links, geen externe scripts of cookies */
   function share() {
+    if (document.querySelector('[data-dsu]')) return;
     var art = document.querySelector('article');
     if (!art || document.querySelector('.ldl-sh')) return;
     var canon = document.querySelector('link[rel=canonical]');
@@ -116,6 +117,8 @@
   function init() {
     share();
     if (done()) return;
+    var slots = document.querySelectorAll('[data-dsu]');
+    if (slots.length) { for (var s = 0; s < slots.length; s++) { var bx = box(slots[s].getAttribute('data-dsu') || 'end'), sub = slots[s].getAttribute('data-sub'), se = bx.querySelector('.dsu-s'); if (sub && se) se.textContent = sub; slots[s].appendChild(bx); } return; }
     var lesMain = document.querySelector('.ly > main');
     if (lesMain) { lesMain.appendChild(box('les')); return; }
     var art = document.querySelector('article');
