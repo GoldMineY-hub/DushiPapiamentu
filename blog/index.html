@@ -570,5 +570,6 @@ function expandSec(sec){var l=sec.querySelector('.blog-list.clp');if(l){l.classL
 <script>
 (function(){var f=document.querySelector('.filter-bar');if(!f)return;function u(){f.classList.toggle('more-r',f.scrollLeft+f.clientWidth<f.scrollWidth-4);}f.addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();f.querySelectorAll('.filter-btn').forEach(function(b){b.addEventListener('click',function(){b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});});});})();
 </script>
+<script src="/totop.js?v=1" defer></script>
 </body>
 </html>
