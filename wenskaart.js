@@ -4,13 +4,13 @@
   var WENSEN = [
     { p: 'Bon Pasku i Bon Aña!', n: 'Fijne feestdagen en een voorspoedig nieuwjaar!', u: 'bon PAS-koe ie bon A-nja' },
     { p: 'Bon Pasku!', n: 'Fijne kerst / fijne feestdagen!', u: 'bon PAS-koe' },
-    { p: 'Felis Pasku!', n: 'Vrolijk kerstfeest!', u: 'FE-lies PAS-koe' },
-    { p: 'Felis Aña Nobo!', n: 'Gelukkig nieuwjaar!', u: 'FE-lies A-nja NO-bo' },
+    { p: 'Felis Pasku!', n: 'Vrolijk kerstfeest!', u: 'fe-LIES PAS-koe' },
+    { p: 'Felis Aña Nobo!', n: 'Gelukkig nieuwjaar!', u: 'fe-LIES A-nja NO-bo' },
     { p: 'Bon Aña!', n: 'Een voorspoedig nieuwjaar!', u: 'bon A-nja' },
-    { p: 'Bon Pasku i un felis Aña Nobo!', n: 'Fijne feestdagen en een gelukkig nieuwjaar!', u: 'bon PAS-koe ie oen FE-lies A-nja NO-bo' },
+    { p: 'Bon Pasku i un felis Aña Nobo!', n: 'Fijne feestdagen en een gelukkig nieuwjaar!', u: 'bon PAS-koe ie oen fe-LIES A-nja NO-bo' },
     { p: 'Bon Pasku i un bon Aña Nobo!', n: 'Fijne feestdagen en een goed nieuwjaar!', u: 'bon PAS-koe ie oen bon A-nja NO-bo' },
     { p: 'Bon Pasku pa henter famia!', n: 'Fijne kerst voor de hele familie!', u: '' },
-    { p: 'Mi ta deseá bo un felis Aña Nobo.', n: 'Ik wens je een gelukkig nieuwjaar.', u: 'mie ta de-se-JA bo oen FE-lies A-nja NO-bo' }
+    { p: 'Mi ta deseá bo un felis Aña Nobo.', n: 'Ik wens je een gelukkig nieuwjaar.', u: 'mie ta de-se-JA bo oen fe-LIES A-nja NO-bo' }
   ];
   var REGELS = [
     { p: '', n: '' },
