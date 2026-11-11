@@ -48,6 +48,8 @@ a{text-decoration:none;color:inherit}
 .filter-wrap{background:#fff;border-bottom:1px solid #E2E8F0;position:sticky;top:57px;z-index:90}
 .filter-bar{max-width:760px;margin:0 auto;padding:12px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
 .filter-bar::-webkit-scrollbar{display:none}
+@media(min-width:700px){.filter-bar{flex-wrap:wrap;justify-content:center;overflow:visible;max-width:980px}}
+@media(max-width:699px){.filter-bar.more-r{-webkit-mask-image:linear-gradient(to right,#000 80%,transparent);mask-image:linear-gradient(to right,#000 80%,transparent)}}
 .filter-btn{border:1px solid #E2E8F0;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:500;color:#5C6B7A;background:#fff;cursor:pointer;white-space:nowrap;transition:all 0.2s;font-family:'DM Sans',sans-serif}
 .filter-btn:hover{border-color:#0077A8;color:#0077A8}
 .filter-btn.active{background:#0077A8;color:#fff;border-color:#0077A8}
@@ -58,6 +60,9 @@ a{text-decoration:none;color:inherit}
 .section-head p{font-size:14px;color:#5C6B7A;line-height:1.5}
 .section-divider{height:3px;width:48px;background:#0077A8;border-radius:2px;margin-top:10px}
 .blog-list{display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+.blog-list.clp .blog-row:nth-child(n+4){display:none}
+.more-btn{display:block;width:100%;margin:4px 0 8px;padding:12px 16px;background:#fff;border:1.5px dashed #B5D4F4;border-radius:12px;color:#0077A8;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.more-btn:hover{background:#E6F1FB}
 .blog-row{display:grid;grid-template-columns:72px 1fr;background:#fff;border-radius:14px;border:1px solid #E2E8F0;overflow:hidden;transition:all 0.2s}
 .blog-row:hover{border-color:#0077A8;transform:translateX(4px)}
 .blog-row-accent{width:72px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
@@ -550,12 +555,20 @@ function filterCat(cat, btn) {
       sec.classList.remove('hidden');
     } else {
       sec.classList.toggle('hidden', sec.getAttribute('data-cat') !== cat);
+      if(sec.getAttribute('data-cat') === cat) expandSec(sec);
     }
   });
 }
 </script>
 <script>
 (function(){var now=Date.now(),r=[].slice.call(document.querySelectorAll('.blog-row[data-date]')).map(function(a){return [Date.parse(a.getAttribute('data-date')),a];}).filter(function(x){return now-x[0]<14*864e5;}).sort(function(a,b){return b[0]-a[0];}).slice(0,3);r.forEach(function(x){var t=x[1].querySelector('.blog-row-title');if(t){var s=document.createElement('span');s.className='nw';s.textContent='Nieuw';t.appendChild(s);}});})();
+</script>
+<script>
+(function(){document.querySelectorAll('.blog-list').forEach(function(l){var n=l.querySelectorAll('.blog-row').length;if(n<=3)return;l.classList.add('clp');var b=document.createElement('button');b.type='button';b.className='more-btn';b.textContent='Toon alle '+n+' artikelen \u2193';b.onclick=function(){l.classList.remove('clp');b.remove();};l.parentNode.insertBefore(b,l.nextSibling);});})();
+function expandSec(sec){var l=sec.querySelector('.blog-list.clp');if(l){l.classList.remove('clp');var b=l.nextElementSibling;if(b&&b.classList.contains('more-btn'))b.remove();}}
+</script>
+<script>
+(function(){var f=document.querySelector('.filter-bar');if(!f)return;function u(){f.classList.toggle('more-r',f.scrollLeft+f.clientWidth<f.scrollWidth-4);}f.addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();f.querySelectorAll('.filter-btn').forEach(function(b){b.addEventListener('click',function(){b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});});});})();
 </script>
 </body>
 </html>
