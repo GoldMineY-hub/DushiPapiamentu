@@ -35,3 +35,6 @@
 
 /downloads/dushi-papiamentu-woordenlijst.pdf
   Link: <https://dushipapiamentu.nl/blog/papiamentu-woordenlijst-pdf>; rel="canonical"
+
+/images/pins/*
+  Access-Control-Allow-Origin: *
