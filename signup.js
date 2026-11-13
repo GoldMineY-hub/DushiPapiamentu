@@ -13,23 +13,23 @@
     d.className = 'dsu dsu-' + kind;
     if (kind === 'mid') {
       d.innerHTML =
-        '<p class="dsu-t">&#127965;&#65039; Elke week een eilandtip in je inbox?</p>' +
+        '<p class="dsu-t">&#127965;&#65039; Elke dinsdagavond een eilandtip in je inbox?</p>' +
         '<p class="dsu-s">Taal, cultuur en tips van native speakers van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
     } else if (kind === 'les') {
       d.className = 'dsu dsu-end dsu-les';
       d.innerHTML =
         '<div class="dsu-k">Bon trabou!</div>' +
-        '<p class="dsu-t">Goed bezig! Blijf oefenen met een eilandtip per week</p>' +
+        '<p class="dsu-t">Goed bezig! Blijf oefenen met elke dinsdagavond een eilandtip</p>' +
         '<p class="dsu-s">Zo blijft wat je leert hangen, ook tussen de lessen door:</p>' +
-        '<ul><li>Elke week een echte eilandtip van native speakers</li>' +
+        '<ul><li>Elke dinsdagavond een echte eilandtip van native speakers</li>' +
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     } else {
       d.innerHTML =
         '<div class="dsu-k">Bon bini!</div>' +
-        '<p class="dsu-t">Leer Papiamentu met een eilandtip per week</p>' +
+        '<p class="dsu-t">Leer Papiamentu met elke dinsdagavond een eilandtip</p>' +
         '<p class="dsu-s">Vond je dit artikel nuttig? Dan vind je dit ook leuk:</p>' +
-        '<ul><li>Elke week een echte eilandtip van native speakers</li>' +
+        '<ul><li>Elke dinsdagavond een echte eilandtip van native speakers</li>' +
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
