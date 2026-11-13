@@ -7,6 +7,6 @@
   document.addEventListener('click',function(e){if(!nav.contains(e.target))setOpen(false);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
   var p=location.pathname.replace(/\.html$/,'').replace(/\/index$/,'/');
-  var key=p.indexOf('/blog')===0?'blog':p.indexOf('/lessen')===0?'lessen':p.indexOf('/over-ons')===0?'over-ons':(p==='/'||p==='')?'home':'';
+  var key=p.indexOf('/blog')===0?'blog':p.indexOf('/lessen')===0?'lessen':p.indexOf('/over-ons')===0?'over-ons':p.indexOf('/papiaments-vertalen')===0?'vertalen':(p==='/'||p==='')?'home':'';
   var cur=nav.querySelector('[data-nav="'+key+'"]');if(cur)cur.setAttribute('aria-current','page');
 })();
