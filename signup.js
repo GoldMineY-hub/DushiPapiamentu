@@ -33,6 +33,11 @@
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
+    var ov = document.querySelector('[data-dsu-title]');
+    if (ov && kind !== 'les') {
+      d.querySelector('.dsu-t').innerHTML = ov.getAttribute('data-dsu-title');
+      if (ov.getAttribute('data-dsu-sub')) d.querySelector('.dsu-s').innerHTML = ov.getAttribute('data-dsu-sub');
+    }
     d.innerHTML +=
       '<p class="dsu-n">&#127796; Al ruim <b>' + LEZERS + '</b> mensen krijgen onze eilandtips</p>' +
       '<form class="dsu-f" novalidate>' +
