@@ -1,0 +1,10 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Afbeelding versturen</title></head>
+<body style="font-family:sans-serif;padding:20px">Afbeelding wordt doorgegeven...
+<script>
+(function(){var n=new URLSearchParams(location.search).get('f')||'';if(!/^[a-z0-9\-]+\.(jpg|png)$/.test(n)){document.body.textContent='Ongeldig bestand';return;}
+var p=n.indexOf('ig-')===0?'/images/pins/ig/':'/images/pins/';
+fetch(p+n).then(function(r){return r.blob();}).then(function(b){
+ if(window.opener){window.opener.postMessage({dpImage:true,name:n,blob:b},'https://business.facebook.com');}
+ document.body.textContent='Klaar';setTimeout(function(){window.close();},800);});
+})();
+</script></body></html>
