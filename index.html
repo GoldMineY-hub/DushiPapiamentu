@@ -361,7 +361,8 @@ button{font-family:'DM Sans',sans-serif}
 /* CTA EMAIL */
 .cta-email-section{background:linear-gradient(145deg,#1A2332 0%,#1e3d5a 50%,#005A7D 100%);border-radius:28px;padding:56px 44px;text-align:center;position:relative;overflow:hidden}
 .cta-email-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#E8634A,#F4A236,#0077A8,#2A8E4F)}
-.cta-email-section::after{content:'🏝️';font-size:180px;position:absolute;bottom:-50px;right:-20px;opacity:0.05;line-height:1}
+.cta-email-section::after{content:'🏝️';font-size:180px;position:absolute;bottom:-50px;right:-20px;opacity:0.05;line-height:1;pointer-events:none;z-index:0}
+.cta-email-section>*{position:relative;z-index:1}
 .cta-email-label{display:inline-block;background:rgba(244,162,54,0.15);border:1px solid rgba(244,162,54,0.3);color:#F4A236;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:20px}
 .cta-email-section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,38px);color:#fff;margin-bottom:12px;line-height:1.1}
 .cta-email-section p{font-size:15px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 32px;line-height:1.7}
