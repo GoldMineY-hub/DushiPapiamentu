@@ -34,7 +34,11 @@
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
     var ov = document.querySelector('[data-dsu-title]');
-    if (ov && kind !== 'les') {
+    var om = document.querySelector('[data-dsu-mid-title]');
+    if (om && kind === 'mid') {
+      d.querySelector('.dsu-t').innerHTML = om.getAttribute('data-dsu-mid-title');
+      if (om.getAttribute('data-dsu-mid-sub')) d.querySelector('.dsu-s').innerHTML = om.getAttribute('data-dsu-mid-sub');
+    } else if (ov && kind !== 'les') {
       d.querySelector('.dsu-t').innerHTML = ov.getAttribute('data-dsu-title');
       if (ov.getAttribute('data-dsu-sub')) d.querySelector('.dsu-s').innerHTML = ov.getAttribute('data-dsu-sub');
     }
@@ -135,6 +139,8 @@
     var heads = art.querySelectorAll('h2');
     if (heads.length < 3) heads = art.querySelectorAll('h3');
     var anchor = heads.length >= 3 ? heads[2] : (heads.length === 2 ? heads[1] : null);
+    var midId = art.getAttribute('data-dsu-mid');
+    if (midId && document.getElementById(midId)) anchor = document.getElementById(midId);
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(box('mid'), anchor);
 
     // Onderaan: boven de knop "Terug naar alle artikelen"
