@@ -14,14 +14,14 @@
     if (kind === 'mid') {
       d.innerHTML =
         '<p class="dsu-t">&#127965;&#65039; Elke dinsdagavond een eilandtip in je inbox?</p>' +
-        '<p class="dsu-s">Taal, cultuur en tips van native speakers van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
+        '<p class="dsu-s">Taal, cultuur en tips van Riley en Mirjela, van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
     } else if (kind === 'les') {
       d.className = 'dsu dsu-end dsu-les';
       d.innerHTML =
         '<div class="dsu-k">Bon trabou!</div>' +
         '<p class="dsu-t">Goed bezig! Blijf oefenen met elke dinsdagavond een eilandtip</p>' +
         '<p class="dsu-s">Zo blijft wat je leert hangen, ook tussen de lessen door:</p>' +
-        '<ul><li>Elke dinsdagavond een echte eilandtip van native speakers</li>' +
+        '<ul><li>Elke dinsdagavond een echte eilandtip van Riley en Mirjela</li>' +
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     } else {
@@ -29,7 +29,7 @@
         '<div class="dsu-k">Bon bini!</div>' +
         '<p class="dsu-t">Leer Papiamentu met elke dinsdagavond een eilandtip</p>' +
         '<p class="dsu-s">Vond je dit artikel nuttig? Dan vind je dit ook leuk:</p>' +
-        '<ul><li>Elke dinsdagavond een echte eilandtip van native speakers</li>' +
+        '<ul><li>Elke dinsdagavond een echte eilandtip van Riley en Mirjela</li>' +
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
@@ -61,6 +61,36 @@
     }
   }
 
+  function blokVan(f) {
+    var c = (f.parentNode && f.parentNode.className) || '';
+    return c.indexOf('dsu-les') > -1 ? 'les' : (c.indexOf('dsu-mid') > -1 ? 'mid' : 'eind');
+  }
+
+  /* Na het aanmelden: één optionele vraag. Het antwoord komt als EILAND bij het contact in Brevo. */
+  var EIL = [['Curacao', 'Cura&ccedil;ao'], ['Aruba', 'Aruba'], ['Bonaire', 'Bonaire'], ['Geen plannen', 'Nog geen plannen']];
+  function eilandVraag(boxEl, email) {
+    if (!boxEl || boxEl.querySelector('.dsu-eil')) return;
+    var donker = boxEl.className.indexOf('dsu-mid') === -1;
+    var w = document.createElement('div');
+    w.className = 'dsu-eil';
+    w.style.cssText = 'margin-top:14px';
+    var kn = 'display:inline-block;margin:4px;padding:10px 14px;border-radius:100px;font:700 14px/1 inherit;cursor:pointer;' +
+      (donker ? 'background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)' : 'background:#fff;color:#005A7D;border:1px solid #B5D4F4');
+    var h = '<p style="font-size:15px;font-weight:700;margin:0 0 8px;' + (donker ? 'color:#fff' : 'color:#1A2332') + '">Nog &eacute;&eacute;n klik (mag je overslaan): naar welk eiland ga jij?</p><div>';
+    for (var i = 0; i < EIL.length; i++) h += '<button type="button" data-e="' + EIL[i][0] + '" style="' + kn + '">' + EIL[i][1] + '</button>';
+    w.innerHTML = h + '</div>';
+    w.addEventListener('click', function (ev) {
+      var b = ev.target.closest ? ev.target.closest('button[data-e]') : null;
+      if (!b) return;
+      try {
+        fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: 'eiland', eiland: b.getAttribute('data-e') }) });
+      } catch (e) {}
+      w.innerHTML = '<p style="font-size:14px;margin:0;' + (donker ? 'color:rgba(255,255,255,.9)' : 'color:#005A7D') + '">Top, dank je! Dan houden we daar rekening mee in je eilandtips.</p>';
+    });
+    boxEl.appendChild(w);
+  }
+
   function submit(ev) {
     ev.preventDefault();
     var f = ev.target, b = f.querySelector('button'), m = f.parentNode.querySelector('.dsu-m');
@@ -70,7 +100,7 @@
     fetch(ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ naam: '', email: email, source: 'signup' })
+      body: JSON.stringify({ naam: '', email: email, source: 'signup', page: location.pathname, blok: blokVan(f) })
     }).then(function (r) { return r.json(); }).then(function (data) {
       if (data && data.ok === false) {
         b.disabled = false;
@@ -79,9 +109,11 @@
       }
       try { localStorage.setItem('dp_signed_up', '1'); } catch (e) {}
       okAll();
+      eilandVraag(f.parentNode, email);
     }).catch(function () {
       // Zelfde gedrag als het formulier op de homepage: antwoord niet leesbaar, aanmelding is meestal wel verstuurd
       okAll();
+      eilandVraag(f.parentNode, email);
     });
   }
 

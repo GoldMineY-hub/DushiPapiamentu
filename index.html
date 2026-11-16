@@ -908,18 +908,42 @@ function handleSignup(el) {
   msg.textContent = 'Even geduld...';
   btn.disabled = true;
 
+  function naarLes() { window.location.href = 'lessen/lesson-1-bon-bini'; }
+
   function door() {
-    msg.style.color = 'rgba(255,255,255,0.9)';
-    msg.textContent = 'Bon bini! Je wordt doorgestuurd naar Les 1...';
-    setTimeout(function() {
-      window.location.href = 'lessen/lesson-1-bon-bini';
-    }, 1200);
+    if (box.querySelector('.hp-eil')) return;
+    btn.parentNode.style.display = 'none';
+    msg.style.color = 'rgba(255,255,255,0.95)';
+    msg.style.fontSize = '15px';
+    msg.innerHTML = '<b>Bon bini!</b> Kijk in je inbox, je woordenlijst komt eraan.';
+    var w = document.createElement('div');
+    w.className = 'hp-eil';
+    w.style.cssText = 'margin-top:16px;text-align:center';
+    var kn = 'display:inline-block;margin:4px;padding:11px 16px;border-radius:100px;font:700 15px/1 inherit;cursor:pointer;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)';
+    var E = [['Curacao', 'Cura&ccedil;ao'], ['Aruba', 'Aruba'], ['Bonaire', 'Bonaire'], ['Geen plannen', 'Nog geen plannen']];
+    var h = '<p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 10px">Nog &eacute;&eacute;n klik: naar welk eiland ga jij?</p><div>';
+    for (var i = 0; i < E.length; i++) h += '<button type="button" data-e="' + E[i][0] + '" style="' + kn + '">' + E[i][1] + '</button>';
+    h += '</div><p style="margin:14px 0 0"><a href="lessen/lesson-1-bon-bini" style="color:rgba(255,255,255,.75);font-size:14px;text-decoration:underline">Overslaan en naar les 1 &rarr;</a></p>';
+    w.innerHTML = h;
+    w.addEventListener('click', function (ev) {
+      var b = ev.target.closest ? ev.target.closest('button[data-e]') : null;
+      if (!b) return;
+      var klaar = false;
+      function verder() { if (!klaar) { klaar = true; naarLes(); } }
+      w.innerHTML = '<p style="font-size:15px;color:#fff;margin:0">Top, dank je! Je gaat nu naar les 1...</p>';
+      fetch('https://dushi-papiamentu-cert.sahadataly.workers.dev', {
+        method: 'POST', headers: {'Content-Type': 'application/json'}, keepalive: true,
+        body: JSON.stringify({email: email, source: 'eiland', eiland: b.getAttribute('data-e')})
+      }).then(verder, verder);
+      setTimeout(verder, 1500);
+    });
+    msg.parentNode.insertBefore(w, msg.nextSibling);
   }
 
   fetch('https://dushi-papiamentu-cert.sahadataly.workers.dev', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({naam: '', email: email, source: 'signup'})
+    body: JSON.stringify({naam: '', email: email, source: 'signup', page: '/', blok: box.id || 'home'})
   })
   .then(function(r){ return r.json(); })
   .then(door)
