@@ -143,9 +143,9 @@ article tr:nth-child(even) td{background:#F8FAFC}
   var d=D[r]||D.reis;
   if(r.indexOf('groet-')===0||r.indexOf('pan-')===0){document.getElementById('bd-hero').textContent='Hier is het antwoord op de vraag uit je eilandtip.';}
   if(D[r]){document.getElementById('bd-titel').textContent=d[0];document.getElementById('bd-tekst').textContent=d[1];}
-  var BON={groet:'<b>🎁 BONUS: ZO NEEM JE OOK WEER AFSCHEID</b><p><strong>Ayó!</strong> Tot ziens.<br><strong>Te aweró!</strong> Tot straks.<br><strong>Drumi dushi!</strong> Slaap lekker. Die zeg je \'s avonds, na bon nochi.</p>',pan:'<b>🎁 BONUS: BESTEL JE EERSTE BROODJE</b><p>Nu je weet wat pan is, kun je meteen bestellen. <em>Ku</em> betekent met. Zeg bij een snèk: <strong>Pan ku galiña, por fabor.</strong> Een broodje kip, alsjeblieft. Of probeer <strong>pan ku pòrchòp</strong>: een broodje karbonade.</p>'};
+  var BON={groet:'<b>🎁 BONUS: ZO NEEM JE OOK WEER AFSCHEID</b><p><strong>Ayó!</strong> Tot ziens.<br><strong>Te aweró!</strong> Tot straks.<br><strong>Drumi dushi!</strong> Slaap lekker. Die zeg je \'s avonds, na bon nochi.</p>',pan:'<b>🎁 BONUS: BESTEL JE EERSTE BROODJE</b><p>Nu je weet wat pan is, kun je meteen bestellen. <em>Ku</em> betekent met. Zeg in een snackbar: <strong>Pan ku galiña, por fabor.</strong> Een broodje kip, alsjeblieft. Of probeer <strong>pan ku pòrchòp</strong>: een broodje karbonade.</p>'};
   var bk=r.split('-')[0];if(BON[bk]&&D[r]){var bb=document.getElementById('bd-bonus');bb.className='tip';bb.innerHTML=BON[bk];}
-  document.getElementById('bd-links').innerHTML=d[2].map(function(x,i){return i===0?'<a href="'+x[0]+'" style="display:block;padding:16px 20px;background:#0077A8;border-radius:12px;text-decoration:none;color:#fff;text-align:center"><strong style="font-size:17px">'+x[1]+' &rarr;</strong><br><span style="font-size:14px;opacity:.85">'+x[2]+'</span></a>':L(x[0],x[1],x[2]);}).join('');
+  document.getElementById('bd-links').innerHTML=d[2].map(function(x,i){return i===0?'<a href="'+x[0]+'" style="display:block;padding:16px 20px;background:#0077A8;border-radius:12px;text-decoration:none;color:#fff;text-align:center"><strong style="font-size:17px;color:#fff">'+x[1]+' &rarr;</strong><br><span style="font-size:14px;opacity:.85">'+x[2]+'</span></a>':L(x[0],x[1],x[2]);}).join('');
 })();
 </script>
 
