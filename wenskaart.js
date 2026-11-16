@@ -306,7 +306,10 @@
 
   function blob() { return new Promise(function (res) { cv.toBlob(function (b) { res(b); }, 'image/jpeg', 0.92); }); }
   function msg(t) { $('wk-msg').textContent = t; }
+  function tel(ev) { try { fetch('https://dushi-papiamentu-cert.sahadataly.workers.dev', { method: 'POST', headers: { 'Content-Type': 'application/json' }, keepalive: true, body: JSON.stringify({ source: 'tel', ev: ev }) }); } catch (e) {} }
+  var stilDownload = false;
   $('wk-download').onclick = function () {
+    if (!stilDownload) tel('wk-download'); stilDownload = false;
     render().then(blob).then(function (b) {
       var a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bon-pasku-wenskaart.jpg';
       document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
@@ -314,12 +317,13 @@
     });
   };
   $('wk-delen').onclick = function () {
+    tel('wk-delen');
     render().then(blob).then(function (b) {
       var file = new File([b], 'bon-pasku-wenskaart.jpg', { type: 'image/jpeg' });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         navigator.share({ files: [file], title: 'Bon Pasku!', text: 'Gemaakt op dushipapiamentu.nl/wenskaart-bon-pasku' }).catch(function () {});
       } else {
-        $('wk-download').click();
+        stilDownload = true; $('wk-download').click();
         msg('Delen gaat op deze computer niet direct. Je kaartje is gedownload: stuur het als foto via WhatsApp Web of je telefoon.');
       }
     });

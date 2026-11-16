@@ -12,8 +12,10 @@ var r=[];for(var i=0;i<W.length;i++){var s=Math.max(score(IDX[i].p,q),score(IDX[
 r.sort(function(a,b){return b[0]-a[0]||W[a[1]][0].length-W[b[1]][0].length;});
 if(!r.length){out.innerHTML='<p class="vt-none">Dit woord staat nog niet in onze lijst. Probeer een ander woord, of kijk in de <a href="/blog/papiamentu-woordenlijst-pdf">woordenlijst</a>.</p>';return;}
 out.innerHTML=r.slice(0,12).map(function(x){var w=W[x[1]];return '<div class="vt-r"><div><div class="vt-p">'+esc(w[0])+'</div>'+(w[1]?'<div class="vt-u">'+esc(w[1])+'</div>':'')+'</div><div class="vt-n">'+esc(w[2])+(w[3]?'<a class="vt-l" href="'+esc(w[3])+'">Leer meer</a>':'')+'</div></div>';}).join('')+(r.length>12?'<p class="vt-more">'+(r.length-12)+' meer resultaten. Typ een langer woord om te zoeken.</p>':'');}
-inp.addEventListener('input',show);
-out.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-v');if(v){inp.value=v;show();inp.focus();}});
+var telT,telLast='';
+function tel(){clearTimeout(telT);telT=setTimeout(function(){var q=norm(inp.value);if(q.length<2||q===telLast)return;telLast=q;var gev=!!out.querySelector('.vt-r');try{fetch('https://dushi-papiamentu-cert.sahadataly.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({source:'tel',ev:'vertaal',q:q,gevonden:gev})});}catch(e){}},1500);}
+inp.addEventListener('input',function(){show();tel();});
+out.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-v');if(v){inp.value=v;show();tel();inp.focus();}});
 try{var u=new URLSearchParams(location.search).get('q');if(u)inp.value=u;}catch(e){}
 show();
 })();
