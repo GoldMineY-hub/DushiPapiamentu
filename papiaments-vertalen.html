@@ -102,18 +102,22 @@ article td.tk-nu{background:#FEF3C7!important}article th.tk-nu{background:#F4A23
 #vt-q{width:100%;font-size:18px;padding:14px 16px;border:2px solid #B5D4F4;border-radius:12px;font-family:inherit;color:#1A2332;outline:none}
 #vt-q:focus{border-color:#0077A8}
 .vt-sub{font-size:13px;color:#5C6B7A;margin:8px 0 0}
-#vt-out{margin-top:14px}
-.vt-r{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:12px 4px;border-bottom:1px solid #EEF2F6}
-.vt-r:last-child{border-bottom:0}
+#vt-out{margin-top:14px;display:grid;grid-template-columns:1fr;gap:10px}
+#vt-out>p,#vt-out>.vt-cats{grid-column:1/-1}
+.vt-r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 14px 14px 18px;background:#F7FAFC;border:1px solid #E6EDF4;border-radius:14px;transition:border-color .15s,background .15s}
+.vt-r:hover{border-color:#B5D4F4;background:#fff}
+.vt-t{min-width:0}
 .vt-p{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:20px;color:#1A2332;line-height:1.25}
-.vt-u{font-size:13px;color:#B45309;font-weight:600;margin-top:2px}
-.vt-n{text-align:right;font-size:15px;color:#374151;max-width:55%}
-.vt-l{display:block;font-size:12px;color:#0077A8;margin-top:4px;text-decoration:underline}
+.vt-u{font-family:'DM Sans',sans-serif;font-size:13px;color:#B45309;font-weight:600;margin-left:6px;white-space:nowrap}
+.vt-n{font-size:15px;color:#4B5563;margin-top:3px}
+.vt-act{display:flex;gap:6px;flex-shrink:0}
+.vt-b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid #D6E2EE;color:#4B6378;cursor:pointer;text-decoration:none;padding:0;transition:all .15s}
+.vt-b:hover{border-color:#0077A8;color:#0077A8}.vt-wa:hover{border-color:#0F6E56;color:#0F6E56}.vt-go{background:#0077A8;border-color:#0077A8;color:#fff}.vt-go:hover{background:#005A7D;color:#fff}
+.vt-b.vt-ok{background:#0F6E56;border-color:#0F6E56;color:#fff}
+@media(min-width:1024px){.vt{max-width:1040px}#vt-out{grid-template-columns:1fr 1fr}}
 .vt-hint,.vt-none,.vt-more{font-size:14px;color:#5C6B7A;margin:6px 0 0;line-height:1.8}
 .vt-hint button{font:inherit;font-size:13px;background:#E6F1FB;border:1px solid #B5D4F4;color:#005A7D;border-radius:999px;padding:3px 12px;margin:2px;cursor:pointer}
 .vt-none a{color:#0077A8;text-decoration:underline}
-.vt-act{display:flex;gap:6px;margin-top:8px}.vt-b{font:inherit;font-size:12px;font-weight:600;line-height:1;background:#fff;border:1px solid #B5D4F4;color:#005A7D;border-radius:999px;padding:7px 12px;cursor:pointer;text-decoration:none}.vt-b:hover{background:#E6F1FB}.vt-wa{border-color:#9FD8B4;color:#0F6E56}.vt-wa:hover{background:#E7F6EC}.vt-b.vt-ok{background:#0F6E56;border-color:#0F6E56;color:#fff}
-@media(min-width:1024px){.vt{max-width:1040px}#vt-out{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}#vt-out>p,#vt-out>.vt-cats{grid-column:1/-1}.vt-r:last-child{border-bottom:1px solid #EEF2F6}}
 .vt-cats{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}.vt-cats span{font-size:13px;font-weight:700;color:#5C6B7A;margin-right:2px}.vt-cats button{font:inherit;font-size:13px;background:#FFF7EA;border:1px solid #F4D29C;color:#8A4B08;border-radius:999px;padding:5px 12px;cursor:pointer}.vt-cats button:hover{background:#FDEBCB}
 
 table.gt{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0}
@@ -126,7 +130,7 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 .gtf img{display:block;width:100%;height:auto;border-bottom:3px solid #E8634A}
 .gtf figcaption{font-size:13px;color:#374151;padding:10px 12px;line-height:1.5}
 @media(max-width:600px){.gtg{grid-template-columns:1fr}}
-@media(max-width:480px){.vt-n{max-width:50%;font-size:14px}.vt-p{font-size:18px}table.gt{font-size:13px}}
+@media(max-width:480px){.vt-r{padding:12px 10px 12px 14px}.vt-p{font-size:18px}.vt-u{display:block;margin:2px 0 0}.vt-b{width:34px;height:34px}table.gt{font-size:13px}}
 .vt-pop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 14px}.vt-pop span{font-size:13px;font-weight:700;color:#5C6B7A;margin-right:2px}.vt-pop a{font-size:13px;font-weight:600;color:#005A7D;background:#E6F1FB;border:1px solid #B5D4F4;border-radius:100px;padding:6px 12px;text-decoration:none}.vt-pop a:hover{background:#D4E8F8}
 </style>
 <script type="application/ld+json">
@@ -238,7 +242,7 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 <script src="/nav.js" defer></script>
 <link rel="stylesheet" href="/signup.css?v=3">
 <script src="/signup.js?v=8" defer></script>
-<script src="/vertalen.js?v=11" defer></script>
+<script src="/vertalen.js?v=12" defer></script>
 <meta property="og:image:alt" content="Papiaments vertalen: gratis tool van Dushi Papiamentu">
 <meta name="robots" content="max-image-preview:large">
 </head>
