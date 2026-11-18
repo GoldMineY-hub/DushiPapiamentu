@@ -47,4 +47,12 @@ var ct=t.getAttribute('data-cat');if(ct!==null){showCat(+ct);return;}
 if(t.getAttribute('data-clear')){inp.value='';show();inp.focus();}});
 try{var u=new URLSearchParams(location.search).get('q');if(u)inp.value=u;}catch(e){}
 show();
+/* Knop terug naar de zoeker: verschijnt pas als de zoeker uit beeld is */
+(function(){var card=document.querySelector('.vt-card');if(!card||!('IntersectionObserver' in window))return;
+var b=document.createElement('button');b.type='button';b.className='vt-up';b.setAttribute('aria-label','Terug naar de woordzoeker');b.title='Zoek een woord';
+b.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>';
+document.body.appendChild(b);
+new IntersectionObserver(function(en){b.classList.toggle('on',!en[0].isIntersecting&&en[0].boundingClientRect.top<0);}).observe(card);
+b.addEventListener('click',function(){var top=card.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'});setTimeout(function(){try{inp.focus({preventScroll:true});inp.select();}catch(e){inp.focus();}},450);});
+})();
 })();
