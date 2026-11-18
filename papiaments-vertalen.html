@@ -102,11 +102,11 @@ article td.tk-nu{background:#FEF3C7!important}article th.tk-nu{background:#F4A23
 #vt-q{width:100%;font-size:18px;padding:14px 16px;border:2px solid #B5D4F4;border-radius:12px;font-family:inherit;color:#1A2332;outline:none}
 #vt-q:focus{border-color:#0077A8}
 .vt-sub{font-size:13px;color:#5C6B7A;margin:8px 0 0}
-#vt-out{margin-top:14px;display:grid;grid-template-columns:1fr;gap:10px}
+#vt-out{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
 #vt-out>p,#vt-out>.vt-cats{grid-column:1/-1}
 .vt-r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 14px 14px 18px;background:#F7FAFC;border:1px solid #E6EDF4;border-radius:14px;transition:border-color .15s,background .15s}
 .vt-r:hover{border-color:#B5D4F4;background:#fff}
-.vt-t{min-width:0}
+.vt-t{min-width:0;overflow-wrap:anywhere}
 .vt-p{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:20px;color:#1A2332;line-height:1.25}
 .vt-u{font-family:'DM Sans',sans-serif;font-size:13px;color:#B45309;font-weight:600;margin-left:6px;white-space:nowrap}
 .vt-n{font-size:15px;color:#4B5563;margin-top:3px}
@@ -114,10 +114,13 @@ article td.tk-nu{background:#FEF3C7!important}article th.tk-nu{background:#F4A23
 .vt-b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid #D6E2EE;color:#4B6378;cursor:pointer;text-decoration:none;padding:0;transition:all .15s}
 .vt-b:hover{border-color:#0077A8;color:#0077A8}.vt-wa:hover{border-color:#0F6E56;color:#0F6E56}.vt-go{background:#0077A8;border-color:#0077A8;color:#fff}.vt-go:hover{background:#005A7D;color:#fff}
 .vt-b.vt-ok{background:#0F6E56;border-color:#0F6E56;color:#fff}
-@media(min-width:1024px){.vt{max-width:1040px}#vt-out{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.vt{max-width:1040px}#vt-out{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .vt-hint,.vt-none,.vt-more{font-size:14px;color:#5C6B7A;margin:6px 0 0;line-height:1.8}
 .vt-hint button{font:inherit;font-size:13px;background:#E6F1FB;border:1px solid #B5D4F4;color:#005A7D;border-radius:999px;padding:3px 12px;margin:2px;cursor:pointer}
 .vt-none a{color:#0077A8;text-decoration:underline}
+@media(min-width:1100px){.wide,.faq-g.wide,.gtg.wide{width:1000px;max-width:none;margin-left:calc(50% - 500px)}}
+.faq-g{display:grid;grid-template-columns:1fr;gap:12px;margin:14px 0 22px}.faq-i{background:#F7FAFC;border:1px solid #E6EDF4;border-radius:14px;padding:16px 18px}.faq-i h3{margin:0 0 6px;font-size:17px}.faq-i p{margin:0;font-size:15px;line-height:1.6}
+@media(min-width:760px){.faq-g{grid-template-columns:1fr 1fr}}
 .vt-cats{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}.vt-cats span{font-size:13px;font-weight:700;color:#5C6B7A;margin-right:2px}.vt-cats button{font:inherit;font-size:13px;background:#FFF7EA;border:1px solid #F4D29C;color:#8A4B08;border-radius:999px;padding:5px 12px;cursor:pointer}.vt-cats button:hover{background:#FDEBCB}
 
 table.gt{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0}
@@ -288,9 +291,9 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 
 <p>Ja, en beter dan je misschien denkt. Wij hebben 18 zinnen die je op vakantie of bij je Antilliaanse familie nodig hebt door Google Translate gehaald, en ze laten nakijken door Riley, die geboren is op Curaçao. Bij korte zinnen was het resultaat goed: alle 18 vertalingen waren te gebruiken.</p>
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div class="wide" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
 <table class="gt">
-<tr><th>Nederlands</th><th>Google Translate</th><th>Klopt het?</th><th>Tip van een native</th></tr>
+<tr><th>Nederlands</th><th>Google Translate</th><th>Klopt het?</th><th>Tip van een local</th></tr>
 <tr><td>Goedemorgen, hoe gaat het?</td><td>Bon dia, kon ta?</td><td class="ok">Goed</td><td>Ook vaak: Bon dia, kon ta bai?</td></tr><tr><td>Het gaat goed, dank je. En met jou?</td><td>Kosnan ta bai bon, danki. I abo?</td><td class="ok">Goed</td><td>Korter: Mi ta bon, danki. I abo?</td></tr><tr><td>Heel erg bedankt!</td><td>Masha danki!</td><td class="ok">Goed</td><td></td></tr><tr><td>Graag gedaan.</td><td>No menshon’é.</td><td class="ok">Goed</td><td>Ook: Di nada.</td></tr><tr><td>Tot ziens, fijne dag!</td><td>Ayó, pasa un dushi dia!</td><td class="ok">Goed</td><td>Ook: Pasa un bon dia!</td></tr><tr><td>Ik hou van jou.</td><td>Mi stima bo.</td><td class="ok">Goed</td><td>Vaak aan elkaar: Mi stimabo.</td></tr><tr><td>Slaap lekker, schat.</td><td>Drumi bon, mi amor.</td><td class="ok">Goed</td><td>Op Curaçao hoor je vaker: Drumi dushi.</td></tr><tr><td>Je bent lief.</td><td>Bo ta dushi.</td><td class="ok">Goed</td><td></td></tr><tr><td>Het eten was heerlijk!</td><td>E kuminda tabata dushi.</td><td class="ok">Goed</td><td>Nog sterker: E kuminda tabata masha dushi!</td></tr><tr><td>Een koud biertje, alstublieft.</td><td>Un serbes friu, por fabor.</td><td class="ok">Goed</td><td></td></tr><tr><td>Mag ik de rekening?</td><td>Mi por haña e kuenta?</td><td class="ok">Goed</td><td>Ook: E kuenta, por fabor.</td></tr><tr><td>Hoeveel kost dit?</td><td>Kuantu esaki ta kosta?</td><td class="ok">Goed</td><td></td></tr><tr><td>Het is te duur.</td><td>E ta muchu karu.</td><td class="ok">Goed</td><td></td></tr><tr><td>Waar is het strand?</td><td>Unda e playa ta?</td><td class="ok">Goed</td><td></td></tr><tr><td>Welkom op Curaçao!</td><td>Bon Bini na Kòrsou!</td><td class="ok">Goed</td><td></td></tr><tr><td>Beetje bij beetje.</td><td>Poko poko.</td><td class="ok">Goed</td><td></td></tr><tr><td>Proost!</td><td>Salú!</td><td class="ok">Goed</td><td></td></tr><tr><td>Wat betekent dat?</td><td>Kiko esei ta nifiká?</td><td class="tnb">Klopt, maar</td><td>Riley zegt zelf: Kiko esei kermen?</td></tr>
 </table>
 </div>
@@ -301,7 +304,7 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 
 <p>Daarna deden we 12 langere zinnen, zoals je die in een appje naar je schoonfamilie of op vakantie zou schrijven. Daar ging het in 5 van de 12 zinnen mis. Twee keer zette Google er zelfs <strong>Engelse woorden</strong> tussen: <em>slow</em> en <em>great</em>. Een Nederlander merkt dat niet, een Antilliaan wel.</p>
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div class="wide" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
 <table class="gt">
 <tr><th>Nederlands</th><th>Google Translate</th><th>Klopt het?</th><th>Zo zeg je het</th></tr>
 <tr><td>Ik kom uit Nederland en mijn vriendin komt van Curaçao.</td><td>Mi ta di Hulanda i mi amiga ta di Curaçao.</td><td class="ok">Goed</td><td></td></tr><tr><td>Mijn schoonmoeder kookt het lekkerste eten dat ik ooit heb gegeten.</td><td>Mi suegra ta kushiná e kuminda di mas dushi ku mi a yega di kome.</td><td class="ok">Goed</td><td></td></tr><tr><td>Wij komen volgend jaar met de hele familie naar het eiland.</td><td>Nos ta bin e isla ku henter famia otro aña.</td><td class="tnb">Fout: woordvolgorde</td><td>Otro aña nos ta bin e isla ku henter famia.</td></tr><tr><td>Ik mis je, ik kan niet wachten tot ik je weer zie.</td><td>Mi ta sinti bo falta; Mi no por warda pa mira bo atrobe.</td><td class="ok">Goed</td><td></td></tr><tr><td>Kun je mij vertellen hoe ik bij het strand kom?</td><td>Bo por bisa mi kon pa yega na e playa?</td><td class="ok">Goed</td><td>Riley zegt zelf liever <em>laman</em> dan <em>playa</em>.</td></tr><tr><td>We hebben vandaag gesnorkeld en we zagen een schildpad.</td><td>Nos a bai snorkel awe i a mira un turtuga.</td><td class="tnb">Fout</td><td>Nos a bai duik awe i nos a mira un schilpad.</td></tr><tr><td>Is dit restaurant vanavond open, of moeten we reserveren?</td><td>E restorant aki ta habrí awe nochi, òf nos mester hasi un reservashon?</td><td class="ok">Goed</td><td></td></tr><tr><td>Het is hier zo warm, ik heb de hele dag water gedronken.</td><td>Ta asina kayente aki; Mi a bebe awa henter dia.</td><td class="ok">Goed</td><td></td></tr><tr><td>Ik leer Papiaments, maar ik spreek het nog niet zo goed.</td><td>Mi ta siñando papiamentu, pero mi no ta papia muchu bon ainda.</td><td class="tnb">Kan beter</td><td>Mi ta siñando papiamentu, pero ainda mi no por papia hopi bon.</td></tr><tr><td>Kun je wat langzamer praten, alsjeblieft?</td><td>Bo por papia un tiki mas <strong>slow</strong>, por fabor?</td><td class="tnb">Fout: Engels woord</td><td>Langzamer is <em>poko poko</em>: Papia mas poko poko, por fabor.</td></tr><tr><td>Wat leuk dat je er bent, ga lekker zitten.</td><td>Ta <strong>great</strong> ku bo ta aki, hasi bo mes kómodo.</td><td class="tnb">Fout: Engels woord</td><td>Kontentu ku bo ta aki, hasi bo mes di kas.</td></tr><tr><td>Het is al laat, ik ga naar huis. Tot morgen!</td><td>Ta lat kaba; Mi ta bai kas. Te mañan!</td><td class="ok">Goed</td><td></td></tr>
@@ -311,7 +314,7 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 
 <h3>Zo zag het eruit in Google Translate</h3>
 <p>Dit zijn de screenshots van onze test, met eronder hoe je het wel zegt.</p>
-<div class="gtg">
+<div class="gtg wide">
 <figure class="gtf"><img src="/images/vertalen/gt-langzamer.webp" width="760" height="318" loading="lazy" alt="Google Translate vertaalt langzamer als slow, een Engels woord"><figcaption>Google zet het Engelse woord <em>slow</em> erin. Goed is: <em>Papia mas poko poko, por fabor.</em></figcaption></figure>
 <figure class="gtf"><img src="/images/vertalen/gt-leuk.webp" width="760" height="332" loading="lazy" alt="Google Translate gebruikt het Engelse woord great"><figcaption>Weer een Engels woord: <em>great</em>. Goed is: <em>Kontentu ku bo ta aki, hasi bo mes di kas.</em></figcaption></figure>
 <figure class="gtf"><img src="/images/vertalen/gt-familie.webp" width="760" height="342" loading="lazy" alt="Foute vertaling van volgend jaar komen we met de hele familie"><figcaption>De woorden kloppen, de volgorde niet: je begint met <em>otro aña</em>. Goed is: <em>Otro aña nos ta bin e isla ku henter famia.</em></figcaption></figure>
@@ -332,7 +335,7 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 
 <h2 id="meest-gezocht">De meest gezochte woorden in het Papiaments</h2>
 
-<div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div class="wide" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
 <table class="gt">
 <tr><th>Nederlands</th><th>Papiamentu</th><th>Uitspraak</th></tr>
 <tr><td>Dank je</td><td>Danki</td><td>DAN-kie</td></tr><tr><td>Heel erg bedankt</td><td>Masha danki</td><td>MA-sja DAN-kie</td></tr><tr><td>Goedemorgen</td><td>Bon dia</td><td>bon DIE-ja</td></tr><tr><td>Goedemiddag</td><td>Bon tardi</td><td>bon TAR-die</td></tr><tr><td>Goedenavond / welterusten</td><td>Bon nochi</td><td>bon NO-tsjie</td></tr><tr><td>Welkom</td><td>Bon bini</td><td>bon BIE-nie</td></tr><tr><td>Hoe gaat het?</td><td>Kon ta bai?</td><td>kon ta BAI</td></tr><tr><td>Tot ziens</td><td>Ayó</td><td>a-JO</td></tr><tr><td>Alsjeblieft</td><td>Por fabor</td><td>por fa-BOR</td></tr><tr><td>Graag gedaan</td><td>Di nada</td><td>die NA-da</td></tr><tr><td>Slaap lekker</td><td>Drumi dushi</td><td>DROE-mie DOE-sjie</td></tr><tr><td>Ik hou van jou</td><td>Mi stimabo</td><td>mie STIE-ma-bo</td></tr><tr><td>Lekker / lief / schat</td><td>Dushi</td><td>DOE-sjie</td></tr><tr><td>Proost!</td><td>Salú!</td><td>sa-LOE</td></tr>
@@ -353,23 +356,20 @@ table.gt td:nth-child(2){font-weight:600;color:#1A2332}
 
 <h2 id="faq">Veelgestelde vragen</h2>
 
-<h3>Kan Google Translate Papiaments vertalen?</h3>
-<p>Ja. Korte, alledaagse zinnen vertaalt Google Translate goed: in onze test klopten ze alle 18. Bij langere zinnen ging het in 5 van de 12 mis, soms met Engelse woorden ertussen. Uitspraak geeft Google Translate niet.</p>
-
-<h3>Hoe vertaal ik van Nederlands naar Papiaments?</h3>
-<p>Typ het Nederlandse woord in de zoeker bovenaan deze pagina. Je ziet dan meteen het Papiamentse woord met de uitspraak voor Nederlanders. Voor hele zinnen kun je Google Translate gebruiken en hier de uitspraak opzoeken.</p>
-
-<h3>Is Papiaments hetzelfde als Papiamento?</h3>
-<p>Bijna. Op Curaçao en Bonaire heet de taal Papiamentu, op Aruba Papiamento. Het is dezelfde taal, maar de spelling verschilt. Deze pagina gebruikt de spelling van Curaçao.</p>
-
-<h3>Is er een Papiaments woordenboek?</h3>
-<p>Op deze pagina zoek je in meer dan 350 woorden en zinnen. Wil je ze op papier? Download dan gratis onze woordenlijst als PDF.</p>
-
-<h3>Hoe zeg je dank je in het Papiaments?</h3>
-<p>Dank je is danki (DAN-kie). Heel erg bedankt is masha danki (MA-sja DAN-kie).</p>
-
-<h3>Hoe zeg je ik hou van jou in het Papiaments?</h3>
-<p>Ik hou van jou is mi stimabo, ook geschreven als mi stima bo.</p>
+<div class="faq-g wide">
+<div class="faq-i"><h3>Kan Google Translate Papiaments vertalen?</h3>
+<p>Ja. Korte, alledaagse zinnen vertaalt Google Translate goed: in onze test klopten ze alle 18. Bij langere zinnen ging het in 5 van de 12 mis, soms met Engelse woorden ertussen. Uitspraak geeft Google Translate niet.</p></div>
+<div class="faq-i"><h3>Hoe vertaal ik van Nederlands naar Papiaments?</h3>
+<p>Typ het Nederlandse woord in de zoeker bovenaan deze pagina. Je ziet dan meteen het Papiamentse woord met de uitspraak voor Nederlanders. Voor hele zinnen kun je Google Translate gebruiken en hier de uitspraak opzoeken.</p></div>
+<div class="faq-i"><h3>Is Papiaments hetzelfde als Papiamento?</h3>
+<p>Bijna. Op Curaçao en Bonaire heet de taal Papiamentu, op Aruba Papiamento. Het is dezelfde taal, maar de spelling verschilt. Deze pagina gebruikt de spelling van Curaçao.</p></div>
+<div class="faq-i"><h3>Is er een Papiaments woordenboek?</h3>
+<p>Op deze pagina zoek je in meer dan 350 woorden en zinnen. Wil je ze op papier? Download dan gratis onze woordenlijst als PDF.</p></div>
+<div class="faq-i"><h3>Hoe zeg je dank je in het Papiaments?</h3>
+<p>Dank je is danki (DAN-kie). Heel erg bedankt is masha danki (MA-sja DAN-kie).</p></div>
+<div class="faq-i"><h3>Hoe zeg je ik hou van jou in het Papiaments?</h3>
+<p>Ik hou van jou is mi stimabo, ook geschreven als mi stima bo.</p></div>
+</div>
 
 <p class="src">Bronnen: onze eigen kennis; Papiamentu is onze moedertaal. De test met Google Translate (30 zinnen) is gedaan op 8 november 2026 en nagekeken door Riley, geboren op Curaçao. Deze pagina gebruikt de spelling van de <a href="https://gobiernu.cw/wp-content/uploads/2025/12/196-GT.-Lb-schrijfwijze-Papiamentu-en-Nederlands.pdf" rel="nofollow" target="_blank" style="color:inherit;text-decoration:underline">officiële woordenlijst van Curaçao</a>.</p>
 
