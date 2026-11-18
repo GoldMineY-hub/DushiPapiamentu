@@ -30,3 +30,6 @@
 .dps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0 4px}
 .dps a{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#0077A8;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:100px;padding:6px 14px;text-decoration:none;transition:border-color .2s,background .2s}
 .dps a:hover{border-color:#0077A8;background:#fff}
+/* Mobiel: invoervelden 16px zodat iPhone niet inzoomt; smalle tabellen laten afbreken */
+@media(max-width:768px){input[type=email],input[type=text],input[type=search],input:not([type]),textarea,select{font-size:16px!important}}
+@media(max-width:400px){table:not(.gt){font-size:13px}table:not(.gt) td,table:not(.gt) th{padding-left:6px!important;padding-right:6px!important}table.lt{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
