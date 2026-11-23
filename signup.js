@@ -8,14 +8,23 @@
     try { return localStorage.getItem('dp_signed_up') === '1'; } catch (e) { return false; }
   }
 
+  /* A/B-test aanmeldblokken in blogs: a = oude tekst (eilandtip), b = cursus (zoals de homepage). Vaste keuze per bezoeker. */
+  function abVariant() {
+    var v = '';
+    try { v = localStorage.getItem('dp_ab_blok') || ''; } catch (e) {}
+    if (v !== 'a' && v !== 'b') { v = Math.random() < 0.5 ? 'a' : 'b'; try { localStorage.setItem('dp_ab_blok', v); } catch (e) {} }
+    return v;
+  }
+
   function box(kind) {
     var d = document.createElement('div');
     d.className = 'dsu dsu-' + kind;
-    if (kind === 'mid') {
-      d.innerHTML =
-        '<p class="dsu-t">&#127965;&#65039; Elke dinsdagavond een eilandtip in je inbox?</p>' +
-        '<p class="dsu-s">Taal, cultuur en tips van Riley en Mirjela, van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
-    } else if (kind === 'les') {
+    var ov = document.querySelector('[data-dsu-title]');
+    var om = document.querySelector('[data-dsu-mid-title]');
+    var testbaar = kind !== 'les' && !(om && kind === 'mid') && !(ov && !ov.hasAttribute('data-dsu-ab'));
+    var ab = testbaar ? abVariant() : '';
+    var nieuw = ab === 'b';
+    if (kind === 'les') {
       d.className = 'dsu dsu-end dsu-les';
       d.innerHTML =
         '<div class="dsu-k">Bon trabou!</div>' +
@@ -24,6 +33,26 @@
         '<ul><li>Elke dinsdagavond een echte eilandtip van Riley en Mirjela</li>' +
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
+    } else if (nieuw && kind === 'mid') {
+      var ow = document.querySelector('[data-dsu-onderwerp]');
+      var w = ow ? ow.getAttribute('data-dsu-onderwerp') : '';
+      d.innerHTML = w ?
+        '<p class="dsu-t">&#127891; Nu weet je wat <em>' + w + '</em> betekent. Leer de rest in 12 gratis lessen</p>' +
+        '<p class="dsu-s">Van twee locals van K&ograve;rsou. Je begint meteen met les 1, en krijgt er de woordenlijst en elke dinsdag een eilandtip bij.</p>' :
+        '<p class="dsu-t">&#127891; Leer echt Papiamentu: start de gratis cursus</p>' +
+        '<p class="dsu-s">12 korte lessen van twee locals van K&ograve;rsou. Je begint meteen met les 1, en krijgt er de woordenlijst en elke dinsdag een eilandtip bij.</p>';
+    } else if (nieuw) {
+      d.innerHTML =
+        '<div class="dsu-k">Bon bini!</div>' +
+        '<p class="dsu-t">Start vandaag nog, het is 100% gratis</p>' +
+        '<p class="dsu-s">Vond je dit nuttig? Leer dan echt Papiamentu, in 12 korte lessen:</p>' +
+        '<ul><li>Je begint meteen met les 1, zonder account</li>' +
+        '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
+        '<li>Elke dinsdagavond een eilandtip van Riley en Mirjela</li></ul>';
+    } else if (kind === 'mid') {
+      d.innerHTML =
+        '<p class="dsu-t">&#127965;&#65039; Elke dinsdagavond een eilandtip in je inbox?</p>' +
+        '<p class="dsu-s">Taal, cultuur en tips van Riley en Mirjela, van K&ograve;rsou. Plus direct onze gratis woordenlijst.</p>';
     } else {
       d.innerHTML =
         '<div class="dsu-k">Bon bini!</div>' +
@@ -33,25 +62,28 @@
         '<li>Gratis woordenlijst met 250+ woorden en uitspraak</li>' +
         '<li>Uitspraak die je als Nederlander gewoon kunt voorlezen</li></ul>';
     }
-    var ov = document.querySelector('[data-dsu-title]');
-    var om = document.querySelector('[data-dsu-mid-title]');
-    if (om && kind === 'mid') {
-      d.querySelector('.dsu-t').innerHTML = om.getAttribute('data-dsu-mid-title');
-      if (om.getAttribute('data-dsu-mid-sub')) d.querySelector('.dsu-s').innerHTML = om.getAttribute('data-dsu-mid-sub');
-    } else if (ov && kind !== 'les') {
-      d.querySelector('.dsu-t').innerHTML = ov.getAttribute('data-dsu-title');
-      if (ov.getAttribute('data-dsu-sub')) d.querySelector('.dsu-s').innerHTML = ov.getAttribute('data-dsu-sub');
+    if (!nieuw && kind !== 'les') {
+      if (om && kind === 'mid') {
+        d.querySelector('.dsu-t').innerHTML = om.getAttribute('data-dsu-mid-title');
+        if (om.getAttribute('data-dsu-mid-sub')) d.querySelector('.dsu-s').innerHTML = om.getAttribute('data-dsu-mid-sub');
+      } else if (ov) {
+        d.querySelector('.dsu-t').innerHTML = ov.getAttribute('data-dsu-title');
+        if (ov.getAttribute('data-dsu-sub')) d.querySelector('.dsu-s').innerHTML = ov.getAttribute('data-dsu-sub');
+      }
     }
+    if (nieuw) d.className += ' dsu-cursus';
+    if (ab) d.setAttribute('data-ab', ab);
     d.innerHTML +=
       '<p class="dsu-n">&#127796; Al ruim <b>' + LEZERS + '</b> mensen krijgen onze eilandtips</p>' +
       '<form class="dsu-f" novalidate>' +
       '<input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres" required>' +
-      '<button type="submit">' + (kind === 'mid' ? 'Aanmelden' : 'Ja, stuur me de tips') + '</button>' +
+      '<button type="submit">' + (nieuw ? 'Start gratis' : (kind === 'mid' ? 'Aanmelden' : 'Ja, stuur me de tips')) + '</button>' +
       '</form><div class="dsu-m" role="status"></div><p class="dsu-p">' + PRIV + '</p>' +
       (location.pathname.indexOf('/eilandtips') === 0 ? '' : '<p class="dsu-p dsu-vb">Benieuwd hoe een eilandtip eruitziet? <a href="/eilandtips/bij-antillianen-thuis">Lees een voorbeeld</a></p>');
     d.querySelector('form').addEventListener('submit', submit);
     return d;
   }
+
 
   function okAll() {
     var all = document.querySelectorAll('.dsu');
@@ -65,7 +97,9 @@
   function blokVan(f) {
     var c = (f.parentNode && f.parentNode.className) || '';
     if (c.indexOf('dsu-sheet') > -1) return 'menu';
-    return c.indexOf('dsu-les') > -1 ? 'les' : (c.indexOf('dsu-mid') > -1 ? 'mid' : 'eind');
+    var ab = (f.parentNode && f.parentNode.getAttribute && f.parentNode.getAttribute('data-ab')) || '';
+    var b = c.indexOf('dsu-les') > -1 ? 'les' : (c.indexOf('dsu-mid') > -1 ? 'mid' : 'eind');
+    return ab ? b + '-' + ab : b;
   }
 
   /* Na het aanmelden: één optionele vraag. Het antwoord komt als EILAND bij het contact in Brevo. */
@@ -93,6 +127,15 @@
     boxEl.appendChild(w);
   }
 
+  /* Blog (mid/eind/menu): net als de homepage na aanmelden door naar les 1 */
+  function naarLes(f) {
+    if (!f.parentNode || f.parentNode.className.indexOf('dsu-cursus') === -1) return false;
+    var m = f.parentNode.querySelector('.dsu-m');
+    if (m) m.innerHTML = 'Masha danki! Je woordenlijst komt naar je inbox. <a href="/lessen/lesson-1-bon-bini">Les 1 wordt geopend&hellip;</a>';
+    setTimeout(function () { location.href = '/lessen/lesson-1-bon-bini'; }, 1800);
+    return true;
+  }
+
   function submit(ev) {
     ev.preventDefault();
     var f = ev.target, b = f.querySelector('button'), m = f.parentNode.querySelector('.dsu-m');
@@ -111,10 +154,12 @@
       }
       try { localStorage.setItem('dp_signed_up', '1'); } catch (e) {}
       okAll();
+      if (naarLes(f)) return;
       eilandVraag(f.parentNode, email);
     }).catch(function () {
       // Zelfde gedrag als het formulier op de homepage: antwoord niet leesbaar, aanmelding is meestal wel verstuurd
       okAll();
+      if (naarLes(f)) return;
       eilandVraag(f.parentNode, email);
     });
   }
@@ -177,7 +222,7 @@
     document.head.appendChild(st);
     bg = document.createElement('div'); bg.id = 'dsu-sh-bg';
     var d = document.createElement('div');
-    d.id = 'dsu-sh'; d.className = 'dsu dsu-mid dsu-sheet';
+    d.id = 'dsu-sh'; d.className = 'dsu dsu-mid dsu-sheet dsu-cursus';
     d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', 'Gratis beginnen');
     d.innerHTML = '<div class="dsu-h"></div><button type="button" class="dsu-x" aria-label="Sluiten">&times;</button>' +
       '<div class="dsu-k2">GRATIS</div><p class="dsu-t">Begin met je gratis woordenlijst</p>' +
