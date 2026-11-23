@@ -63,6 +63,7 @@
 
   function blokVan(f) {
     var c = (f.parentNode && f.parentNode.className) || '';
+    if (c.indexOf('dsu-sheet') > -1) return 'menu';
     return c.indexOf('dsu-les') > -1 ? 'les' : (c.indexOf('dsu-mid') > -1 ? 'mid' : 'eind');
   }
 
@@ -155,7 +156,53 @@
     if (back && back.parentNode) back.parentNode.insertBefore(d, back); else art.appendChild(d);
   }
 
+  /* Mobiel: "Start gratis" in het menu van een blog opent eerst een kleine tussenstap */
+  var LES1 = '/lessen/lesson-1-bon-bini';
+  function openSheet() {
+    var bg = document.getElementById('dsu-sh-bg');
+    if (bg) { bg.style.display = 'block'; document.getElementById('dsu-sh').style.display = 'block'; return; }
+    var st = document.createElement('style');
+    st.textContent = '#dsu-sh-bg{position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:300}' +
+      '#dsu-sh{position:fixed;left:0;right:0;bottom:0;z-index:301;margin:0;border-radius:20px 20px 0 0;padding:10px 20px 24px;background:#fff;border:0;box-shadow:0 -8px 30px rgba(0,0,0,.2);max-height:90vh;overflow:auto}' +
+      '#dsu-sh .dsu-h{width:40px;height:4px;border-radius:4px;background:#CBD5E1;margin:0 auto 14px}' +
+      '#dsu-sh .dsu-x{position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:50%;border:0;background:#F1F5F9;font-size:20px;line-height:1;color:#5C6B7A;cursor:pointer}' +
+      '#dsu-sh .dsu-k2{display:inline-block;background:#FDF3E3;color:#B45309;font-size:11px;font-weight:700;letter-spacing:1.5px;border-radius:100px;padding:4px 12px;margin-bottom:10px}' +
+      '#dsu-sh .dsu-t{font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:700;color:#1A2332;line-height:1.25;margin:0 0 6px}' +
+      '#dsu-sh .dsu-s{font-size:14px;color:#5C6B7A;line-height:1.5;margin:0 0 14px}' +
+      '#dsu-sh .dsu-or{display:flex;align-items:center;gap:10px;color:#94A3B8;font-size:12px;margin:14px 0 12px}' +
+      '#dsu-sh .dsu-or:before,#dsu-sh .dsu-or:after{content:"";flex:1;height:1px;background:#E2E8F0}' +
+      '#dsu-sh .dsu-f button{background:#F4A236;color:#1A2332}' +
+      '#dsu-sh .dsu-l1{display:block;text-align:center;border:2px solid #0077A8;color:#0077A8;border-radius:10px;padding:12px;font-size:15px;font-weight:700;text-decoration:none}';
+    document.head.appendChild(st);
+    bg = document.createElement('div'); bg.id = 'dsu-sh-bg';
+    var d = document.createElement('div');
+    d.id = 'dsu-sh'; d.className = 'dsu dsu-mid dsu-sheet';
+    d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', 'Gratis beginnen');
+    d.innerHTML = '<div class="dsu-h"></div><button type="button" class="dsu-x" aria-label="Sluiten">&times;</button>' +
+      '<div class="dsu-k2">GRATIS</div><p class="dsu-t">Begin met je gratis woordenlijst</p>' +
+      '<p class="dsu-s">250+ woorden en zinnen met uitspraak, direct in je inbox. Plus elke dinsdagavond een eilandtip van Riley en Mirjela.</p>' +
+      '<form class="dsu-f" novalidate><input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres" required>' +
+      '<button type="submit">Stuur me de woordenlijst</button></form><div class="dsu-m" role="status"></div><p class="dsu-p">' + PRIV + '</p>' +
+      '<div class="dsu-or">of</div><a class="dsu-l1" href="' + LES1 + '">Liever meteen beginnen &rarr; naar les 1</a>';
+    d.querySelector('form').addEventListener('submit', submit);
+    function close() { bg.style.display = 'none'; d.style.display = 'none'; }
+    bg.addEventListener('click', close);
+    d.querySelector('.dsu-x').addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    document.body.appendChild(bg); document.body.appendChild(d);
+  }
+  function sheetHook() {
+    if (location.pathname.indexOf('/blog/') !== 0) return;
+    var cta = document.querySelector('.dpn-cta');
+    if (!cta) return;
+    cta.addEventListener('click', function (e) {
+      if (done() || !window.matchMedia || !window.matchMedia('(max-width: 600px)').matches) return;
+      e.preventDefault(); openSheet();
+    });
+  }
+
   function init() {
+    sheetHook();
     share();
     if (done()) return;
     var slots = document.querySelectorAll('[data-dsu]');
