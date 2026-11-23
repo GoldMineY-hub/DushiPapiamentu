@@ -184,6 +184,7 @@
       '<p class="dsu-s">250+ woorden en zinnen met uitspraak, direct in je inbox. Plus elke dinsdagavond een eilandtip van Riley en Mirjela.</p>' +
       '<form class="dsu-f" novalidate><input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres" required>' +
       '<button type="submit">Stuur me de woordenlijst</button></form><div class="dsu-m" role="status"></div><p class="dsu-p">' + PRIV + '</p>' +
+      '<p class="dsu-p dsu-vb">Benieuwd hoe een eilandtip eruitziet? <a href="/eilandtips/bij-antillianen-thuis">Lees een voorbeeld</a></p>' +
       '<div class="dsu-or">of</div><a class="dsu-l1" href="' + LES1 + '">Liever meteen beginnen &rarr; naar les 1</a>';
     d.querySelector('form').addEventListener('submit', submit);
     function close() { bg.style.display = 'none'; d.style.display = 'none'; }
