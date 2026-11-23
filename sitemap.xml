@@ -86,7 +86,7 @@
   <!-- Blog overzicht -->
   <url>
     <loc>https://dushipapiamentu.nl/blog/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -240,6 +240,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dushipapiamentu.nl/blog/carnaval-curacao</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dushipapiamentu.nl/blog/volkslied-curacao</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -247,7 +253,7 @@
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/antilliaanse-kerst</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -293,7 +299,7 @@
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/blog/sinterklaas-op-curacao</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://dushipapiamentu.nl/cursus-papiaments</loc>
