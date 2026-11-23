@@ -30,7 +30,17 @@ var sug=suggest(q),h='';
 if(sug.length)h+='<p class="vt-hint">Bedoelde je: '+sug.map(function(s){return '<button type="button" data-v="'+esc(s)+'">'+esc(s)+'</button>';}).join(' ')+'</p>';
 if(parts.length)h+='<p class="vt-hint">'+(head?'Deze hele zin hebben we niet. Dit komt het dichtst in de buurt:':'Deze hele zin hebben we niet, maar wel deze losse woorden:')+'</p>'+parts.slice(0,9).map(row).join('');
 h+='<p class="vt-none">'+(parts.length||sug.length?'':'Dit woord staat nog niet in onze lijst. ')+'Kijk ook in de <a href="/blog/papiamentu-woordenlijst-pdf">woordenlijst</a> of leer het in de <a href="/cursus-papiaments">gratis lessen</a>. Google Translate gaat bij Papiaments vaak de mist in, <a href="#google-translate">lees hier waarom</a>.</p>';
+h+=askBox();
 out.innerHTML=h;}
+function signed(){try{return localStorage.getItem('dp_signed_up')==='1';}catch(e){return false;}}
+function askBox(){var t='<div class="vt-ask"><p><strong>We hebben je zoekwoord genoteerd.</strong> Elke week zetten we de meest gezochte woorden erbij, gecontroleerd door Riley en Mirjela.';
+if(signed())return t+' Je ziet ze vanzelf terug in je eilandtip.</p></div>';
+return t+' Meld je aan, dan krijg je de nieuwe woorden in je eilandtip, plus de gratis woordenlijst.</p><form class="vt-ask-f" novalidate><input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres"><button type="submit">Houd me op de hoogte</button></form><small class="vt-ask-m" role="status">Gratis. Afmelden kan altijd. Lees onze <a href="/privacy">privacyverklaring</a>.</small></div>';}
+document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('vt-ask-f'))return;e.preventDefault();var em=f.email.value.trim(),m=f.parentNode.querySelector('.vt-ask-m');
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){m.textContent='Vul een geldig e-mailadres in.';return;}
+f.querySelector('button').disabled=true;send({naam:'',email:em,source:'signup',page:'/papiaments-vertalen',blok:'vertaal'});try{localStorage.setItem('dp_signed_up','1');}catch(x){}
+f.style.display='none';m.innerHTML='<strong>Masha danki!</strong> Kijk in je inbox: je welkomstmail met de woordenlijst komt eraan.';});
+
 function show(){var q=norm(inp.value);if(!q){out.innerHTML='<p class="vt-hint">Typ een woord, bijvoorbeeld <button type="button" data-v="dank je">dank je</button> <button type="button" data-v="dushi">dushi</button> <button type="button" data-v="goedemorgen">goedemorgen</button> <button type="button" data-v="strand">strand</button></p>'+catChips();return;}
 var r=find(q);if(!r.length){notFound(q);return;}
 out.innerHTML=r.slice(0,12).map(function(x){return row(x[1]);}).join('')+(r.length>12?'<p class="vt-more">'+(r.length-12)+' meer resultaten. Typ een langer woord om te zoeken.</p>':'');}
