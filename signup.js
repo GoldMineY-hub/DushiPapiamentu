@@ -47,7 +47,8 @@
       '<form class="dsu-f" novalidate>' +
       '<input type="email" name="email" placeholder="Je e-mailadres" autocomplete="email" aria-label="E-mailadres" required>' +
       '<button type="submit">' + (kind === 'mid' ? 'Aanmelden' : 'Ja, stuur me de tips') + '</button>' +
-      '</form><div class="dsu-m" role="status"></div><p class="dsu-p">' + PRIV + '</p>';
+      '</form><div class="dsu-m" role="status"></div><p class="dsu-p">' + PRIV + '</p>' +
+      (location.pathname.indexOf('/eilandtips') === 0 ? '' : '<p class="dsu-p dsu-vb">Benieuwd hoe een eilandtip eruitziet? <a href="/eilandtips/bij-antillianen-thuis">Lees een voorbeeld</a></p>');
     d.querySelector('form').addEventListener('submit', submit);
     return d;
   }
