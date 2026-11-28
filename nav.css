@@ -2,14 +2,14 @@
 .dpn{gap:12px}
 .dpn .dpn-logo{display:flex;align-items:center;gap:8px;text-decoration:none;min-width:0}
 .dpn .dpn-logo svg{flex-shrink:0}
-.dpn .nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff;white-space:nowrap}
+.dpn .nb{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:16px;font-weight:700;color:#fff;white-space:nowrap}
 .dpn .nb em{font-weight:400;font-style:italic;color:#00B8D4}
 .dpn .dpn-right{display:flex;align-items:center;gap:18px}
 .dpn .dpn-links{display:flex;align-items:center;gap:20px}
-.dpn .dpn-links a{display:block;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;white-space:nowrap;transition:color .2s}
+.dpn .dpn-links a{display:block;font-family:'DM Sans','DM Fallback',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;white-space:nowrap;transition:color .2s}
 .dpn .dpn-links a:hover,.dpn .dpn-links a[aria-current="page"]{color:#fff}
 .dpn .dpn-links a[aria-current="page"]{box-shadow:inset 0 -2px 0 #F4A236}
-.dpn .dpn-cta{display:inline-block;background:#F4A236;color:#1A2332;border-radius:8px;padding:8px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.dpn .dpn-cta{display:inline-block;background:#F4A236;color:#1A2332;border-radius:8px;padding:8px 16px;font-family:'DM Sans','DM Fallback',sans-serif;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
 .dpn .dpn-toggle{display:none}
 @media(max-width:760px){
   .nav.dpn{padding-top:8px;padding-bottom:8px}
@@ -28,7 +28,7 @@
 @media(max-width:360px){.dpn .dpn-cta{padding:7px 11px;font-size:11px}.dpn .nb{font-size:14px}}
 /* Social links in de footer */
 .dps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0 4px}
-.dps a{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#0077A8;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:100px;padding:6px 14px;text-decoration:none;transition:border-color .2s,background .2s}
+.dps a{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans','DM Fallback',sans-serif;font-size:13px;font-weight:600;color:#0077A8;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:100px;padding:6px 14px;text-decoration:none;transition:border-color .2s,background .2s}
 .dps a:hover{border-color:#0077A8;background:#fff}
 /* Mobiel: invoervelden 16px zodat iPhone niet inzoomt; smalle tabellen laten afbreken */
 @media(max-width:768px){input[type=email],input[type=text],input[type=search],input:not([type]),textarea,select{font-size:16px!important}}

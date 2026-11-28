@@ -15,9 +15,10 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/playfair-display-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-italic.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-italic.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/dm-sans-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/dm-sans-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'PF Fallback';src:local('Times New Roman'),local('Times'),local('Liberation Serif');size-adjust:114.3%;ascent-override:94.7%;descent-override:22%;line-gap-override:0%}@font-face{font-family:'DM Fallback';src:local('Arial'),local('Helvetica'),local('Liberation Sans');size-adjust:105%;ascent-override:93.3%;descent-override:29.1%;line-gap-override:0%}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,11 +40,11 @@
 <style>/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.95);backdrop-filter:blur(12px)}
 .nav a{display:flex;align-items:center;gap:8px}
-.nb{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#fff}
+.nb{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:16px;font-weight:700;color:#fff}
 .nb em{font-weight:400;font-style:italic;color:#00B8D4}
 .nr{display:flex;gap:16px;align-items:center}
 .nr a{font-size:12px;color:rgba(255,255,255,0.6);white-space:nowrap}
-.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap}
+.nr button{background:#F4A236;color:#1A2332;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans','DM Fallback',sans-serif;white-space:nowrap}
 @media(max-width:600px){.nr a{display:none}}
 @media(max-width:360px){.nr button{padding:6px 12px;font-size:11px}}
 .hero{background:linear-gradient(135deg,#B45309 0%,#92400E 40%,#1A2332 100%);padding:90px 24px 56px;text-align:center;position:relative;overflow:hidden}
@@ -52,18 +53,18 @@
 .breadcrumb a{color:rgba(255,255,255,0.9);text-decoration:underline;text-decoration:none}
 .breadcrumb a:hover{color:#fff}
 .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero h1{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(26px,5vw,40px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:10px;max-width:700px;margin-left:auto;margin-right:auto}
 .hero p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto}
 .hero-meta{font-size:13px;color:rgba(255,255,255,0.45);margin-top:14px}
 @media(max-width:768px){.hero{padding:72px 18px 44px}.hero h1{font-size:clamp(22px,6vw,34px)}}
 @media(max-width:480px){.hero{padding:62px 14px 36px}.hero h1{font-size:clamp(20px,7vw,28px);line-height:1.2}.hero-meta{font-size:12px}}
 *{box-sizing:border-box;margin:0;padding:0}html,body{overflow-x:hidden}
-body{overflow-x:hidden;font-family:'DM Sans',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden;font-family:'DM Sans','DM Fallback',sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
-button{font-family:'DM Sans',sans-serif}
+button{font-family:'DM Sans','DM Fallback',sans-serif}
 
 .nav-logo{display:flex;align-items:center;gap:10px}
-.nav-logo span{font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:#fff}
+.nav-logo span{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:18px;font-weight:700;color:#fff}
 .nav-logo em{font-weight:400;font-style:italic;color:#00B8D4}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);font-weight:500;transition:color 0.2s}
@@ -72,7 +73,7 @@ button{font-family:'DM Sans',sans-serif}
 
 
 .article-wrap{max-width:700px;margin:0 auto;padding:48px 24px 80px}
-.article-body h2{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:#1A2332;margin:36px 0 12px}
+.article-body h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:22px;font-weight:700;color:#1A2332;margin:36px 0 12px}
 .article-body h3{font-size:17px;font-weight:700;color:#1A2332;margin:24px 0 8px}
 .article-body p{font-size:16px;line-height:1.8;color:#374151;margin-bottom:18px}
 .article-body ul{margin:0 0 18px 20px}
@@ -81,7 +82,7 @@ button{font-family:'DM Sans',sans-serif}
 .island-card{background:#fff;border:1px solid #E8ECF1;border-radius:18px;padding:24px 22px;margin:24px 0}
 .island-card-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
 .island-emoji{font-size:32px}
-.island-card-header h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin:0}
+.island-card-header h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin:0}
 .island-card-header span{font-size:13px;color:#5C6B7A;display:block;margin-top:2px}
 .island-card p{font-size:15px;color:#374151;line-height:1.75;margin-bottom:10px}
 .island-card p:last-child{margin-bottom:0}
@@ -97,18 +98,18 @@ button{font-family:'DM Sans',sans-serif}
 .diff-table td{padding:11px 16px;font-size:14px;color:#374151;border-bottom:1px solid #F1F5F9}
 .diff-table tr:last-child td{border-bottom:none}
 .diff-table tr:nth-child(even) td{background:#F8FAFC}
-.diff-table .pap{font-family:'Playfair Display',Georgia,serif;font-weight:600;color:#0077A8}
-.diff-table .pap-aruba{font-family:'Playfair Display',Georgia,serif;font-weight:600;color:#C2410C}
+.diff-table .pap{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-weight:600;color:#0077A8}
+.diff-table .pap-aruba{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-weight:600;color:#C2410C}
 
 .tip-block{background:#fff;border:1px solid #E8ECF1;border-radius:18px;padding:24px 22px;margin:24px 0;border-left:4px solid #0077A8}
 .tip-block p{font-size:15px;color:#374151;line-height:1.75;margin-bottom:0}
 
 .quote-block{background:linear-gradient(135deg,#E6F4FB,#F0F8FF);border-radius:14px;padding:22px 24px;margin:28px 0;border-left:4px solid #0077A8}
-.quote-block p{font-family:'Playfair Display',Georgia,serif;font-size:17px;color:#1A2332;line-height:1.6;font-style:italic;margin-bottom:8px}
+.quote-block p{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:17px;color:#1A2332;line-height:1.6;font-style:italic;margin-bottom:8px}
 .quote-block span{font-size:12px;color:#5C6B7A}
 
 .cta-block{background:linear-gradient(135deg,#0077A8,#005A7D);border-radius:18px;padding:28px 24px;margin:40px 0;text-align:center}
-.cta-block h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}
+.cta-block h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}
 .cta-block p{font-size:14px;color:rgba(255,255,255,0.8);margin-bottom:18px;line-height:1.6}
 .cta-btn{display:inline-block;background:#F4A236;color:#1A2332;border-radius:12px;padding:13px 28px;font-size:14px;font-weight:700;transition:opacity 0.2s}
 .cta-btn:hover{opacity:0.9}
@@ -261,7 +262,6 @@ button{font-family:'DM Sans',sans-serif}
 
     <h2>Welk eiland spreekt welke taal?</h2>
 
-    
 
   <p>Per eiland uitgelegd: <a href="/blog/welke-taal-spreken-ze-op-bonaire" style="color:#006A96;text-decoration:underline">Welke taal spreken ze op Bonaire?</a> en <a href="/blog/welke-taal-spreken-ze-op-aruba" style="color:#006A96;text-decoration:underline">Welke taal spreken ze op Aruba?</a></p>
 <figure class="dp-foto"><img src="/images/foto/handelskade-punda-willemstad.webp" srcset="/images/foto/handelskade-punda-willemstad-600.webp 600w, /images/foto/handelskade-punda-willemstad-800.webp 800w, /images/foto/handelskade-punda-willemstad.webp 1200w" sizes="(max-width: 720px) 67vw, 680px" width="1200" height="630" alt="Willemstad, Curaçao: hier heet de taal Papiamentu" loading="lazy" decoding="async"><figcaption>Willemstad, Curaçao: hier heet de taal Papiamentu. <span>Foto: <a href="https://commons.wikimedia.org/wiki/File:Willemstad_-_55373797352.jpg" rel="nofollow noopener" target="_blank">xiquinhosilva</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="nofollow noopener" target="_blank">CC BY 4.0</a></span></figcaption></figure>
@@ -364,7 +364,6 @@ button{font-family:'DM Sans',sans-serif}
       <a href="../lessen/lesson-1-bon-bini" class="cta-btn">Start gratis met Les 1 →</a>
     </div>
 
-    
 <h2>Veelgestelde vragen</h2>
 <h3>Wat is het verschil tussen Papiamentu en Papiamento?</h3>
 <p>Papiamentu wordt gesproken op Curaçao en Bonaire. Papiamento is de Arubaanse variant. De spelling verschilt iets maar de talen zijn 95% hetzelfde en volledig onderling verstaanbaar.</p>
@@ -424,7 +423,7 @@ button{font-family:'DM Sans',sans-serif}
     </div>
 
 <p style="font-size:12px;color:#5C6B7A;line-height:1.6;margin:24px 0 12px">Spelling volgens de <a href="https://gobiernu.cw/wp-content/uploads/2025/12/196-GT.-Lb-schrijfwijze-Papiamentu-en-Nederlands.pdf" rel="nofollow" target="_blank" style="color:inherit;text-decoration:underline">officiële woordenlijst van Curaçao</a>.</p>
-  <div style="margin:36px 0 8px;text-align:center"><a href="/blog/" style="display:inline-block;background:#1A2332;color:#fff;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;padding:13px 24px;border-radius:10px;text-decoration:none">&larr; Terug naar alle artikelen</a></div>
+  <div style="margin:36px 0 8px;text-align:center"><a href="/blog/" style="display:inline-block;background:#1A2332;color:#fff;font-family:'DM Sans','DM Fallback',sans-serif;font-weight:600;font-size:15px;padding:13px 24px;border-radius:10px;text-decoration:none">&larr; Terug naar alle artikelen</a></div>
 </article>
 </div>
 

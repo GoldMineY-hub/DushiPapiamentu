@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pagina niet gevonden | Dushi Papiamentu</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/playfair-display-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-italic.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-italic.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/dm-sans-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/dm-sans-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'PF Fallback';src:local('Times New Roman'),local('Times'),local('Liberation Serif');size-adjust:114.3%;ascent-override:94.7%;descent-override:22%;line-gap-override:0%}@font-face{font-family:'DM Fallback';src:local('Arial'),local('Helvetica'),local('Liberation Sans');size-adjust:105%;ascent-override:93.3%;descent-override:29.1%;line-gap-override:0%}</style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#FAFCFE;color:#1A2332;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:24px}
+body{font-family:'DM Sans','DM Fallback',sans-serif;background:#FAFCFE;color:#1A2332;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:24px}
 .box{max-width:460px}
-.code{font-family:'Playfair Display',Georgia,serif;font-size:clamp(80px,20vw,140px);font-weight:700;color:#64748B;line-height:1}
-h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,5vw,30px);margin:12px 0 8px;color:#1A2332}
+.code{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(80px,20vw,140px);font-weight:700;color:#64748B;line-height:1}
+h1{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(22px,5vw,30px);margin:12px 0 8px;color:#1A2332}
 p{font-size:15px;color:#5C6B7A;line-height:1.6;margin-bottom:24px}
 a{display:inline-block;background:#0077A8;color:#fff;border-radius:12px;padding:14px 32px;font-size:15px;font-weight:700;text-decoration:none}
 a:hover{opacity:0.9}

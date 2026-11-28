@@ -37,18 +37,17 @@
 <meta name="twitter:image:alt" content="Dushi Papiamentu - Gratis Papiaments cursus">
 <title>Papiaments leren: 12 gratis lessen van native speakers</title>
 <!-- DNS + preconnect voor snellere font load -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+ 
 <!-- Async font loading: geen render-blocking, display=swap voor directe tekst -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/playfair-display-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-latin-400-italic.woff2) format('woff2')}@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(/fonts/playfair-display-latin-700-italic.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/dm-sans-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/dm-sans-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'PF Fallback';src:local('Times New Roman'),local('Times'),local('Liberation Serif');size-adjust:114.3%;ascent-override:94.7%;descent-override:22%;line-gap-override:0%}@font-face{font-family:'DM Fallback';src:local('Arial'),local('Helvetica'),local('Liberation Sans');size-adjust:105%;ascent-override:93.3%;descent-override:29.1%;line-gap-override:0%}</style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans','DM Fallback',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1A2332;background:#FAFCFE;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
-button{font-family:'DM Sans',sans-serif}
+button{font-family:'DM Sans','DM Fallback',sans-serif}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
@@ -61,7 +60,7 @@ button{font-family:'DM Sans',sans-serif}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,35,50,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
-.nav-logo span{font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:#fff}
+.nav-logo span{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:18px;font-weight:700;color:#fff}
 .nav-logo em{font-weight:400;font-style:italic;color:#00B8D4}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);font-weight:500;transition:color 0.2s}
@@ -77,7 +76,7 @@ button{font-family:'DM Sans',sans-serif}
 .hero-bg{position:absolute;font-size:120px;opacity:0.04;top:20px;right:-10px;animation:float 6s ease-in-out infinite;pointer-events:none}
 .hero-bg2{position:absolute;font-size:80px;opacity:0.03;top:80px;left:10px;animation:float 7s ease-in-out 1s infinite;pointer-events:none}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:8px 20px;font-size:12px;color:#F4A236;font-weight:700;letter-spacing:2.5px;margin-bottom:20px;text-transform:uppercase}
-.hero h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(36px,7vw,56px);font-weight:700;color:#fff;line-height:1.08;margin-bottom:12px}
+.hero h1{font-family:'Playfair Display','PF Fallback',Georgia,'Times New Roman',serif;font-size:clamp(36px,7vw,56px);font-weight:700;color:#fff;line-height:1.08;margin-bottom:12px}
 .hero h1 em{font-style:italic;font-weight:400;color:#F4A236}
 .hero-sub{font-size:17px;color:rgba(255,255,255,0.6);max-width:580px;margin:0 auto 32px;line-height:1.65}
 .hero-cta{display:inline-block;background:#F4A236;color:#1A2332;border:none;border-radius:16px;padding:18px 44px;font-size:18px;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(244,162,54,0.3)}
@@ -88,7 +87,7 @@ button{font-family:'DM Sans',sans-serif}
 .section{max-width:960px;margin:0 auto;padding:56px 24px}
 .section-sm{padding:40px 24px}
 .section-label{font-size:12px;font-weight:700;letter-spacing:2.5px;color:#0077A8;margin-bottom:10px;text-transform:uppercase}
-.section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,34px);font-weight:700;margin-bottom:8px;color:#1A2332;line-height:1.2}
+.section h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(26px,5vw,34px);font-weight:700;margin-bottom:8px;color:#1A2332;line-height:1.2}
 .section .sub{font-size:15px;color:#5C6B7A;margin-bottom:28px;line-height:1.6;max-width:680px}
 
 /* FEATURES */
@@ -103,7 +102,7 @@ button{font-family:'DM Sans',sans-serif}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);background:linear-gradient(135deg,#0077A8,#005A7D);border-radius:20px;padding:28px 20px;margin-top:36px}
 .stat{text-align:center;position:relative}
 .stat:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:rgba(255,255,255,0.15)}
-.stat-num{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#fff}
+.stat-num{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#fff}
 .stat-label{font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px}
 
 /* LESSONS */
@@ -126,7 +125,7 @@ button{font-family:'DM Sans',sans-serif}
 .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
 @media(max-width:560px){.testi-grid{grid-template-columns:1fr}}
 .testi{background:#fff;border:1px solid #E8ECF1;border-radius:16px;padding:24px;position:relative}
-.testi-q{font-family:'Playfair Display',Georgia,serif;font-size:36px;color:#0077A8;opacity:0.2;position:absolute;top:12px;left:16px;line-height:1}
+.testi-q{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:36px;color:#0077A8;opacity:0.2;position:absolute;top:12px;left:16px;line-height:1}
 .testi p{font-size:14px;line-height:1.65;color:#1A2332;font-style:italic;padding-left:20px;margin-top:8px}
 .testi .author{font-size:13px;color:#5C6B7A;margin-top:12px;font-style:normal;padding-left:20px;font-weight:600}
 .testi .stars{color:#F4A236;font-size:14px;padding-left:20px;margin-top:4px;letter-spacing:2px}
@@ -143,10 +142,10 @@ button{font-family:'DM Sans',sans-serif}
 
 /* FOOTER CTA */
 .footer-cta{background:linear-gradient(135deg,#1A2332 0%,#005A7D 100%);border-radius:24px;padding:48px 28px;text-align:center;position:relative;overflow:hidden}
-.footer-cta h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,5vw,32px);color:#fff;margin-bottom:8px}
+.footer-cta h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(24px,5vw,32px);color:#fff;margin-bottom:8px}
 .footer-cta p{font-size:15px;color:rgba(255,255,255,0.8);margin-bottom:28px}
 .email-row{display:flex;gap:10px;max-width:480px;margin:0 auto}
-.email-row input{flex:1;padding:16px 18px;border-radius:14px;border:1px solid rgba(255,255,255,0.15);font-size:15px;font-family:'DM Sans',sans-serif;background:rgba(255,255,255,0.08);color:white;outline:none}
+.email-row input{flex:1;padding:16px 18px;border-radius:14px;border:1px solid rgba(255,255,255,0.15);font-size:15px;font-family:'DM Sans','DM Fallback',sans-serif;background:rgba(255,255,255,0.08);color:white;outline:none}
 .email-row input::placeholder{color:rgba(255,255,255,0.35)}
 .email-row input:focus{border-color:rgba(255,255,255,0.35)}
 .email-row button{background:#F4A236;color:#1A2332;border:none;border-radius:14px;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all 0.2s}
@@ -233,19 +232,19 @@ button{font-family:'DM Sans',sans-serif}
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:36px}
 .bento-a{grid-column:span 7;background:linear-gradient(135deg,#1A2332 0%,#1e3d5a 60%,#005A7D 100%);border-radius:24px;padding:36px 32px;position:relative;overflow:hidden;color:#fff}
 .bento-a::before{content:'🗣️';font-size:100px;position:absolute;right:-10px;bottom:-20px;opacity:0.08;line-height:1}
-.bento-a h3{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;margin-bottom:10px;line-height:1.2}
+.bento-a h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:22px;font-weight:700;margin-bottom:10px;line-height:1.2}
 .bento-a p{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65}
 .bento-b{grid-column:span 5;background:#F4A236;border-radius:24px;padding:32px;position:relative;overflow:hidden}
 .bento-b::before{content:'🎮';font-size:90px;position:absolute;right:-5px;bottom:-15px;opacity:0.12;line-height:1}
-.bento-b h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
+.bento-b h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
 .bento-b p{font-size:14px;color:#1A2332;line-height:1.65}
 .bento-c{grid-column:span 5;background:linear-gradient(135deg,#E6F1FB,#c8e0f5);border-radius:24px;padding:32px;position:relative;overflow:hidden}
 .bento-c::before{content:'🌍';font-size:90px;position:absolute;right:-5px;bottom:-15px;opacity:0.12;line-height:1}
-.bento-c h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
+.bento-c h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;font-weight:700;color:#1A2332;margin-bottom:8px;line-height:1.2}
 .bento-c p{font-size:14px;color:#3A4A5C;line-height:1.65}
 .bento-d{grid-column:span 7;background:linear-gradient(135deg,#0F6E56,#0a8060,#0D9488);border-radius:24px;padding:32px;position:relative;overflow:hidden;color:#fff}
 .bento-d::before{content:'🏝️';font-size:100px;position:absolute;right:-10px;bottom:-20px;opacity:0.1;line-height:1}
-.bento-d h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;margin-bottom:8px;line-height:1.2}
+.bento-d h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;font-weight:700;margin-bottom:8px;line-height:1.2}
 .bento-d p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.65}
 @media(max-width:700px){.bento{grid-template-columns:1fr 1fr;gap:12px}.bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 2}.bento-a,.bento-d{padding:28px 24px}.bento-b,.bento-c{padding:24px}}
 @media(max-width:480px){.bento{grid-template-columns:1fr;gap:10px}.bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 1}.bento-a h3,.bento-b h3,.bento-c h3,.bento-d h3{font-size:18px}.bento-a,.bento-d{padding:24px 20px}.bento-b,.bento-c{padding:22px 20px}}
@@ -254,7 +253,7 @@ button{font-family:'DM Sans',sans-serif}
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E8ECF1;border-radius:20px;overflow:hidden;margin-top:28px}
 .stat-box{background:#fff;padding:32px 20px;text-align:center;transition:background 0.2s}
 .stat-box:hover{background:#F8FAFC}
-.stat-box-num{font-family:'Playfair Display',Georgia,serif;font-size:44px;font-weight:700;color:#1A2332;line-height:1;margin-bottom:4px}
+.stat-box-num{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:44px;font-weight:700;color:#1A2332;line-height:1;margin-bottom:4px}
 .stat-box-num span{color:#0077A8}
 .stat-box-label{font-size:13px;color:#5C6B7A;font-weight:500}
 @media(max-width:480px){.stats-row{grid-template-columns:1fr;gap:1px}.stat-box{padding:22px 16px}.stat-box-num{font-size:36px}}
@@ -268,7 +267,7 @@ button{font-family:'DM Sans',sans-serif}
 .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
 .who-card{background:#fff;border-radius:20px;padding:28px 22px;border:1px solid #E8ECF1;position:relative;overflow:hidden;transition:all 0.25s}
 .who-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.08);border-color:transparent}
-.who-card-num{font-family:'Playfair Display',Georgia,serif;font-size:64px;font-weight:700;position:absolute;top:-8px;right:12px;line-height:1;user-select:none}.who-card-num::before{content:attr(data-num);color:#E8ECF1}
+.who-card-num{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:64px;font-weight:700;position:absolute;top:-8px;right:12px;line-height:1;user-select:none}.who-card-num::before{content:attr(data-num);color:#E8ECF1}
 .who-card-icon{font-size:32px;margin-bottom:14px;display:block}
 .who-card h3{font-size:15px;font-weight:700;color:#1A2332;margin-bottom:6px}
 .who-card p{font-size:13px;color:#5C6B7A;line-height:1.6}
@@ -277,7 +276,7 @@ button{font-family:'DM Sans',sans-serif}
 
 /* LESSONS - nieuwe stijl */
 .lessons-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
-.lessons-header-left h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,34px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:6px}
+.lessons-header-left h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(26px,5vw,34px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:6px}
 .lessons-header-left p{font-size:15px;color:#5C6B7A}
 .lessons-track{display:flex;flex-direction:column;gap:0}
 .lesson-item{display:flex;align-items:center;gap:0;border-bottom:1px solid #F1F5F9;transition:all 0.2s;position:relative}
@@ -285,7 +284,7 @@ button{font-family:'DM Sans',sans-serif}
 .lesson-item:hover{background:#F8FAFC}
 .lesson-item:hover .li-arrow{opacity:1;transform:translateX(0)}
 .lesson-item a{display:flex;align-items:center;gap:20px;padding:18px 20px;flex:1;text-decoration:none;color:inherit}
-.li-num{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:'Playfair Display',Georgia,serif}
+.li-num{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:'Playfair Display','PF Fallback',Georgia,serif}
 .li-num.done{background:linear-gradient(135deg,#0F6E56,#0D9488);color:#fff}
 .li-num.next{background:#E6F1FB;color:#005A7D;border:1px solid #B5D4F4}
 .li-info{flex:1;min-width:0}
@@ -297,11 +296,11 @@ button{font-family:'DM Sans',sans-serif}
 
 /* FREE BANNER - nieuw */
 .free-banner{background:linear-gradient(135deg,#064e3b 0%,#065F46 50%,#047857 100%);border-radius:24px;padding:44px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;margin-top:32px}
-.free-banner::before{content:'∞';font-size:200px;font-family:'Playfair Display',serif;position:absolute;right:-20px;top:-60px;color:rgba(255,255,255,0.04);line-height:1}
-.free-banner-left h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(24px,4vw,32px);color:#fff;margin-bottom:8px;line-height:1.1}
+.free-banner::before{content:'∞';font-size:200px;font-family:'Playfair Display','PF Fallback',serif;position:absolute;right:-20px;top:-60px;color:rgba(255,255,255,0.04);line-height:1}
+.free-banner-left h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(24px,4vw,32px);color:#fff;margin-bottom:8px;line-height:1.1}
 .free-banner-left p{font-size:15px;color:rgba(255,255,255,0.65);max-width:500px;line-height:1.65}
 .free-banner-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:20px 28px;text-align:center;flex-shrink:0}
-.free-banner-badge .price{font-family:'Playfair Display',Georgia,serif;font-size:42px;font-weight:700;color:#fff;line-height:1}
+.free-banner-badge .price{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:42px;font-weight:700;color:#fff;line-height:1}
 .free-banner-badge .price-label{font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;letter-spacing:1px;text-transform:uppercase}
 @media(max-width:600px){.free-banner{flex-direction:column;text-align:center;padding:32px 24px}.free-banner-badge{width:100%}.free-banner-left p{max-width:100%}}
 @media(max-width:480px){.free-banner{padding:28px 20px;border-radius:18px}.free-banner-left h2{font-size:22px}.free-banner-badge .price{font-size:36px}}
@@ -316,14 +315,14 @@ button{font-family:'DM Sans',sans-serif}
 .blog-tile:hover .blog-tile-cover-emoji{transform:scale(1.12) rotate(-4deg)}
 .blog-tile-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column}
 .blog-tile-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
-.blog-tile-title{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px;flex:1}
+.blog-tile-title{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:16px;font-weight:700;color:#1A2332;line-height:1.3;margin-bottom:8px;flex:1}
 .blog-tile-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #F1F5F9;margin-top:auto}
 .blog-tile-time{font-size:11px;color:#5C6B7A}
 .blog-tile-arrow{width:28px;height:28px;border-radius:50%;background:#F1F5F9;display:flex;align-items:center;justify-content:center;transition:all 0.25s;color:#0077A8;font-size:13px}
 .blog-tile:hover .blog-tile-arrow{background:#0077A8;color:#fff}
 .blog-all-link{grid-column:1/-1;background:linear-gradient(135deg,#1A2332,#005A7D);border-radius:20px;padding:32px;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:all 0.2s}
 .blog-all-link:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.15)}
-.blog-all-link h3{font-family:'Playfair Display',Georgia,serif;font-size:20px;margin-bottom:4px}
+.blog-all-link h3{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:20px;margin-bottom:4px}
 .blog-all-link p{font-size:13px;color:rgba(255,255,255,0.6)}
 .blog-all-link-btn{background:#F4A236;color:#1A2332;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;flex-shrink:0;white-space:nowrap;transition:all 0.2s}
 .blog-all-link:hover .blog-all-link-btn{transform:scale(1.04)}
@@ -338,7 +337,7 @@ button{font-family:'DM Sans',sans-serif}
 .testi-card:nth-child(2){border-top:3px solid #F4A236}
 .testi-card:nth-child(3){border-top:3px solid #0F6E56}
 .testi-card:nth-child(4){border-top:3px solid #E8634A}
-.testi-quote{font-size:42px;color:#E8ECF1;font-family:'Playfair Display',serif;line-height:1;margin-bottom:4px}
+.testi-quote{font-size:42px;color:#E8ECF1;font-family:'Playfair Display','PF Fallback',serif;line-height:1;margin-bottom:4px}
 .testi-text{font-size:15px;color:#1A2332;line-height:1.7;font-style:italic;margin-bottom:16px}
 .testi-author{display:flex;align-items:center;gap:10px}
 .testi-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0077A8,#00B8D4);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
@@ -365,13 +364,13 @@ button{font-family:'DM Sans',sans-serif}
 .cta-email-section::after{content:'🏝️';font-size:180px;position:absolute;bottom:-50px;right:-20px;opacity:0.05;line-height:1;pointer-events:none;z-index:0}
 .cta-email-section>*{position:relative;z-index:1}
 .cta-email-label{display:inline-block;background:rgba(244,162,54,0.15);border:1px solid rgba(244,162,54,0.3);color:#F4A236;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:20px}
-.cta-email-section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,38px);color:#fff;margin-bottom:12px;line-height:1.1}
+.cta-email-section h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(26px,5vw,38px);color:#fff;margin-bottom:12px;line-height:1.1}
 .cta-email-section p{font-size:15px;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 32px;line-height:1.7}
 .email-form{display:flex;gap:10px;max-width:500px;margin:0 auto}
-.email-form input{flex:1;padding:16px 20px;border-radius:14px;border:1px solid rgba(255,255,255,0.15);font-size:15px;font-family:'DM Sans',sans-serif;background:rgba(255,255,255,0.09);color:white;outline:none;transition:border-color 0.2s}
+.email-form input{flex:1;padding:16px 20px;border-radius:14px;border:1px solid rgba(255,255,255,0.15);font-size:15px;font-family:'DM Sans','DM Fallback',sans-serif;background:rgba(255,255,255,0.09);color:white;outline:none;transition:border-color 0.2s}
 .email-form input::placeholder{color:rgba(255,255,255,0.35)}
 .email-form input:focus{border-color:rgba(255,255,255,0.4)}
-.email-form button{background:#F4A236;color:#1A2332;border:none;border-radius:14px;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all 0.2s;flex-shrink:0}
+.email-form button{background:#F4A236;color:#1A2332;border:none;border-radius:14px;padding:16px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'DM Sans','DM Fallback',sans-serif;transition:all 0.2s;flex-shrink:0}
 .email-form button:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(244,162,54,0.4)}
 @media(max-width:500px){.email-form{flex-direction:column}.email-form button{width:100%}}
 @media(max-width:480px){.cta-email-section{padding:36px 20px;border-radius:20px}.cta-email-section h2{font-size:26px}}
@@ -381,7 +380,7 @@ button{font-family:'DM Sans',sans-serif}
 .sh{margin-bottom:32px}
 .sh-eyebrow{font-size:11px;font-weight:700;color:#0077A8;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .sh-eyebrow::before{content:'';display:inline-block;width:28px;height:2px;background:#0077A8;border-radius:2px}
-.sh h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:8px}
+.sh h2{font-family:'Playfair Display','PF Fallback',Georgia,serif;font-size:clamp(28px,5vw,36px);font-weight:700;color:#1A2332;line-height:1.1;margin-bottom:8px}
 .sh p{font-size:15px;color:#5C6B7A;max-width:600px;line-height:1.65}
 @media(max-width:480px){.sh{margin-bottom:24px}.sh h2{font-size:24px}.sh p{font-size:14px}}
 
@@ -882,7 +881,7 @@ button{font-family:'DM Sans',sans-serif}
       <rect x="31" y="18" width="12" height="24" rx="2" fill="#0077A8"/><polygon points="31,18 37,9 43,18" fill="#005A7D"/>
       <rect x="45" y="22" width="12" height="20" rx="2" fill="#2A8E4F"/><polygon points="45,22 51,14 57,22" fill="#1E7A3E"/>
     </svg>
-    <span style="font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#5C6B7A">Dushi <em style="font-weight:400;font-style:italic;color:#0077A8">Papiamentu</em></span>
+    <span style="font-family:'Playfair Display','PF Fallback',Georgia,serif;font-weight:700;color:#5C6B7A">Dushi <em style="font-weight:400;font-style:italic;color:#0077A8">Papiamentu</em></span>
   </div>
   <p><span>Gemaakt met ❤️ vanuit Kòrsou</span> · <a href="/privacy">Privacy</a> · <a href="/voorwaarden">Voorwaarden</a></p>
   <p style="margin-top:6px">© 2026 Dushi Papiamentu. Alle rechten voorbehouden.</p>
